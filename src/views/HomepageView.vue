@@ -1,0 +1,25 @@
+<script setup>
+import { TestComponent } from '../components/TestComponent'
+
+import { IButton } from '../components/IButton'
+</script>
+
+<template>
+  <TestComponent />
+  <main class="flex h-screen bg-[#F3743D]">
+    <section class="flex-1 flex justify-center items-center px-5">
+      <div class="text-white text-center">
+        <img class="inline mb-6" src="../assets/img/map-pin.svg" alt="" />
+        <h1 class="font-bold text-4xl mb-7">IT traveler</h1>
+        <p class="leading-6 mb-11 bg-blue-800">
+          Простий і зручний веб додаток, який дозволить тобі відмічати твої улюблені місця, а також
+          ті, в яких би ти дуже хотів побувати. Тож не зволікай і спробуй сам.
+        </p>
+        <IButton />
+      </div>
+    </section>
+    <section class="flex-1">
+      <img class="h-full w-full object-cover" src="../assets/img/static-map.png" alt="" />
+    </section>
+  </main>
+</template>
