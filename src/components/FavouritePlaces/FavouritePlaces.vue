@@ -7,7 +7,7 @@ import { ref } from 'vue'
 const buttonVariant = ref('gradient')
 
 const changeButtonVariant = () => {
-  buttonVariant.value = 'gradient' || 'outlined'
+  buttonVariant.value = 'gradient' ? 'outlined' : 'gradient'
 }
 </script>
 
