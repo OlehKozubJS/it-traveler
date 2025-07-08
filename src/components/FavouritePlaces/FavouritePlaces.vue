@@ -7,7 +7,7 @@ import { ref } from 'vue'
 const buttonVariant = ref('gradient')
 
 const changeButtonVariant = () => {
-  buttonVariant.value = 'gradient' ? 'outlined' : 'gradient'
+  buttonVariant.value = buttonVariant === 'gradient' ? 'outlined' : 'gradient'
 }
 </script>
 
@@ -17,7 +17,7 @@ const changeButtonVariant = () => {
     <slot name="label"></slot>
     <slot name="list"></slot>
     <FavouritePlace :key="number" v-for="number in 4" />
-    <IButton class="w-full mt-10" @click="changeButtonVariant" variant="gradient"
+    <IButton class="w-full mt-10" @click="changeButtonVariant" :variant="buttonVariant"
       >Додати маркер</IButton
     >
   </div>
