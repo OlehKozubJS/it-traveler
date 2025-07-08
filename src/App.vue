@@ -4,6 +4,6 @@ import { HomepageView } from './views'
 </script>
 
 <template>
-  <FavouritePlaces />
+  <FavouritePlaces><div>This is super slot</div></FavouritePlaces>
   <!--HomepageView /-->
 </template>
