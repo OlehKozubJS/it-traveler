@@ -11,6 +11,10 @@ const increment = () => {
 }
 
 const user = ref({ name: 'Tom', age: 14 })
+
+const changeUserName = () => {
+  user.value.name = 'Harry Potter'
+}
 </script>
 
 <template>
