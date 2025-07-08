@@ -14,7 +14,8 @@ const changeButtonVariant = () => {
 
 <template>
   <div class="px-6">
-    <IInput />
+    <IInput label="Some label" />
+    <a href="">Click me</a>
     <div class="text-grey mb-4">Додані маркери {{ buttonVariant }}</div>
     <FavouritePlace :key="number" v-for="number in 4" />
     <IButton class="w-full mt-10" @click="changeButtonVariant" :variant="buttonVariant"
