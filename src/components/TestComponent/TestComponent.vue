@@ -11,7 +11,7 @@ const fruitsMap = {
 const isTestComponent = ref(false)
 
 const toggleTestComponent = () => {
-  if (isTestComponent) {
+  if (isTestComponent.value) {
     isTestComponent.value = false
   } else {
     isTestComponent.value = true
