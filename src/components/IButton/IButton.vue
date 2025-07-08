@@ -2,6 +2,7 @@
 import { defineProps } from 'vue'
 
 const props = defineProps(['variant'])
+const bgStyles = props.variant === 'gradient' ? "bg-gradient-to-r from-[#FFA279] to-[#F3743D]"
 </script>
 
 <template>
