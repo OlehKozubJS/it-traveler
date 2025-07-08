@@ -16,7 +16,11 @@ const changeUserName = () => {
   user.value.name = 'Harry Potter'
 }
 
-const superUser = reactive()
+const superUser = reactive({ Name: 'Super user', age: 1000 })
+
+const changeSuperUserName = () => {
+  user.value.name = 'Harry Potter'
+}
 </script>
 
 <template>
