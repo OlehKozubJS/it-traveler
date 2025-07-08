@@ -32,7 +32,9 @@ const changeSuperUserName = () => {
     <IButton class="w-full mt-10" @click="increment">Додати маркер</IButton>
 
     <div class="text-grey">User name {{ user.name }}</div>
-    <IButton class="w-full mt-10" @click="changeUserName">Change user name</IButton>
+    <IButton class="w-full mt-10" @click="changeUserName" variant="gradient"
+      >Change user name</IButton
+    >
     <div class="text-grey">Super user name {{ superUser.name }}</div>
     <IButton class="w-full mt-10" @click="changeSuperUserName">Change super user name</IButton>
   </div>
