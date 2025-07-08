@@ -6,7 +6,7 @@ import { HomepageView } from './views'
 <template>
   <FavouritePlaces
     ><div>This is super slot</div>
-    <template></template
-  ></FavouritePlaces>
+    <template v-slot:label>this is label</template></FavouritePlaces
+  >
   <!--HomepageView /-->
 </template>
