@@ -13,6 +13,7 @@ const increment = () => {
 
 <template>
   <div class="px-6">
+    <div class="text-grey">User name</div>
     <div class="text-grey mb-4">Додані маркери {{ counter }}</div>
     <slot name="label"></slot>
     <slot name="list"></slot>
