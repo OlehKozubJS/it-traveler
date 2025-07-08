@@ -6,7 +6,7 @@
       <img class="w-[76px] h-[76px] shrink-0" src="" alt="" />
       <div>
         <div class="flex justify-between items-center mb-2">
-          <h2 class="font-bold text-sm text-[#2C2C2C]"></h2>
+          <h2 class="font-bold text-sm text-[#2C2C2C]">Палац спорту</h2>
           <div class="flex gap-2">
             <button>edit</button>
             <button>delete</button>
