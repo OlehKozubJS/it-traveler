@@ -12,7 +12,7 @@
             <button></button>
           </div>
         </div>
-        <p class=""></p>
+        <p class="text-xs line-clamp-3"></p>
       </div>
     </div>
     <div class="h-[1px] w-full bg-[#ececec]"></div>
