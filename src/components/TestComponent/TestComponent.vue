@@ -26,7 +26,7 @@ const toggleTestComponent = () => {
 </style>
 
 <template>
-  <button @click="toggleTestComponent()" type="button">Test component</button>
+  <button @click="toggleTestComponent" type="button">Test component</button>
   <template v-if="isTestComponent">
     <div :key="fruit" v-for="(fruit, index) in fruits">{{ index }} : {{ fruit }}</div>
     <div :key="fruit" v-for="(fruit, key) in fruitsMap">{{ key }} : {{ fruit }}</div>
