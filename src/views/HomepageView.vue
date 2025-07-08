@@ -1,11 +1,10 @@
 <script setup>
-import { TestComponent } from '../components/TestComponent'
-
+//import { TestComponent } from '../components/TestComponent'
+//<TestComponent />
 import { IButton } from '../components/IButton'
 </script>
 
 <template>
-  <TestComponent />
   <main class="flex h-screen bg-[#F3743D]">
     <section class="flex-1 flex justify-center items-center px-5">
       <div class="text-white text-center">
