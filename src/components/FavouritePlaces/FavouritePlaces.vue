@@ -4,7 +4,7 @@ import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 
 <template>
   <div class="py-6">
-    <div class="text-grey">Додані маркери</div>
+    <div class="text-grey mb-4">Додані маркери</div>
     <FavouritePlace />
   </div>
 </template>
