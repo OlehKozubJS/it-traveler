@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import FavouritePlaceIconButton from './FavouritePlaceIconButton.vue'
+</script>
 
 <template>
   <section section class="text-grey mb-6 last:mb-0">
