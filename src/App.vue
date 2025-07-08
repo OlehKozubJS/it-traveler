@@ -1,9 +1,9 @@
 <script setup>
-import FavouritePlace from './components/FavouritePlace/FavouritePlace.vue'
+import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
 import { HomepageView } from './views'
 </script>
 
 <template>
-  <FavouritePlace />
+  <FavouritePlaces />
   <!--HomepageView /-->
 </template>
