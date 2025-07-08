@@ -5,6 +5,6 @@ import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 <template>
   <div class="py-6">
     <div class="text-grey mb-4">Додані маркери</div>
-    <FavouritePlace />
+    <FavouritePlace :key="number" v-for="number in 4" />
   </div>
 </template>
