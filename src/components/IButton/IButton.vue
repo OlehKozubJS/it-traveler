@@ -11,8 +11,11 @@ const props = defineProps({
     },
   },
 })
-const bgStyles =
-  props.variant === 'gradient' ? 'bg-gradient-to-r from-[#FFA279] to-[#F3743D]' : 'bg-[#FFA279]'
+const bgStyles = computed(() => {
+  return props.variant === 'gradient'
+    ? 'bg-gradient-to-r from-[#FFA279] to-[#F3743D]'
+    : 'bg-[#FFA279]'
+})
 </script>
 
 <template>
