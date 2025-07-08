@@ -3,6 +3,6 @@ import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 </script>
 
 <template>
-  <div>Додані маркери</div>
+  <div class="text-grey">Додані маркери</div>
   <FavouritePlace />
 </template>
