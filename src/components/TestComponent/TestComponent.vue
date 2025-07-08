@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 const fruits = ['kiwi', 'orange', 'lemon']
 const fruitsMap = {
   kiwi: 'super kiwi',
@@ -6,16 +8,16 @@ const fruitsMap = {
   lemon: 'super lemon',
 }
 
-let isTestComponent = false
+let isTestComponent = ref(false)
 
 const toggleTestComponent = () => {
   console.log('clicked')
   if (isTestComponent === true) {
     console.log('else works', isTestComponent)
-    isTestComponent = false
+    isTestComponent.value = false
   } else {
     console.log('if works', isTestComponent)
-    isTestComponent = true
+    isTestComponent.value = true
   }
 }
 </script>
