@@ -8,5 +8,5 @@ import IButton from '../IButton/IButton.vue'
     <div class="text-grey mb-4">Додані маркери</div>
     <FavouritePlace :key="number" v-for="number in 4" />
   </div>
-  <IButton>Додати маркер</IButton>
+  <IButton class="w-full">Додати маркер</IButton>
 </template>
