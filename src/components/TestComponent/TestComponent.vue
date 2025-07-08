@@ -16,6 +16,7 @@ const toggleTestComponent = () => {
   } else {
     isTestComponent.value = true
   }
+  console.log(isTestComponent)
 }
 </script>
 
