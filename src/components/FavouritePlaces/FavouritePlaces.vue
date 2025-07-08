@@ -17,6 +17,6 @@ const increment = () => {
     <slot name="label"></slot>
     <slot name="list"></slot>
     <FavouritePlace :key="number" v-for="number in 4" />
-    <IButton class="w-full mt-10">Додати маркер</IButton>
+    <IButton class="w-full mt-10" @click="increment">Додати маркер</IButton>
   </div>
 </template>
