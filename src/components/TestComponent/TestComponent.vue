@@ -11,12 +11,9 @@ const fruitsMap = {
 let isTestComponent = ref(false)
 
 const toggleTestComponent = () => {
-  console.log('clicked')
-  if (isTestComponent === true) {
-    console.log('else works', isTestComponent)
+  if (isTestComponent) {
     isTestComponent.value = false
   } else {
-    console.log('if works', isTestComponent)
     isTestComponent.value = true
   }
 }
