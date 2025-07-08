@@ -1,5 +1,7 @@
 <script setup>
 import FavouritePlaceIconButton from './FavouritePlaceIconButton.vue'
+import EditIcon from './EditIcon.vue'
+import DeleteIcon from './DeleteIcon.vue'
 </script>
 
 <template>
