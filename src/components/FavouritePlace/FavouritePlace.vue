@@ -6,10 +6,10 @@
       <img class="w-[76px] h-[76px] shrink-0" src="" alt="" />
       <div>
         <div class="flex justify-between items-center mb-2">
-          <h2></h2>
-          <div>
-            <button></button>
-            <button></button>
+          <h2 class="font-bold text-sm text-[#2C2C2C]"></h2>
+          <div class="flex gap-2">
+            <button>edit</button>
+            <button>delete</button>
           </div>
         </div>
         <p class="text-xs line-clamp-3">
