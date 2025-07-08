@@ -22,6 +22,6 @@ import DeleteIcon from './DeleteIcon.vue'
         </p>
       </div>
     </div>
-    <div class="h-[1px] w-full bg-[#ececec]"></div>
+    <div class="h-[1px] w-full bg-[#ececec] mt-4"></div>
   </section>
 </template>
