@@ -13,7 +13,7 @@ const changeButtonVariant = () => {
 
 <template>
   <div class="px-6">
-    <div class="text-grey mb-4">Додані маркери {{ variant }}</div>
+    <div class="text-grey mb-4">Додані маркери {{ buttonVariant }}</div>
     <slot name="label"></slot>
     <slot name="list"></slot>
     <FavouritePlace :key="number" v-for="number in 4" />
