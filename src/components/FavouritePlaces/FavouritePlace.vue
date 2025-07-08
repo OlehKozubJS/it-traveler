@@ -2,4 +2,4 @@
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 </script>
 
-<template></template>
+<template><FavouritePlace /></template>
