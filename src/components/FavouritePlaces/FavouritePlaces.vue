@@ -7,7 +7,7 @@ import { ref } from 'vue'
 const counter = ref(0)
 
 const increment = () => {
-  counter += 1
+  counter.value += 1
 }
 </script>
 
