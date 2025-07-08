@@ -5,7 +5,7 @@ import { IButton } from '../components/IButton'
 </script>
 
 <template>
-  <main class="flex h-screen">
+  <main class="flex h-screen bg-primary">
     <section class="flex-1 flex justify-center items-center px-5">
       <div class="text-white text-center">
         <img class="inline mb-6" src="../assets/img/map-pin.svg" alt="" />
