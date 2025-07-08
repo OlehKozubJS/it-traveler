@@ -8,7 +8,7 @@ const fruitsMap = {
   lemon: 'super lemon',
 }
 
-let isTestComponent = ref(false)
+const isTestComponent = ref(false)
 
 const toggleTestComponent = () => {
   if (isTestComponent) {
