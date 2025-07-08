@@ -16,7 +16,7 @@ const changeUserName = () => {
   user.value.name = 'Harry Potter'
 }
 
-const superUser = reactive({ name: 'Super user', age: 1000 })
+let superUser = reactive({ name: 'Super user', age: 1000 })
 
 const changeSuperUserName = () => {
   superUser.name = 'New super user'
