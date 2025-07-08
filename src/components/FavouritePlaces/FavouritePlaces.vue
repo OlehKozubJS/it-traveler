@@ -2,7 +2,7 @@
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 
 const counter = ref(0)
 
