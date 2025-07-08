@@ -12,8 +12,8 @@ import DeleteIcon from './DeleteIcon.vue'
         <div class="flex justify-between items-center mb-2">
           <h2 class="font-bold text-sm text-[#2C2C2C]">Палац спорту</h2>
           <div class="flex gap-2">
-            <FavouritePlaceIconButton>edit</FavouritePlaceIconButton>
-            <FavouritePlaceIconButton>delete</FavouritePlaceIconButton>
+            <FavouritePlaceIconButton><EditIcon /></FavouritePlaceIconButton>
+            <FavouritePlaceIconButton><DeleteIcon /></FavouritePlaceIconButton>
           </div>
         </div>
         <p class="text-xs line-clamp-3">
