@@ -2,4 +2,7 @@
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 </script>
 
-<template><FavouritePlace /></template>
+<template>
+  <div>Додані маркери</div>
+  <FavouritePlace />
+</template>
