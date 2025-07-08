@@ -1,3 +1,3 @@
 <template>
-  <button class="text-grey cursor-pointer"><slot></slot></button>
+  <button class="text-grey cursor-pointer hover:text-primary"><slot></slot></button>
 </template>
