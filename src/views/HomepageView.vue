@@ -1,6 +1,4 @@
 <script setup>
-//import { TestComponent } from '../components/TestComponent'
-//<TestComponent />
 import { IButton } from '../components/IButton'
 </script>
 
