@@ -4,10 +4,10 @@ import IButton from '../IButton/IButton.vue'
 
 import { ref } from 'vue'
 
-const counter = ref('gradient')
+const buttonVariant = ref('gradient')
 
 const changeButtonVariant = () => {
-  counter.value += 'gradient' || 'outlined'
+  buttonVariant.value = 'gradient' || 'outlined'
 }
 </script>
 
