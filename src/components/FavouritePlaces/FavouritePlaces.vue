@@ -1,6 +1,14 @@
 <script setup>
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
+
+import { ref } from 'vue'
+
+const counter = ref(0)
+
+const increment = () => {
+  counter += 1
+}
 </script>
 
 <template>
