@@ -2,7 +2,7 @@
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 const counter = ref(0)
 
@@ -15,6 +15,8 @@ const user = ref({ name: 'Tom', age: 14 })
 const changeUserName = () => {
   user.value.name = 'Harry Potter'
 }
+
+const superUser = reactive()
 </script>
 
 <template>
