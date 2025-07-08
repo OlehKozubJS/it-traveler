@@ -5,5 +5,5 @@ import { HomepageView } from './views'
 
 <template>
   <FavouritePlace />
-  <HomepageView />
+  <!--HomepageView /-->
 </template>
