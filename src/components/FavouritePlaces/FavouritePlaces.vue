@@ -1,5 +1,6 @@
 <script setup>
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
+import IButton from '../IButton/IButton.vue'
 </script>
 
 <template>
@@ -7,4 +8,5 @@ import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
     <div class="text-grey mb-4">Додані маркери</div>
     <FavouritePlace :key="number" v-for="number in 4" />
   </div>
+  <IButton />
 </template>
