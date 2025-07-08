@@ -9,18 +9,6 @@ const counter = ref(0)
 const increment = () => {
   counter.value += 1
 }
-
-const user = ref({ name: 'Tom', age: 14 })
-
-const changeUserName = () => {
-  user.value.name = 'Harry Potter'
-}
-
-let superUser = reactive({ name: 'Super user', age: 1000 })
-
-const changeSuperUserName = () => {
-  superUser.name = 'New super user'
-}
 </script>
 
 <template>
