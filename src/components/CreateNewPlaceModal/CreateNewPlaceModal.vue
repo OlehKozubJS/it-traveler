@@ -1,13 +1,15 @@
 <script setup>
+const props = defineProps({ isOpen: { default: false, type: Boolean } })
+
 import IModal from '../IModal/IModal.vue'
 import IInput from '../IInput/IInput.vue'
 import InputImage from '../InputImage/InputImage.vue'
 import IButton from '../IButton/IButton.vue'
 import MarkerIcon from '../icons/MarkerIcon.vue'
+import { reactive } from 'vue'
 
-const props = defineProps({ isOpen: { default: false, type: Boolean } })
-
-const emit = defineEmits(['close'])
+const emit = defineEmits(['close', 'submit'])
+const formData = reactive()
 </script>
 
 <template>
