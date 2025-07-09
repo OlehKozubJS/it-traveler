@@ -4,3 +4,7 @@
   --color-primary: #f3743d;
   --color-grey: #939393;
 }
+
+body {
+  background-color: black;
+}
