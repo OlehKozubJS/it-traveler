@@ -1,4 +1,6 @@
+import { token } from './token'
+
 export const mapSettings = {
   style: '',
-  apiToken: '',
+  apiToken: token,
 }
