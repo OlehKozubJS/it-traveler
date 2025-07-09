@@ -16,6 +16,10 @@ onUnmounted(() => {
 })
 
 const imageURL = ref('')
+
+const handleUploaded = (newImageURL) => {
+  imageURL.value = newImageURL
+}
 </script>
 
 <template>
@@ -28,7 +32,8 @@ const imageURL = ref('')
         <button @click="emit('close')">
           <CrossIcon class="absolute right-3 top-3 w-6 h-6" />
         </button>
-        <InputImage @uploaded="console.log" />
+        <InputImage @uploaded="handleUploaded" />
+        <img :src="imageURL" alt="" />
         <slot></slot>
       </div></div
   ></component>
