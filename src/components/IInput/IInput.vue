@@ -1,5 +1,7 @@
 <script setup>
 const props = defineProps({ label: String })
+
+const value = ref('')
 </script>
 
 <template>
