@@ -21,5 +21,5 @@ const closeModal = () => {
   <!--HomepageView /-->
   <RegistrationForm @submit="console.log" />
   <LoginForm @submit="console.log" />
-  <IModal v-if="isOpen" @close="console.log('closed')" />
+  <IModal v-if="isOpen" @close="closeModal" />
 </template>
