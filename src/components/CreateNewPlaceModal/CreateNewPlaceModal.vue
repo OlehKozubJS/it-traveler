@@ -16,7 +16,7 @@ const handleUpload = (url) => {
 }
 
 const uploadText = computed(() => {
-  return formData.img ? 'Натисність тут, щоб додати фото'
+  return `Натисність тут, щоб ${formData.img ? 'додати' : 'змінити'} фото`
 })
 </script>
 
