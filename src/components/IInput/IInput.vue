@@ -13,13 +13,13 @@ const props = defineProps({
   },
 })
 
+defineOptions({ inheritAttrs: false })
+
 const text = ref('')
 
 const changeValue = (event) => {
   text.value = event.target.value
 }
-
-defineOptions({ inheritAttrs: false })
 </script>
 
 <template>
