@@ -2,6 +2,8 @@
 const props = defineProps({ label: String })
 
 const value = ref('')
+
+const
 </script>
 
 <template>
