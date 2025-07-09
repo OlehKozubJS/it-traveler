@@ -9,7 +9,7 @@ const props = defineProps({
     type: String,
     default: 'text',
     validator: () => {
-      return ['number', 'text', 'email', 'tel', 'password']
+      return ['number', 'text', 'email', 'tel', 'password', 'textarea']
     },
   },
 })
@@ -19,6 +19,10 @@ defineOptions({ inheritAttrs: false })
 const text = ref('')
 
 const emit = defineEmits(['update:modelValue'])
+
+const isTextarea = compute(() => {
+  return props.type === 'textarea'
+})
 </script>
 
 <template>
