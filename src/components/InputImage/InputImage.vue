@@ -3,7 +3,11 @@ import UploadIcon from './UploadIcon.vue'
 
 const handleUploadImage = (event) => {
   const file = event.target.files[0]
-  console.log(file)
+  const fileReader = new FileReader()
+  fileReader.readAsDataURL(file)
+  fileReader.onload = () => {
+    console.log(fileReader.result)
+  }
 }
 </script>
 
