@@ -4,7 +4,7 @@ import UploadIcon from './UploadIcon.vue'
 
 <template>
   <label classr="cursor-pointer hover-text-primary">
-    <input type="text" />
+    <input type="file" accept="image/*" class="hidden" />
     <span>
       <UploadIcon />
       <span></span>
