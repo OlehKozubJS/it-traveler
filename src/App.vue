@@ -1,4 +1,6 @@
 <script setup>
+import { onMounted } from 'vue'
+
 import RegistrationForm from './components/Auth/RegistrationForm/RegistrationForm.vue'
 import LoginForm from './components/Auth/LoginForm/LoginForm.vue'
 //import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
