@@ -12,8 +12,8 @@ const emit = defineEmits(['close'])
 <template>
   <IModal v-if="props.isOpen" @close="emit('close')">
     <div>
-      <IInput />
-      <IInput type="textarea" />
+      <IInput label="Локація" />
+      <IInput label="Опис" type="textarea" />
       <InputImage />
       <IButton variant="gradient">Додати</IButton>
     </div>
