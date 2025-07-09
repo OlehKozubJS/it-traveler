@@ -5,7 +5,7 @@ import { TestComponent } from './components/TestComponent'
 </script>
 
 <template>
-  <FavouritePlaces></FavouritePlaces>
+  <!--FavouritePlaces></!--FavouritePlaces>
   <!--TestComponent /-->
   <!--HomepageView /-->
 </template>
