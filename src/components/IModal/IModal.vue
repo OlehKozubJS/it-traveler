@@ -1,7 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted, Teleport } from 'vue'
-
-import InputImage from '../InputImage/InputImage.vue'
+import { onMounted, onUnmounted, Teleport } from 'vue'
 
 import CrossIcon from '../icons/CrossIcon.vue'
 
@@ -14,12 +12,6 @@ onMounted(() => {
 onUnmounted(() => {
   document.body.style.overflow = 'initial'
 })
-
-const imageURL = ref('')
-
-const handleUploaded = (newImageURL) => {
-  imageURL.value = newImageURL
-}
 </script>
 
 <template>
@@ -32,8 +24,6 @@ const handleUploaded = (newImageURL) => {
         <button @click="emit('close')">
           <CrossIcon class="absolute right-3 top-3 w-6 h-6" />
         </button>
-        <InputImage @uploaded="handleUploaded" />
-        <img :src="imageURL" alt="" />
         <slot></slot>
       </div></div
   ></component>
