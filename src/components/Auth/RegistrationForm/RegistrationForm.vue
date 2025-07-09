@@ -3,6 +3,8 @@ import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
 
 const emit = defineEmits(['submit'])
+
+const foo = ref('')
 </script>
 
 <template>
