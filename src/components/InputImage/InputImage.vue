@@ -5,9 +5,9 @@ import UploadIcon from './UploadIcon.vue'
 <template>
   <label classr="cursor-pointer hover-text-primary">
     <input type="file" accept="image/*" class="hidden" />
-    <span>
+    <span class="flex gap-1 items-center">
       <UploadIcon />
-      <span></span>
+      <span class="underline text-xs">Натисність тут, щоб додати фото</span>
     </span>
   </label>
   <span></span>
