@@ -23,6 +23,7 @@ const handleUpload = (url) => {
       <IInput label="Локація" class="mb-4" v-model="formData.title" />
       <IInput label="Опис" type="textarea" class="mb-2" v-model="formData.description" />
       <InputImage class="mb-10" @uploaded="handleUpload" />
+      <img v-if="formData.img" :src="formData.img" alt="" class="w-6 h-6 object-cover" />
       <IButton variant="gradient" class="w-full">Додати</IButton>
     </form>
   </IModal>
