@@ -4,8 +4,9 @@ import UploadIcon from './UploadIcon.vue'
 
 <template>
   <label classr="cursor-pointer hover-text-primary">
+    <input type="text" />
     <span>
-      <input type="text" />
+      <UploadIcon />
       <span></span>
     </span>
   </label>
