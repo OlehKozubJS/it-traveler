@@ -13,7 +13,11 @@ import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
       <FavouritePlaces />
     </div>
     <div class="w-full h-full flex items-center justify-center text-6xl">
-      <MapboxMap class="w-full h-full" :access-token="mapSettings.apiToken"></MapboxMap>
+      <MapboxMap
+        class="w-full h-full"
+        :access-token="mapSettings.apiToken"
+        :map-style="mapSettings.style"
+      ></MapboxMap>
     </div>
   </main>
 </template>
