@@ -30,6 +30,10 @@ const baseStyles =
 const inputStyles = computed(() => {
   return baseStyles + (isTextarea.value ? ' resize-none' : '')
 })
+
+const componentName = computed(() => {
+  return isTextarea.value ? 'textarea' : 'input'
+})
 </script>
 
 <template>
