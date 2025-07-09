@@ -50,10 +50,12 @@ const componentName = computed(() => {
       /></template>
       <template v-else="isTextarea">
         <textarea
+          :is="componentName"
+          rows="3"
           :class="inputStyles"
           v-bind="{ ...$props, ...$attrs }"
-          @input="emit('update:modelValue', $event.target.value)"
           :value="modelValue"
+          @input="emit('update:modelValue', $event.target.value)"
         />
       </template>
     </label>
