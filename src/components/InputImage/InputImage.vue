@@ -5,6 +5,11 @@ const emit = defineEmits('uploaded')
 
 const handleUploadImage = (event) => {
   const file = event.target.files[0]
+
+  if (file.size > 3 * 1024 * 1024) {
+    return
+  }
+
   const fileReader = new FileReader()
   fileReader.readAsDataURL(file)
   fileReader.onload = () => {
