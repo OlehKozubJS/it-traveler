@@ -7,16 +7,7 @@ import IButton from '@/components/IButton/IButton.vue'
   <form action="" class="max-w-[500px] w-full bg-white p-10 rounded-2xl">
     <IInput class="mb-4" label="Повне ім'я" />
     <IInput class="mb-4" label="Електронна пошта" type="email" />
-    <IInput
-      class="mb-4"
-      label="Пароль"
-      type="password"
-      @input="
-        (event) => {
-          console.log(event.target.value)
-        }
-      "
-    />
-    <IButton variant="gradient">Створити акаунт</IButton>
+    <IInput class="mb-4" label="Пароль" type="password" />
+    <IButton variant="gradient" class="mt-8 w-full">Створити акаунт</IButton>
   </form>
 </template>
