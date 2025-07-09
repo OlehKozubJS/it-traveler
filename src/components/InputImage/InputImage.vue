@@ -23,12 +23,14 @@ const handleUploadImage = (event) => {
 </script>
 
 <template>
-  <label classr="cursor-pointer hover:text-primary">
-    <input type="file" accept="image/*" class="hidden" @change="handleUploadImage" />
-    <span class="flex gap-1 items-center">
-      <UploadIcon />
-      <span class="underline text-xs">Натисність тут, щоб додати фото</span>
-    </span>
-  </label>
-  <div class="text-red-500" v-if="errorMessage">{{ errorMessage }}</div>
+  <div>
+    <label classr="cursor-pointer hover:text-primary">
+      <input type="file" accept="image/*" class="hidden" @change="handleUploadImage" />
+      <span class="flex gap-1 items-center">
+        <UploadIcon />
+        <span class="underline text-xs">Натисність тут, щоб додати фото</span>
+      </span>
+    </label>
+    <div class="text-red-500" v-if="errorMessage">{{ errorMessage }}</div>
+  </div>
 </template>
