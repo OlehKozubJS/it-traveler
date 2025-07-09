@@ -3,7 +3,7 @@ import IModal from '../IModal/IModal.vue'
 import IInput from '../IInput/IInput.vue'
 import InputImage from '../InputImage/InputImage.vue'
 import IButton from '../IButton/IButton.vue'
-import markerIcon from '../icons/markerIcon.vue'
+import MarkerIcon from '../icons/MarkerIcon.vue'
 
 const props = defineProps({ isOpen: { default: false, type: Boolean } })
 
