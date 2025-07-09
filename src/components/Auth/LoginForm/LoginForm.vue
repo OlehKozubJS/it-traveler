@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, toRaw, watch } from 'vue'
+import { reactive, toRaw } from 'vue'
 
 import FormContainer from '../FormContainer.vue'
 import IInput from '@/components/IInput/IInput.vue'
@@ -11,14 +11,6 @@ const userData = reactive({
   email: '',
   password: '',
 })
-
-watch(
-  userData,
-  () => {
-    console.log('user login data changed')
-  },
-  { immediate: true },
-)
 </script>
 
 <template>
