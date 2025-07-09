@@ -10,4 +10,5 @@ import RegistrationForm from './components/Auth/RegistrationForm/RegistrationFor
   <!--FavouritePlaces /-->
   <!--TestComponent /-->
   <!--HomepageView /-->
+  <RegistrationForm />
 </template>
