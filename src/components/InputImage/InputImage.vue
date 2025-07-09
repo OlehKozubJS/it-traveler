@@ -10,5 +10,5 @@ import UploadIcon from './UploadIcon.vue'
       <span class="underline text-xs">Натисність тут, щоб додати фото</span>
     </span>
   </label>
-  <span></span>
+  <span class="text-red-500"></span>
 </template>
