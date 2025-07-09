@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive, toRaw } from 'vue'
 
 import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
@@ -13,7 +13,7 @@ const userData = reactive({ name: '', email: '', password: '' })
   <form
     action=""
     class="max-w-[500px] w-full bg-white p-10 rounded-2xl"
-    @submit.prevent="emit('submit', foo)"
+    @submit.prevent="emit('submit', toRaw(userData))"
   >
     <IInput class="mb-4" label="Повне ім'я" v-model="userData.name" />
     <IInput class="mb-4" label="Електронна пошта" type="email" v-model="userData.email" />
