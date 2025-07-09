@@ -11,7 +11,7 @@ import RegistrationForm from './components/Auth/RegistrationForm/RegistrationFor
   <!--TestComponent /-->
   <!--HomepageView /-->
   <RegistrationForm
-    @submit.prevent="
+    @submit="
       () => {
         console.log('submit')
       }
