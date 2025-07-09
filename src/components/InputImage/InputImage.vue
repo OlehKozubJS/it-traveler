@@ -14,6 +14,7 @@ const handleUploadImage = (event) => {
   }
 
   const fileReader = new FileReader()
+  errorMessage.value = ''
   fileReader.readAsDataURL(file)
   fileReader.onload = () => {
     emit('uploaded', fileReader.result)
