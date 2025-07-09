@@ -5,10 +5,12 @@ import InputImage from '../InputImage/InputImage.vue'
 import IButton from '../IButton/IButton.vue'
 
 const props = defineProps({ isOpen: { default: false, type: Boolean } })
+
+const emit = defineEmits(['close'])
 </script>
 
 <template>
-  <IModal v-if="props.isOpen">
+  <IModal v-if="props.isOpen" @close="emit('close')">
     <div>
       <IInput />
       <IInput type="textarea" />
