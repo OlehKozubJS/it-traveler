@@ -18,19 +18,7 @@ const value = ref('')
   <div class="px-6">
     <IInput label="Some label" />
     {{ value }}
-    <a
-      href=""
-      class="text-black"
-      @click.prevent="
-        () => {
-          console.log('Prevented.')
-        }
-      "
-      >Click me</a
-    >
-    <div @keydown.alt="() => console.log('alt pressed')" class="text-grey mb-4">
-      Додані маркери {{ buttonVariant }}
-    </div>
+    <div class="text-grey mb-4">Додані маркери {{ buttonVariant }}</div>
     <FavouritePlace :key="number" v-for="number in 4" />
     <IButton class="w-full mt-10" @click="changeButtonVariant" :variant="buttonVariant"
       >Додати маркер</IButton
