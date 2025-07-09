@@ -6,6 +6,10 @@ import LoginForm from './components/Auth/LoginForm/LoginForm.vue'
 //import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
 //import { HomepageView } from './views'
 //import { TestComponent } from './components/TestComponent'
+
+onMounted(() => {
+  console.log('mounted')
+})
 </script>
 
 <template>
