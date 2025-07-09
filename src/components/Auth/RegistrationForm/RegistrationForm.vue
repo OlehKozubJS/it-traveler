@@ -1,12 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { reactive } from 'vue'
 
 import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
 
 const emit = defineEmits(['submit'])
 
-const foo = ref('')
+const userData = reactive('')
 </script>
 
 <template>
