@@ -6,7 +6,7 @@ import IInput from '../IInput/IInput.vue'
 import InputImage from '../InputImage/InputImage.vue'
 import IButton from '../IButton/IButton.vue'
 import MarkerIcon from '../icons/MarkerIcon.vue'
-import { reactive } from 'vue'
+import { computed, reactive } from 'vue'
 
 const emit = defineEmits(['close', 'submit'])
 const formData = reactive({ title: '', description: '', img: '' })
@@ -14,6 +14,10 @@ const formData = reactive({ title: '', description: '', img: '' })
 const handleUpload = (url) => {
   formData.img = url
 }
+
+const uploadText = computed(() => {
+  return formData.img ? 'Натисність тут, щоб додати фото'
+})
 </script>
 
 <template>
