@@ -30,5 +30,5 @@ const handleUploadImage = (event) => {
       <span class="underline text-xs">Натисність тут, щоб додати фото</span>
     </span>
   </label>
-  <span class="text-red-500" v-if="errorMessage">{{ errorMessage }}</span>
+  <div class="text-red-500" v-if="errorMessage">{{ errorMessage }}</div>
 </template>
