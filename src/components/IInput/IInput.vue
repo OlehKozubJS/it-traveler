@@ -3,7 +3,7 @@ const props = defineProps({ label: String })
 
 const value = ref('')
 
-const
+const changeValue = () => {}
 </script>
 
 <template>
