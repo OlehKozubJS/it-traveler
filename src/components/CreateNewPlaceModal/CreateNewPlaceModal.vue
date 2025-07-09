@@ -1,6 +1,7 @@
 <script setup>
 import IModal from '../IModal/IModal.vue'
 import IInput from '../IInput/IInput.vue'
+import InputImage from '../InputImage/InputImage.vue'
 
 const props = defineProps({ isOpen: { default: false, type: Boolean } })
 </script>
@@ -10,6 +11,7 @@ const props = defineProps({ isOpen: { default: false, type: Boolean } })
     <div>
       <IInput />
       <IInput type="textarea" />
+      <InputImage />
     </div>
   </IModal>
 </template>
