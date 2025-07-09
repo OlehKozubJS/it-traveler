@@ -31,5 +31,5 @@ coverage
 
 src/map/token.js
 src/map/settings.js
-src/router/
+src/assets
 
