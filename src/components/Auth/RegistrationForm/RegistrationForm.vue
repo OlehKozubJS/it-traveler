@@ -5,9 +5,9 @@ import IButton from '@/components/IButton/IButton.vue'
 
 <template>
   <form action="" class="max-w-[500px] w-full bg-white p-10 rounded-2xl">
-    <IInput label="Повне ім'я" />
-    <IInput label="Електронна пошта" />
-    <IInput label="Пароль" />
-    <IButton />
+    <IInput class="mb-4" label="Повне ім'я" />
+    <IInput class="mb-4" label="Електронна пошта" />
+    <IInput class="mb-4" label="Пароль" />
+    <IButton variant="gradient">Створити акаунт</IButton>
   </form>
 </template>
