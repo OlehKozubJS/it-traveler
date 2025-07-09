@@ -18,6 +18,8 @@ const text = ref('')
 const changeValue = (event) => {
   text.value = event.target.value
 }
+
+defineOptions({ inheritAttrs: false })
 </script>
 
 <template>
