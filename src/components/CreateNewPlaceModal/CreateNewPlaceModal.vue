@@ -22,8 +22,9 @@ const handleUpload = (url) => {
       <div class="flex gap-1 font-bold justify-center mb-10"><MarkerIcon />Додати маркери</div>
       <IInput label="Локація" class="mb-4" v-model="formData.title" />
       <IInput label="Опис" type="textarea" class="mb-2" v-model="formData.description" />
+      <img v-if="formData.img" :src="formData.img" alt="" class="w-10 h-10 object-cover" />
       <InputImage class="mb-10" @uploaded="handleUpload" />
-      <img v-if="formData.img" :src="formData.img" alt="" class="w-6 h-6 object-cover" />
+
       <IButton variant="gradient" class="w-full">Додати</IButton>
     </form>
   </IModal>
