@@ -9,9 +9,13 @@ const emit = defineEmits(['submit'])
 
 const userData = reactive({ name: '', email: '', password: '' })
 
-watch(userData, () => {
-  console.log('user data changed')
-})
+watch(
+  userData,
+  () => {
+    console.log('user data changed')
+  },
+  { immediate: true },
+)
 </script>
 
 <template>
