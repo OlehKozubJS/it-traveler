@@ -17,7 +17,7 @@ const foo = ref('')
   >
     <input type="text" class="text-black" v-model="foo" />
     <IInput class="mb-4" label="Повне ім'я" />
-    <IInput class="mb-4" label="Електронна пошта" type="email" />
+    <IInput class="mb-4" label="Електронна пошта" type="email" v-model="foo" />
     <IInput class="mb-4" label="Пароль" type="password" />
     <IButton variant="gradient" type="submit" class="mt-8 w-full">Створити акаунт</IButton>
   </form>
