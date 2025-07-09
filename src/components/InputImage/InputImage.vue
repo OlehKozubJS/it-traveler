@@ -4,7 +4,7 @@ import UploadIcon from './UploadIcon.vue'
 
 const emit = defineEmits('uploaded')
 const errorMessage = ref('')
-let file = ref(null)
+const file = ref(null)
 
 const handleUploadImage = (event) => {
   file = event.target.files[0]
