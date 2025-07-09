@@ -1,6 +1,8 @@
 <script setup>
 import UploadIcon from './UploadIcon.vue'
 
+const emit = defineEmits('uploaded')
+
 const handleUploadImage = (event) => {
   const file = event.target.files[0]
   const fileReader = new FileReader()
