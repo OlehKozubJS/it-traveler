@@ -4,6 +4,10 @@ import { onMounted, onUnmounted } from 'vue'
 import CrossIcon from '../icons/CrossIcon.vue'
 
 const emit = defineEmits(['close'])
+
+onMounted(() => {
+  document.body.style.overflow = 'hidden'
+})
 </script>
 
 <template>
