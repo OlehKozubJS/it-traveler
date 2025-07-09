@@ -10,5 +10,11 @@ import RegistrationForm from './components/Auth/RegistrationForm/RegistrationFor
   <!--FavouritePlaces /-->
   <!--TestComponent /-->
   <!--HomepageView /-->
-  <RegistrationForm />
+  <RegistrationForm
+    @submit="
+      () => {
+        console.log('submit')
+      }
+    "
+  />
 </template>
