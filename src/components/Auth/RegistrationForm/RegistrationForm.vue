@@ -1,6 +1,7 @@
 <script setup>
 import { reactive, toRaw } from 'vue'
 
+import FormContainer from '../FormContainer.vue'
 import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
 
@@ -11,7 +12,6 @@ const userData = reactive({ name: '', email: '', password: '' })
 
 <template>
   <form
-    action=""
     class="max-w-[500px] w-full bg-white p-10 rounded-2xl"
     @submit.prevent="emit('submit', toRaw(userData))"
   >
