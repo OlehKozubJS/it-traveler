@@ -1,7 +1,9 @@
 <script setup>
 import UploadIcon from './UploadIcon.vue'
 
-const handleUploadImage = () => {}
+const handleUploadImage = (event) => {
+  const file = event.target.file
+}
 </script>
 
 <template>
