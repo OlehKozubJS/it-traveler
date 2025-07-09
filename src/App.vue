@@ -20,11 +20,5 @@ const openModal = () => {
 </script>
 
 <template>
-  <!--FavouritePlaces /-->
-  <!--TestComponent /-->
-  <!--HomepageView /-->]
-  <button @click="openModal" class="text-white">Open modal</button>
-  <RegistrationForm @submit="console.log" />
-  <LoginForm @submit="console.log" />
-  <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" @submit="console.log" />
+  <FavouritePlaces />
 </template>
