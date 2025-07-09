@@ -1,9 +1,11 @@
 <script setup>
 const props = defineProps({ label: String })
 
-const value = ref('')
+const text = ref('')
 
-const changeValue = () => {}
+const changeValue = (event) => {
+  text.value = event.target
+}
 </script>
 
 <template>
