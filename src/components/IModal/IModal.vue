@@ -26,7 +26,7 @@ onUnmounted(() => {
         <button @click="emit('close')">
           <CrossIcon class="absolute right-3 top-3 w-6 h-6" />
         </button>
-        <InputImage />
+        <InputImage @uploaded="console.log" />
         <slot></slot>
       </div></div
   ></component>
