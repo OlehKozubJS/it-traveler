@@ -15,7 +15,7 @@ const userData = reactive({
 
 <template>
   <FormContainer @submit.prevent="emit('submit', toRaw(userData))">
-    <IInput class="mb-4" label="Електронна пошта" type="email" v-model="userData.email" />
+    <IInput class="mb-4" label="Електронна пошта" type="textarea" v-model="userData.email" />
     <IInput class="mb-4" label="Пароль" type="password" v-model="userData.password" />
     <IButton variant="gradient" type="submit" class="mt-32 w-full">Увійти</IButton>
   </FormContainer>
