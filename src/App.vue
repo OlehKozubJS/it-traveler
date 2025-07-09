@@ -1,6 +1,7 @@
 <script setup>
 import { MapboxMap } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+
 import { mapSettings } from './map/settings'
 
 import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
@@ -12,7 +13,7 @@ import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
       <FavouritePlaces />
     </div>
     <div class="w-full h-full flex items-center justify-center text-6xl">
-      <MapboxMap class="w-full h-full"></MapboxMap>
+      <MapboxMap class="w-full h-full" :access-token="mapSettings.apiToken"></MapboxMap>
     </div>
   </main>
 </template>
