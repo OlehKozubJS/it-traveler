@@ -15,7 +15,7 @@ const emit = defineEmits(['close'])
       <IInput />
       <IInput type="textarea" />
       <InputImage />
-      <IButton variant="gradient">Додати місце</IButton>
+      <IButton variant="gradient">Додати</IButton>
     </div>
   </IModal>
 </template>
