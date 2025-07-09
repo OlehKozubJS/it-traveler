@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted, Teleport } from 'vue'
+import { ref, onMounted, onUnmounted, Teleport } from 'vue'
 
 import InputImage from '../InputImage/InputImage.vue'
 
@@ -14,6 +14,8 @@ onMounted(() => {
 onUnmounted(() => {
   document.body.style.overflow = 'initial'
 })
+
+const imageURL = ref('')
 </script>
 
 <template>
