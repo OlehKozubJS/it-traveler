@@ -28,7 +28,7 @@ const handleUploadImage = (event) => {
       <input type="file" accept="image/*" class="hidden" @change="handleUploadImage" />
       <span class="flex gap-1 items-center">
         <UploadIcon />
-        <span class="underline text-xs">Натисність тут, щоб додати фото</span>
+        <span class="underline text-xs">Натисність тут, щоб <span>додати</span> фото</span>
       </span>
     </label>
     <div class="text-red-500" v-if="errorMessage">{{ errorMessage }}</div>
