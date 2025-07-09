@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
 
