@@ -9,7 +9,7 @@ import MarkerIcon from '../icons/MarkerIcon.vue'
 import { reactive } from 'vue'
 
 const emit = defineEmits(['close', 'submit'])
-const formData = reactive()
+const formData = reactive({ title: '', description: '' })
 </script>
 
 <template>
