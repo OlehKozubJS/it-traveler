@@ -8,7 +8,7 @@ const props = defineProps({
     type: String,
     default: 'text',
     validator: () => {
-      return []
+      return ['number', 'text', 'email', 'tel', 'password']
     },
   },
 })
