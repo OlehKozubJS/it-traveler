@@ -13,7 +13,7 @@ const props = defineProps({ isOpen: { default: false, type: Boolean } })
       <IInput />
       <IInput type="textarea" />
       <InputImage />
-      <IButton></IButton>
+      <IButton>Додати місце</IButton>
     </div>
   </IModal>
 </template>
