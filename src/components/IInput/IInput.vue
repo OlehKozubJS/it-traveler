@@ -17,5 +17,6 @@ const changeValue = (event) => {
         type="text"
       />
     </label>
+    {{ text }}
   </div>
 </template>
