@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 const props = defineProps({
   modelValue: String,
@@ -20,8 +20,15 @@ const text = ref('')
 
 const emit = defineEmits(['update:modelValue'])
 
-const isTextarea = compute(() => {
+const isTextarea = computed(() => {
   return props.type === 'textarea'
+})
+
+const baseStyles =
+  'w-full text-sm rounded-[4px] border-[#eaeaea] border-[1px] py-2 px-3 focus:outline-primary'
+
+const inputStyles = computed(() => {
+  return baseStyles + (isTextarea.value ? ' resize-none' : '')
 })
 </script>
 
@@ -30,18 +37,21 @@ const isTextarea = compute(() => {
     {{ text }}
     <label class="block" for="">
       <span class="block text-xs ps-3 mb-2">{{ props.label }}</span>
-      <input
-        class="w-full text-sm rounded-[4px] border-[#eaeaea] border-[1px] py-2 px-3 focus:outline-primary"
-        v-bind="{ ...$props, ...$attrs }"
-        @input="emit('update:modelValue', $event.target.value)"
-        :value="modelValue"
-      />
-      <textarea
-        class="w-full text-sm rounded-[4px] border-[#eaeaea] border-[1px] py-2 px-3 focus:outline-primary resize-none"
-        v-bind="{ ...$props, ...$attrs }"
-        @input="emit('update:modelValue', $event.target.value)"
-        :value="modelValue"
-      />
+      <template v-if="!isTextarea">
+        <input
+          class="w-full text-sm rounded-[4px] border-[#eaeaea] border-[1px] py-2 px-3 focus:outline-primary"
+          v-bind="{ ...$props, ...$attrs }"
+          @input="emit('update:modelValue', $event.target.value)"
+          :value="modelValue"
+      /></template>
+      <template v-else="isTextarea">
+        <textarea
+          class="w-full text-sm rounded-[4px] border-[#eaeaea] border-[1px] py-2 px-3 focus:outline-primary resize-none"
+          v-bind="{ ...$props, ...$attrs }"
+          @input="emit('update:modelValue', $event.target.value)"
+          :value="modelValue"
+        />
+      </template>
     </label>
   </div>
 </template>
