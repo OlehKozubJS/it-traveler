@@ -31,4 +31,5 @@ coverage
 
 src/map/token.js
 src/map/settings.js
-src/router/NewFile.vue
+src/router/
+
