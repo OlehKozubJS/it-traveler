@@ -1,6 +1,7 @@
 <script setup>
 import { MapboxMap } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { mapSettings } from './map/settings'
 
 import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
 </script>
