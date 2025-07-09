@@ -26,5 +26,5 @@ const openModal = () => {
   <button @click="openModal" class="text-white">Open modal</button>
   <RegistrationForm @submit="console.log" />
   <LoginForm @submit="console.log" />
-  <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" />
+  <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" @submit="console.log" />
 </template>
