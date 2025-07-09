@@ -10,5 +10,5 @@ import RegistrationForm from './components/Auth/RegistrationForm/RegistrationFor
   <!--FavouritePlaces /-->
   <!--TestComponent /-->
   <!--HomepageView /-->
-  <RegistrationForm @submit="console.log()" />
+  <RegistrationForm @submit="console.log" />
 </template>
