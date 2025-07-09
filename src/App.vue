@@ -1,12 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import CreateNewPlaceModal from './components/CreateNewPlaceModal/CreateNewPlaceModal.vue'
-import RegistrationForm from './components/Auth/RegistrationForm/RegistrationForm.vue'
-import LoginForm from './components/Auth/LoginForm/LoginForm.vue'
-import IModal from './components/IModal/IModal.vue'
-//import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
-//import { HomepageView } from './views'
-//import { TestComponent } from './components/TestComponent'
+
+import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
 
 const isOpen = ref(false)
 
@@ -20,5 +15,10 @@ const openModal = () => {
 </script>
 
 <template>
-  <FavouritePlaces />
+  <main>
+    <div>
+      <FavouritePlaces />
+    </div>
+    <div></div>
+  </main>
 </template>
