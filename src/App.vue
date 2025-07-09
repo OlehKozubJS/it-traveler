@@ -10,8 +10,8 @@ import IModal from './components/IModal/IModal.vue'
 
 const isOpen = ref(true)
 
-const toggleModal = () => {
-  isOpen.value = !isOpen.value
+const closeModal = () => {
+  isOpen.value = false
 }
 </script>
 
