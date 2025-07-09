@@ -1,6 +1,8 @@
 <script setup>
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
+
+const props = defineProps({ items: { required: true, type: Array } })
 </script>
 
 <template>
