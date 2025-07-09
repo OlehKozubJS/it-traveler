@@ -1,12 +1,15 @@
 <script setup>
+import { ref } from 'vue'
 import UploadIcon from './UploadIcon.vue'
 
 const emit = defineEmits('uploaded')
+const errorMessage = ref('')
 
 const handleUploadImage = (event) => {
   const file = event.target.files[0]
 
   if (file.size > 3 * 1024 * 1024) {
+    errorMessage.value = 'Завеликий файл'
     return
   }
 
