@@ -1,9 +1,6 @@
 <script setup>
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
-
-import { MapboxMap } from '@studiometa/vue-mapbox-gl'
-import 'mapbox-gl/dist/mapbox-gl.css'
 </script>
 
 <template>
