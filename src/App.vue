@@ -15,6 +15,7 @@ import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
     <div class="w-full h-full flex items-center justify-center text-6xl">
       <MapboxMap
         class="w-full h-full"
+        :center="[30.523333, 50.450001]"
         :access-token="mapSettings.apiToken"
         :map-style="mapSettings.style"
       ></MapboxMap>
