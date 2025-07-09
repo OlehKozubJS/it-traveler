@@ -22,7 +22,8 @@ const openModal = () => {
 <template>
   <!--FavouritePlaces /-->
   <!--TestComponent /-->
-  <!--HomepageView /-->
+  <!--HomepageView /-->]
+  <button @click="openModal">Open modal</button>
   <RegistrationForm @submit="console.log" />
   <LoginForm @submit="console.log" />
   <IModal v-if="isOpen" @close="closeModal" />
