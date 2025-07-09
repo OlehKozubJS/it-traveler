@@ -26,7 +26,7 @@ const handleUploadImage = (event) => {
   <div>
     <label classr="cursor-pointer hover:text-primary">
       <input type="file" accept="image/*" class="hidden" @change="handleUploadImage" />
-      <span class="flex gap-1 items-center">
+      <span class="flex gap-2 items-center">
         <UploadIcon />
         <span class="underline text-xs">Натисність тут, щоб додати фото</span>
       </span>
