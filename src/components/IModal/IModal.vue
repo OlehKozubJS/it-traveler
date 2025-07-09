@@ -1,7 +1,7 @@
 <script setup>
 import CrossIcon from '../icons/CrossIcon.vue'
 
-const emit = defineEmits('close')
+const emit = defineEmits(['close'])
 </script>
 
 <template>
