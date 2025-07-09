@@ -1,5 +1,7 @@
 <script setup>
 import UploadIcon from './UploadIcon.vue'
+
+const handleUploadImage = () => {}
 </script>
 
 <template>
