@@ -1,6 +1,8 @@
 <script setup>
 import { onMounted, onUnmounted, Teleport } from 'vue'
 
+import InputImage from '../InputImage/InputImage.vue'
+
 import CrossIcon from '../icons/CrossIcon.vue'
 
 const emit = defineEmits(['close'])
@@ -24,6 +26,7 @@ onUnmounted(() => {
         <button @click="emit('close')">
           <CrossIcon class="absolute right-3 top-3 w-6 h-6" />
         </button>
+        <InputImage />
         <slot></slot>
       </div></div
   ></component>
