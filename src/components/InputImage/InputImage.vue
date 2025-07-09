@@ -8,7 +8,6 @@ const handleUploadImage = (event) => {
   const fileReader = new FileReader()
   fileReader.readAsDataURL(file)
   fileReader.onload = () => {
-    console.log(fileReader.result)
     emit('uploaded', fileReader.result)
   }
 }
