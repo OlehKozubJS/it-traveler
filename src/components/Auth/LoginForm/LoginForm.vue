@@ -15,7 +15,7 @@ const userData = reactive({
 watch(
   userData,
   () => {
-    console.log('user data changed')
+    console.log('user login data changed')
   },
   { immediate: true },
 )
