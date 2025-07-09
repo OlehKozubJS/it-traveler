@@ -7,7 +7,7 @@ import IButton from '@/components/IButton/IButton.vue'
 
 const emit = defineEmits(['submit'])
 
-const userData = reactive({ name: '', email: '', password: '' })
+const userData = reactive({ email: '', password: '' })
 </script>
 
 <template>
