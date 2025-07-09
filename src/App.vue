@@ -1,6 +1,7 @@
 <script setup>
 import RegistrationForm from './components/Auth/RegistrationForm/RegistrationForm.vue'
 import LoginForm from './components/Auth/LoginForm/LoginForm.vue'
+import IModal from './components/IModal/IModal.vue'
 //import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
 //import { HomepageView } from './views'
 //import { TestComponent } from './components/TestComponent'
@@ -12,4 +13,5 @@ import LoginForm from './components/Auth/LoginForm/LoginForm.vue'
   <!--HomepageView /-->
   <RegistrationForm @submit="console.log" />
   <LoginForm @submit="console.log" />
+  <IModal />
 </template>
