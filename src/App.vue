@@ -2,19 +2,7 @@
 import { MapboxMap } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-import { ref } from 'vue'
-
 import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
-
-const isOpen = ref(false)
-
-const closeModal = () => {
-  isOpen.value = false
-}
-
-const openModal = () => {
-  isOpen.value = true
-}
 </script>
 
 <template>
