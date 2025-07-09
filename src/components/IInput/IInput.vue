@@ -33,7 +33,7 @@ const emit = defineEmits(['update:modelValue'])
       <input
         class="w-full text-sm rounded-[4px] border-[#eaeaea] border-[1px] py-2 px-3 focus:outline-primary"
         v-bind="{ ...$props, ...$attrs }"
-        @input="$emit('update:modelValue', $event.target.value)"
+        @input="emit('update:modelValue', $event.target.value)"
         :value="modelValue"
       />
     </label>
