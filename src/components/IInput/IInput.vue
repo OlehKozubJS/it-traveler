@@ -1,7 +1,17 @@
 <script setup>
 import { ref } from 'vue'
 
-const props = defineProps({ label: String })
+const props = defineProps({
+  label: String,
+  placeholder: String,
+  type: {
+    type: String,
+    default: 'text',
+    validator: () => {
+      return []
+    },
+  },
+})
 
 const text = ref('')
 
