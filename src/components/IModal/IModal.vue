@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, Teleport } from 'vue'
 
 import CrossIcon from '../icons/CrossIcon.vue'
 
