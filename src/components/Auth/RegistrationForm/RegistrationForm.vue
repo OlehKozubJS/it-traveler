@@ -8,6 +8,6 @@ import IButton from '@/components/IButton/IButton.vue'
     <IInput class="mb-4" label="Повне ім'я" />
     <IInput class="mb-4" label="Електронна пошта" type="email" />
     <IInput class="mb-4" label="Пароль" type="password" />
-    <IButton variant="gradient" class="mt-8 w-full">Створити акаунт</IButton>
+    <IButton variant="gradient" type="submit" class="mt-8 w-full">Створити акаунт</IButton>
   </form>
 </template>
