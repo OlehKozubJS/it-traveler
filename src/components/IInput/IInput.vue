@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 
 const props = defineProps({
+  modelValue: String,
   label: String,
   placeholder: String,
   type: {
@@ -20,6 +21,8 @@ const text = ref('')
 const changeValue = (event) => {
   text.value = event.target.value
 }
+
+defineEmits(['update:modelValue'])
 </script>
 
 <template>
