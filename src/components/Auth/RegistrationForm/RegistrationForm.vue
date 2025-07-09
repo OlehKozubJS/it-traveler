@@ -13,7 +13,7 @@ const foo = ref('')
   <form
     action=""
     class="max-w-[500px] w-full bg-white p-10 rounded-2xl"
-    @submit.prevent="emit('submit', { name: 'Name' })"
+    @submit.prevent="emit('submit', foo)"
   >
     <input type="text" class="text-black" v-model="foo" />
     <IInput class="mb-4" label="Повне ім'я" />
