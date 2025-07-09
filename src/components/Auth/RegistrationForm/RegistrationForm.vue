@@ -11,9 +11,9 @@ import IButton from '@/components/IButton/IButton.vue'
       class="mb-4"
       label="Пароль"
       type="password"
-      @focus="
-        () => {
-          console.log('focused')
+      @input="
+        (event) => {
+          console.log(event.target.value)
         }
       "
     />
