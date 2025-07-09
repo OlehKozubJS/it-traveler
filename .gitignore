@@ -32,3 +32,4 @@ coverage
 src/map/token.js
 src/map/settings.js
 src/views/HomepageView.vue
+src/views/index.js
