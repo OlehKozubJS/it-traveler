@@ -16,7 +16,7 @@ const handleUpload = (url) => {
 }
 
 const uploadText = computed(() => {
-  return `Натисність тут, щоб ${formData.img ? 'додати' : 'змінити'} фото`
+  return `Натисність тут, щоб ${formData.img ? 'змінити' : 'додати'} фото`
 })
 </script>
 
@@ -28,7 +28,7 @@ const uploadText = computed(() => {
       <IInput label="Опис" type="textarea" class="mb-2" v-model="formData.description" />
       <div class="flex gap-1 items-center mb-10">
         <img v-if="formData.img" :src="formData.img" alt="" class="w-20 h-20 object-cover" />
-        <InputImage class="mb-10" @uploaded="handleUpload" />
+        <InputImage class="mb-10" @uploaded="handleUpload">{{ uploadText }}</InputImage>
       </div>
       <IButton variant="gradient" class="w-full">Додати</IButton>
     </form>
