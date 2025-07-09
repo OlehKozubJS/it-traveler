@@ -9,5 +9,6 @@ import CrossIcon from '../icons/CrossIcon.vue'
         <CrossIcon class="absolute right-3 top-3 w-6 h-6" />
       </button>
     </div>
+    <slot></slot>
   </div>
 </template>
