@@ -13,6 +13,10 @@ const isOpen = ref(true)
 const closeModal = () => {
   isOpen.value = false
 }
+
+const openModal = () => {
+  isOpen.value = true
+}
 </script>
 
 <template>
