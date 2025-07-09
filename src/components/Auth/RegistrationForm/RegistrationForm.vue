@@ -11,6 +11,7 @@ const emit = defineEmits(['submit'])
     class="max-w-[500px] w-full bg-white p-10 rounded-2xl"
     @submit.prevent="emit('submit', { name: 'Name' })"
   >
+    <input type="text" class="text-black" />
     <IInput class="mb-4" label="Повне ім'я" />
     <IInput class="mb-4" label="Електронна пошта" type="email" />
     <IInput class="mb-4" label="Пароль" type="password" />
