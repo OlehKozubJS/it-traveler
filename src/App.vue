@@ -15,10 +15,10 @@ const openModal = () => {
 </script>
 
 <template>
-  <main>
-    <div>
+  <main class="flex h-screen">
+    <div class="bg-white h-full w-[400px] shrink-0 overflow-autop pb-10">
       <FavouritePlaces />
     </div>
-    <div></div>
+    <div class=""></div>
   </main>
 </template>
