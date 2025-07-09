@@ -1,6 +1,8 @@
 <script setup>
 import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
+
+const emit = defineEmits(['submit'])
 </script>
 
 <template>
