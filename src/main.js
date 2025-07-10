@@ -7,6 +7,8 @@ import { authService } from './api/authService'
 
 import App from './App.vue'
 
+const token = localStorage.getItem()
+
 const app = createApp(App)
 
 app.use(createPinia())
