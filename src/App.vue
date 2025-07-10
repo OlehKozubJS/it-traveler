@@ -37,7 +37,11 @@ const favouritePlaces = [
         :access-token="mapSettings.apiToken"
         :map-style="mapSettings.style"
       >
-        <MapboxMarker v-for="place in favouritePlaces" :key="place.id"></MapboxMarker>
+        <MapboxMarker
+          v-for="place in favouritePlaces"
+          :key="place.id"
+          :lngLat="place.lngLat"
+        ></MapboxMarker>
       </MapboxMap>
     </div>
   </main>
