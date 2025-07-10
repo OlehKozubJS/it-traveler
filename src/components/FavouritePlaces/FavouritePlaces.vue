@@ -21,6 +21,7 @@ const addMarker = () => {}
         :title="place.title"
         :description="place.description"
         :img="place.img"
+        :is-active="place.id === activeId"
       />
     </slot>
     <slot></slot>
