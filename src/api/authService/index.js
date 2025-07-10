@@ -1,3 +1,5 @@
+import { clientFetch } from '../clientFetch'
+
 class AuthService {
   #token = null
 
@@ -8,7 +10,8 @@ class AuthService {
   setToken() {}
 
   async loginUser(body) {
-    return clientFetch.post('/user/login', body)
+    const { data } = clientFetch.post('/user/login', body)
+    const { accessToken } = await data
   }
 
   async registerUser(body) {
