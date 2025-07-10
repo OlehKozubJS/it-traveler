@@ -7,11 +7,13 @@ class AuthService {
     return Boolean(this.#token)
   }
 
-  setToken() {}
+  setToken(token) {}
 
   async loginUser(body) {
-    const { data } = clientFetch.post('/user/login', body)
+    const { data } = await clientFetch.post('/user/login', body)
     const { accessToken } = await data
+
+    this.setToken(accessToken)
   }
 
   async registerUser(body) {
