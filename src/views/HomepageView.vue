@@ -43,7 +43,7 @@ const changePlace = (newId) => {
 }
 
 onMounted(async () => {
-  const { data } = await getFavoritePlaces
+  const { data } = await getFavoritePlaces()
 })
 </script>
 
