@@ -4,6 +4,8 @@ import { reactive, toRaw } from 'vue'
 import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
 
+const props = defineProps({})
+
 const emit = defineEmits(['submit'])
 
 const userData = reactive({ name: '', email: '', password: '' })
