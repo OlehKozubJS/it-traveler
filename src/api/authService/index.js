@@ -1,3 +1,4 @@
+import { router } from '@/router'
 import { clientFetch } from '../clientFetch'
 
 export const TOKEN_KEY = 'token'
@@ -76,6 +77,7 @@ clientFetch.interceptors.response.use(
       try {
         return await authService.refresh()
       } catch (e) {
+        router.push('/auth/login')
         return Promise.reject(e)
       }
     }
