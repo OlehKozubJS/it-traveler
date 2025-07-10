@@ -66,16 +66,11 @@ clientFetch.interceptors.request.use((request) => {
 
 clientFetch.interceptors.response.use(
   (response) => response,
-  (error) => {
-    const token = authService.getToken()
+  async (error) => {
+    const errorCode = error.response.status
 
-    if (token) {
-      request.headers = {
-        ...request.headers,
-        Authorization: `Bearer ${token}`,
-      }
+    if (errorCode === 401) {
+      await authService.refresh()
     }
-
-    return request
   },
 )
