@@ -11,7 +11,7 @@ const userData = reactive({ name: '', email: '', password: '' })
 watch(
   userData,
   () => {
-    console.log('user registration data changed')
+    console.log(userData)
   },
   { immediate: true },
 )
