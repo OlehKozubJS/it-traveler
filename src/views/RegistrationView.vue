@@ -19,5 +19,5 @@ const handleRegisterUser = async (userData) => {
 </script>
 
 <template>
-  <RegistrationForm @submit="handleRegisterUser" :isLoading="isLoading" />
+  <RegistrationForm @submit="handleRegisterUser" :is-loading="isLoading" />
 </template>
