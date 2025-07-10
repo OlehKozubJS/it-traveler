@@ -25,7 +25,10 @@ const isLink = computed(() => {
 })
 
 const componentName = computed(() => {
-  return isLink.value ? 'RouterLink' : 'button'
+  return isLink.value ? RouterLink : 'button'
+})
+const link = computed(() => {
+  return isLink.value ? props.to : undefined
 })
 </script>
 
@@ -34,6 +37,7 @@ const componentName = computed(() => {
     :is="componentName"
     class="bg-[#FFA279] rounded-xl py-3 px-10 text-white font-bold -tracking-wider"
     :class="bgStyles"
+    :to="link"
   >
     <slot></slot>
   </component>
