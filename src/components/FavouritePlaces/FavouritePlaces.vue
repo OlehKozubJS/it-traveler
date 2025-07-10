@@ -4,7 +4,7 @@ import IButton from '../IButton/IButton.vue'
 
 const props = defineProps({
   items: { required: true, type: Array },
-  activeId: { required: true, type: Number },
+  activeId: { required: true, type: [Number, null] },
 })
 
 const addMarker = () => {}
