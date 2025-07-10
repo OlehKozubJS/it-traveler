@@ -3,6 +3,7 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { router } from './router'
+import { authService } from './api/authService'
 
 import App from './App.vue'
 
