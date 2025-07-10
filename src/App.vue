@@ -31,6 +31,12 @@ const activeId = ref(null)
 const changeActiveId = (newId) => {
   activeId.value = newId
 }
+
+const changePlace = (newId) => {
+  const activePlace = favouritePlaces.find((place) => {
+    place.id = newId
+  })
+}
 </script>
 
 <template>
