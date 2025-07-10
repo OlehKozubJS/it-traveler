@@ -7,8 +7,12 @@ import BaseLayout from '../layouts/BaseLayout.vue'
   <BaseLayout>
     <section class="w-full bg-white p-10 rounded-2xl">
       <div class="flex justify-center gap-10 mb-10">
-        <router-link to="/auth/registration" class="text-grey">Створити акаунт</router-link>
-        <router-link to="/auth/login" class="text-grey">Увійти</router-link>
+        <router-link to="/auth/registration" class="text-grey" exact-active-class="text-primary"
+          >Створити акаунт</router-link
+        >
+        <router-link to="/auth/login" class="text-grey" exact-active-class="text-primary"
+          >Увійти</router-link
+        >
       </div>
       <router-view></router-view>
     </section>
