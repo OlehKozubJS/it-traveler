@@ -7,7 +7,6 @@ import BaseLayout from '../layouts/BaseLayout.vue'
   <BaseLayout>
     <router-link>Створити акаунт</router-link>
     <router-link>Увійти</router-link>
-    <router-link></router-link>
     <router-view></router-view>
   </BaseLayout>
 </template>
