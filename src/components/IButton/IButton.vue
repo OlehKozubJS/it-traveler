@@ -43,7 +43,7 @@ const link = computed(() => {
     :class="bgStyles"
     :to="link"
   >
-    <template v-if="props.isLoading">Loading</template>
+    <template v-if="props.isLoading">Loading...</template>
     <template v-else>
       <slot></slot>
     </template>
