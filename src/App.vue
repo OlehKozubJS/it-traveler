@@ -37,6 +37,8 @@ const changePlace = (newId) => {
   const { lngLat } = favouritePlaces.find((place) => place.id === newId)
 
   changeActiveId(newId)
+
+  map.value.flyTo({ center: lngLat })
 }
 </script>
 
@@ -56,6 +58,11 @@ const changePlace = (newId) => {
         :zoom="10"
         :access-token="mapSettings.apiToken"
         :map-style="mapSettings.style"
+        @mb-created="
+          (mapInstance) => {
+            map = mapInstance
+          }
+        "
       >
         <MapboxMarker v-for="place in favouritePlaces" :key="place.id" :lngLat="place.lngLat">
           <button @click="changeActiveId(place.id)">
