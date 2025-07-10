@@ -2,6 +2,11 @@
 import FavouritePlaceIconButton from './FavouritePlaceIconButton.vue'
 import EditIcon from './EditIcon.vue'
 import DeleteIcon from './DeleteIcon.vue'
+
+const props = defineProps({
+  title: { required: true, type: String },
+  description: { rquired: true, type: String },
+})
 </script>
 
 <template>
