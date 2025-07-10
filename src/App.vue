@@ -40,7 +40,7 @@ const favouritePlaces = [
         :map-style="mapSettings.style"
       >
         <MapboxMarker v-for="place in favouritePlaces" :key="place.id" :lngLat="place.lngLat">
-          <MarkerIcon />
+          <MarkerIcon class="h-8 w-8" />
         </MapboxMarker>
       </MapboxMap>
     </div>
