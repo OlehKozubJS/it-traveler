@@ -9,6 +9,8 @@ const props = defineProps({ items: { required: true, type: Array } })
   <div class="px-6">
     <div class="text-grey mb-4">Додані маркери {{ buttonVariant }}</div>
     <FavouritePlace :key="place.id" v-for="place in props.items" />
-    <IButton class="w-full mt-10" @click="changeButtonVariant">Додати маркер</IButton>
+    <IButton class="w-full mt-10" @click="changeButtonVariant" variant="gradient"
+      >Додати маркер</IButton
+    >
   </div>
 </template>
