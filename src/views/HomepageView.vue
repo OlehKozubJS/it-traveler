@@ -40,7 +40,7 @@ const changeActiveId = (newId) => {
 }
 
 const changePlace = (newId) => {
-  const { lngLat } = favouritePlaces.find((place) => place.id === newId)
+  const { lngLat } = favouritePlaces.value.find((place) => place.id === newId)
 
   changeActiveId(newId)
 
@@ -49,6 +49,7 @@ const changePlace = (newId) => {
 
 onMounted(async () => {
   const { data } = await getFavoritePlaces()
+  favouritePlaces.value = data
   console.log(data)
 })
 </script>
