@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-
 import { loginUser } from '@/api/user'
 import { useRouter } from 'vue-router'
 
