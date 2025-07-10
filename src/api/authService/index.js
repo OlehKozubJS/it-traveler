@@ -1,5 +1,7 @@
 import { clientFetch } from '../clientFetch'
 
+const TOKEN_KEY = 'token'
+
 class AuthService {
   #token = null
 
@@ -7,7 +9,9 @@ class AuthService {
     return Boolean(this.#token)
   }
 
-  setToken(token) {}
+  setToken(token) {
+    localStorage.setItem(TOKEN_KEY, token)
+  }
 
   clearToken() {}
 
