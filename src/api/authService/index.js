@@ -63,3 +63,16 @@ clientFetch.interceptors.request.use((request) => {
 
   return request
 })
+
+clientFetch.interceptors.response.use((request) => {
+  const token = authService.getToken()
+
+  if (token) {
+    request.headers = {
+      ...request.headers,
+      Authorization: `Bearer ${token}`,
+    }
+  }
+
+  return request
+})
