@@ -27,15 +27,15 @@ const favouritePlaces = [
 ]
 
 const activeId = ref(null)
+const map = ref(null)
 
 const changeActiveId = (newId) => {
   activeId.value = newId
 }
 
 const changePlace = (newId) => {
-  const { lngLat } = favouritePlaces.find((place) => {
-    place.id === newId
-  })
+  const { lngLat } = favouritePlaces.find((place) => place.id === newId)
+
   changeActiveId(newId)
 }
 </script>
