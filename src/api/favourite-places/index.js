@@ -6,6 +6,6 @@ export const getFavoritePlaces = () => {
   return clientFetch.get(BASE_PLACES_URL)
 }
 
-export const getFavoritePlaces = () => {
-  return clientFetch.get(BASE_PLACES_URL)
+export const addFavoritePlace = () => {
+  return clientFetch.post(BASE_PLACES_URL)
 }
