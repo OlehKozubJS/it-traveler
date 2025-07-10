@@ -29,6 +29,7 @@ const favouritePlaces = [
 const activeId = ref(null)
 
 const changeActiveId = (newId) => {
+  console.log('changActiveId')
   activeId.value = newId
 }
 </script>
