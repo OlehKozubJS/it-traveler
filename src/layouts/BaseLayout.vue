@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <main class="flex h-screen bg-primary">
     <section class="flex-1 flex justify-center items-center px-5">
