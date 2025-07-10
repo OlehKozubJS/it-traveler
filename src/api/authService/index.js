@@ -1,6 +1,6 @@
 import { clientFetch } from '../clientFetch'
 
-const TOKEN_KEY = 'token'
+export const TOKEN_KEY = 'token'
 
 class AuthService {
   #token = null
