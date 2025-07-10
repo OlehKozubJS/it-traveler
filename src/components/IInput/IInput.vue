@@ -41,23 +41,14 @@ const componentName = computed(() => {
     {{ text }}
     <label class="block" for="">
       <span class="block text-xs ps-3 mb-2">{{ props.label }}</span>
-      <template v-if="!isTextarea">
-        <input
-          :class="inputStyles"
-          v-bind="{ ...$props, ...$attrs }"
-          @input="emit('update:modelValue', $event.target.value)"
-          :value="modelValue"
-      /></template>
-      <template v-else="isTextarea">
-        <textarea
-          :is="componentName"
-          rows="3"
-          :class="inputStyles"
-          v-bind="{ ...$props, ...$attrs }"
-          :value="modelValue"
-          @input="emit('update:modelValue', $event.target.value)"
-        />
-      </template>
+      <component
+        :is="componentName"
+        rows="3"
+        :class="inputStyles"
+        v-bind="{ ...$props, ...$attrs }"
+        :value="modelValue"
+        @input="emit('update:modelValue', $event.target.value)"
+      />
     </label>
   </div>
 </template>
