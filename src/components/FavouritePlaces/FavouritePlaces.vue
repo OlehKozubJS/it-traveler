@@ -12,7 +12,13 @@ const addMarker = () => {}
     <div class="text-grey mb-4">Додані маркери</div>
     <slot name="label"></slot>
     <slot name="list">
-      <FavouritePlace :key="place.id" v-for="place in props.items" />
+      <FavouritePlace
+        v-for="place in props.items"
+        :key="place.id"
+        :title="place.title"
+        :description="place.description"
+        :img="place.img"
+      />
     </slot>
     <slot></slot>
     <IButton class="w-full mt-10" @click="addMarker" variant="gradient">Додати маркер</IButton>
