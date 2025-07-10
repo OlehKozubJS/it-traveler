@@ -1,3 +1,7 @@
-<script setup></script>
+<script setup>
+import RegistrationForm from '../components/Auth/RegistrationForm/RegistrationForm.vue'
+</script>
 
-<template></template>
+<template>
+  <RegistrationForm />
+</template>
