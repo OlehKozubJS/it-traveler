@@ -8,11 +8,11 @@ import { useMutation } from '@/composables/useMutation'
 
 import LoginForm from '../components/Auth/LoginForm/LoginForm.vue'
 
-const { data, isLoading, error, mutation: handleLoginUser } = useMutation(loginUser)
+const { isLoading, error, mutation: handleLoginUser } = useMutation(loginUser)
 const router = useRouter()
 </script>
 
 <template>
   <LoginForm @submit="handleLoginUser" :is-loading="isLoading" />
-  <div v-if="error">{{ error.message }}</div>
+  <div v-if="error" class="text-red-500">{{ error.message }}</div>
 </template>
