@@ -5,6 +5,6 @@ import AuthView from './views/AuthView.vue'
 
 const routes = [
   { path: '/', component: HomepageView },
-  { path: '/', component: GreetingView },
-  { path: '/', component: AuthView },
+  { path: '/map', component: GreetingView },
+  { path: '/auth', component: AuthView },
 ]
