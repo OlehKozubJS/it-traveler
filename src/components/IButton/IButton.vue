@@ -12,6 +12,10 @@ const props = defineProps({
     },
   },
   to: String,
+  isLoading: {
+    default: false,
+    type: Boolean,
+  },
 })
 
 const bgStyles = computed(() => {
