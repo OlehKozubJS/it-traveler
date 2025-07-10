@@ -6,6 +6,8 @@ import { mapSettings } from './map/settings'
 
 import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
 
+import MarkerIcon from './components/icons/MarkerIcon.vue'
+
 const favouritePlaces = [
   {
     id: 1,
@@ -37,11 +39,9 @@ const favouritePlaces = [
         :access-token="mapSettings.apiToken"
         :map-style="mapSettings.style"
       >
-        <MapboxMarker
-          v-for="place in favouritePlaces"
-          :key="place.id"
-          :lngLat="place.lngLat"
-        ></MapboxMarker>
+        <MapboxMarker v-for="place in favouritePlaces" :key="place.id" :lngLat="place.lngLat">
+          <MarkerIcon />
+        </MapboxMarker>
       </MapboxMap>
     </div>
   </main>
