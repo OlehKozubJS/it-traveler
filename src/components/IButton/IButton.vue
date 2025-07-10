@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, computed, toRefs } from 'vue'
+import { defineProps, computed } from 'vue'
 
 const props = defineProps({
   variant: {
@@ -12,10 +12,8 @@ const props = defineProps({
   },
 })
 
-const { variant } = toRefs(props)
-
 const bgStyles = computed(() => {
-  return variant.value === 'gradient'
+  return props.variant.value === 'gradient'
     ? 'bg-gradient-to-r from-[#FFA279] to-[#F3743D]'
     : 'bg-[#FFA279]'
 })
