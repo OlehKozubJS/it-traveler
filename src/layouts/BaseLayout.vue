@@ -1,7 +1,7 @@
 <template>
   <main class="flex h-screen bg-primary">
     <section class="flex-1 flex justify-center items-center px-5">
-      <div class="text-black max-w-[500px] w-full">
+      <div class="text-white max-w-[500px] w-full">
         <slot></slot>
       </div>
     </section>
