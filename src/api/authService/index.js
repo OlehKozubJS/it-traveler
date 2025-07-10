@@ -9,6 +9,8 @@ class AuthService {
 
   setToken(token) {}
 
+  clearToken() {}
+
   async loginUser(body) {
     const { data } = await clientFetch.post('/user/login', body)
     const { accessToken } = await data
@@ -24,7 +26,9 @@ class AuthService {
   }
 
   async logout() {
-    return clientFetch.get('/user/logout')
+    await clientFetch.get('/user/logout')
+
+    this.clearToken(accessToken)
   }
 
   async refresh() {
