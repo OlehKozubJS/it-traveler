@@ -8,10 +8,10 @@ export const registerUser = (body) => {
   return clientFetch.post('/user/register', body)
 }
 
-export const logout = (body) => {
+export const logout = () => {
   return clientFetch.get('/user/logout')
 }
 
-export const refresh = (body) => {
+export const refresh = () => {
   return clientFetch.get('/user/refresh')
 }
