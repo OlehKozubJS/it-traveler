@@ -8,3 +8,5 @@ const routes = [
   { path: '/map', component: GreetingView },
   { path: '/auth', component: AuthView },
 ]
+
+export const router = createRouter({ history: createWebHistory(), routes })
