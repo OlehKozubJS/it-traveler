@@ -62,7 +62,6 @@ onMounted(async () => {
         :active-id="activeId"
         @place-clicked="changePlace"
       />
-      <div v-if="favouritePlaces.length === 0">Список порожній</div>
     </div>
     <div class="w-full h-full flex items-center justify-center text-6xl">
       <MapboxMap
