@@ -15,7 +15,11 @@ class AuthService {
     this.#token = token
   }
 
-  clearToken() {}
+  clearToken() {
+    this.#token = null
+    localStorage.removeItem(TOKEN_KEY)
+    clientFetch.defaults.headers.common = {}
+  }
 
   async loginUser(body) {
     const { data } = await clientFetch.post('/user/login', body)
