@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 import { MapboxMap, MapboxMarker } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -8,6 +8,7 @@ import { mapSettings } from '../map/settings'
 import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
+import { getFavoritePlaces } from '../api/favourite-places'
 
 const favouritePlaces = [
   {
@@ -40,6 +41,10 @@ const changePlace = (newId) => {
 
   map.value.flyTo({ center: lngLat })
 }
+
+onMounted(async () => {
+  const { data } = await getFavoritePlaces
+})
 </script>
 
 <template>
