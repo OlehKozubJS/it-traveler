@@ -4,8 +4,8 @@ import GreetingView from '../views/GreetingView.vue'
 import AuthView from '../views/AuthView.vue'
 
 const routes = [
-  { path: '/', component: HomepageView },
-  { path: '/map', component: GreetingView },
+  { path: '/', component: GreetingView },
+  { path: '/map', component: HomepageView },
   { path: '/auth', component: AuthView },
 ]
 
