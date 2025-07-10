@@ -9,7 +9,7 @@ const GreetingPage = () => import('../views/GreetingView.vue')
 const HomePage = () => import('../views/HomepageView.vue')
 const AuthPage = () => import('../views/AuthView.vue')
 const LoginPage = () => import('../views/LoginView.vue')
-const RegistrationView = () => import('../views/RegistrationView.vue')
+const RegistrationPage = () => import('../views/RegistrationView.vue')
 
 const routes = [
   { path: '/', component: GreetingPage },
