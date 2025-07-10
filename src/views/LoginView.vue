@@ -14,5 +14,5 @@ const router = useRouter()
 
 <template>
   <LoginForm @submit="handleLoginUser" :is-loading="isLoading" />
-  <div>{{ error.message }}</div>
+  <div v-if="error">{{ error.message }}</div>
 </template>
