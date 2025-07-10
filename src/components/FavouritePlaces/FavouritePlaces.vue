@@ -7,6 +7,8 @@ const props = defineProps({
   activeId: { required: true, type: [Number, null] },
 })
 
+const emit = defineEmits(['place-clicked'])
+
 const addMarker = () => {}
 </script>
 
@@ -22,6 +24,7 @@ const addMarker = () => {}
         :description="place.description"
         :img="place.img"
         :is-active="place.id === props.activeId"
+        @click="emit('place-clicked', place.id)"
       />
     </slot>
     <slot></slot>
