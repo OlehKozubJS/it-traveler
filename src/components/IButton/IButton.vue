@@ -11,6 +11,7 @@ const props = defineProps({
       return ['primary', 'gradient', 'outline']
     },
   },
+  to: String,
 })
 
 const bgStyles = computed(() => {
@@ -18,13 +19,20 @@ const bgStyles = computed(() => {
     ? 'bg-gradient-to-r from-[#FFA279] to-[#F3743D]'
     : 'bg-[#FFA279]'
 })
+
+const isLink = computed(() => {})
+
+const componentName = computed(() => {
+  return props.to ? 'link' : 'button'
+})
 </script>
 
 <template>
-  <button
+  <component
+    :is="componentName"
     class="bg-[#FFA279] rounded-xl py-3 px-10 text-white font-bold -tracking-wider"
     :class="bgStyles"
   >
     <slot></slot>
-  </button>
+  </component>
 </template>
