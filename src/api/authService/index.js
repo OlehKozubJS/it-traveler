@@ -45,3 +45,5 @@ class AuthService {
     return clientFetch.get('/user/refresh')
   }
 }
+
+export const authService = new AuthService()
