@@ -5,8 +5,8 @@ import BaseLayout from '../layouts/BaseLayout.vue'
 
 <template>
   <BaseLayout>
-    <router-link>Створити акаунт</router-link>
-    <router-link>Увійти</router-link>
+    <router-link to="registration">Створити акаунт</router-link>
+    <router-link to="login">Увійти</router-link>
     <router-view></router-view>
   </BaseLayout>
 </template>
