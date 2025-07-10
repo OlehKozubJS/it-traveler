@@ -1,9 +1,12 @@
 <script setup>
+import { ref } from 'vue'
+
 import RegistrationForm from '../components/Auth/RegistrationForm/RegistrationForm.vue'
 import { registerUser } from '../api/user'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+const isLoading = ref(false)
 
 const handleRegisterUser = async (userData) => {
   try {
@@ -16,5 +19,5 @@ const handleRegisterUser = async (userData) => {
 </script>
 
 <template>
-  <RegistrationForm @submit="handleRegisterUser" />
+  <RegistrationForm @submit="handleRegisterUser" :isLoading="isLoading" />
 </template>
