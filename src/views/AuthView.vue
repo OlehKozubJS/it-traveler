@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.vue'
 
 <template>
   <BaseLayout>
-    <section clas=" w-full bg-white p-10 rounded-2xl">
+    <section class="w-full bg-white p-10 rounded-2xl">
       <div>
         <router-link to="/auth/registration">Створити акаунт</router-link>
         <router-link to="/auth/login">Увійти</router-link>
