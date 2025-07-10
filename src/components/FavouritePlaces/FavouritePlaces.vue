@@ -2,7 +2,10 @@
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 
-const props = defineProps({ items: { required: true, type: Array } })
+const props = defineProps({
+  items: { required: true, type: Array },
+  activeId: { required: true, type: Number },
+})
 
 const addMarker = () => {}
 </script>
