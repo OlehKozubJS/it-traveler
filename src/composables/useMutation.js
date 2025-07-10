@@ -11,10 +11,18 @@ export const useMutation = (mutationFunction) => {
 
     try {
       await mutationFunction(...args)
+      error.value = null
     } catch (newError) {
       error.value = newError
     } finally {
       isLoading.value = false
     }
+  }
+
+  return {
+    data,
+    isLoading,
+    error,
+    mutation,
   }
 }
