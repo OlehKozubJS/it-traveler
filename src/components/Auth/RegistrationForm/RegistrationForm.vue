@@ -8,7 +8,11 @@ const props = defineProps({ isLoading: { default: false, type: Boolean } })
 
 const emit = defineEmits(['submit'])
 
-const userData = reactive({ name: '', email: '', password: '' })
+const userData = reactive({
+  name: '',
+  email: '',
+  password: '',
+})
 </script>
 
 <template>
