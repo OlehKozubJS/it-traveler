@@ -1,4 +1,4 @@
-import { router } from '@/router'
+import { router } from '../../router'
 import { clientFetch } from '../clientFetch'
 
 export const TOKEN_KEY = 'token'
