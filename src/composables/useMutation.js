@@ -11,8 +11,8 @@ export const useMutation = (mutationFunction) => {
 
     try {
       await mutationFunction(...args)
-    } catch (error) {
-      console.error(error)
+    } catch (newError) {
+      error.value = newError
     } finally {
       isLoading.value = false
     }
