@@ -6,8 +6,9 @@ import { useRouter } from 'vue-router'
 
 import RegistrationForm from '../components/Auth/RegistrationForm/RegistrationForm.vue'
 
-const router = useRouter()
 const isLoading = ref(false)
+const router = useRouter()
+const error = ref(null)
 
 const handleRegisterUser = async (userData) => {
   isLoading.value = true
