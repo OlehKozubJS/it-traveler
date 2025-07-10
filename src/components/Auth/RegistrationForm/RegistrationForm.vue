@@ -4,7 +4,7 @@ import { reactive, toRaw } from 'vue'
 import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
 
-const props = defineProps({})
+const props = defineProps({ isLoading: { default: false, type: Boolean } })
 
 const emit = defineEmits(['submit'])
 
