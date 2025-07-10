@@ -11,6 +11,7 @@ class AuthService {
 
   setToken(token) {
     localStorage.setItem(TOKEN_KEY, token)
+    clientFetch.defaults.headers.common = { Authorization: `Bearer ${token}` }
   }
 
   clearToken() {}
