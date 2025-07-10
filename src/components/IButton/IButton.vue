@@ -43,6 +43,9 @@ const link = computed(() => {
     :class="bgStyles"
     :to="link"
   >
-    <slot></slot>
+    <template></template>
+    <template>
+      <slot></slot>
+    </template>
   </component>
 </template>
