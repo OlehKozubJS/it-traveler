@@ -21,7 +21,7 @@ const addMarker = () => {}
         :title="place.title"
         :description="place.description"
         :img="place.img"
-        :is-active="place.id === activeId"
+        :is-active="place.id === props.activeId"
       />
     </slot>
     <slot></slot>
