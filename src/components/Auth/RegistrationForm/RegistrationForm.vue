@@ -1,7 +1,6 @@
 <script setup>
 import { reactive, toRaw, watch } from 'vue'
 
-import FormContainer from '../FormContainer.vue'
 import IInput from '@/components/IInput/IInput.vue'
 import IButton from '@/components/IButton/IButton.vue'
 
