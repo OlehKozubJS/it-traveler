@@ -3,5 +3,5 @@ import RegistrationForm from '../components/Auth/RegistrationForm/RegistrationFo
 </script>
 
 <template>
-  <RegistrationForm />
+  <RegistrationForm @submit="console.log" />
 </template>
