@@ -7,8 +7,20 @@ import { mapSettings } from './map/settings'
 import FavouritePlaces from './components/FavouritePlaces/FavouritePlaces.vue'
 
 const favouritePlaces = [
-  { id: 1, title: 'New place 1', description: 'Super description 1', img: '' },
-  { id: 2, title: 'New place 2', description: 'Super description 2', img: '' },
+  {
+    id: 1,
+    title: 'New place 1',
+    description: 'Super description 1',
+    img: '',
+    lngLat: '',
+  },
+  {
+    id: 2,
+    title: 'New place 2',
+    description: 'Super description 2',
+    img: '',
+    lngLat: '',
+  },
 ]
 </script>
 
