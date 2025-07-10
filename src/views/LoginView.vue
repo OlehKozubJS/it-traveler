@@ -11,9 +11,11 @@ import LoginForm from '../components/Auth/LoginForm/LoginForm.vue'
 const {
   isLoading,
   error,
-  mutation: (data)=> {authService.loginUser},
+  mutation: handleLoginUser,
 } = useMutation({
-  mutationFunction: loginUser,
+  mutationFunction: (data) => {
+    authService.loginUser(data)
+  },
   onSuccess: () => {
     router.replace('/map')
   },
