@@ -11,6 +11,7 @@ import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
 
+/*
 const favouritePlaces = [
   {
     id: 1,
@@ -27,6 +28,9 @@ const favouritePlaces = [
     lngLat: [30.523333, 50.450001],
   },
 ]
+*/
+
+const favouritePlaces = ref([])
 
 const activeId = ref(null)
 const map = ref(null)
