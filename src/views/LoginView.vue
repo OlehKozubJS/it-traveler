@@ -7,6 +7,7 @@ import { useRouter } from 'vue-router'
 import LoginForm from '../components/Auth/LoginForm/LoginForm.vue'
 
 const router = useRouter()
+const error = ref(null)
 const isLoading = ref(false)
 
 const handleLoginUser = async (userData) => {
@@ -24,5 +25,5 @@ const handleLoginUser = async (userData) => {
 </script>
 
 <template>
-  <LoginForm @submit="handleRegisterUser" :is-loading="isLoading" />
+  <LoginForm @submit="handleLoginUser" :is-loading="isLoading" />
 </template>
