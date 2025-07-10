@@ -7,8 +7,8 @@ import BaseLayout from '../layouts/BaseLayout.vue'
   <BaseLayout>
     <section class="w-full bg-white p-10 rounded-2xl">
       <div>
-        <router-link to="/auth/registration">Створити акаунт</router-link>
-        <router-link to="/auth/login">Увійти</router-link>
+        <router-link to="/auth/registration" class="text-grey">Створити акаунт</router-link>
+        <router-link to="/auth/login" class="text-grey">Увійти</router-link>
       </div>
       <router-view></router-view>
     </section>
