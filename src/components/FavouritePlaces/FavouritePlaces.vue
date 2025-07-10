@@ -17,6 +17,7 @@ const addMarker = () => {}
     <div class="text-grey mb-4">Додані маркери</div>
     <slot name="label"></slot>
     <slot name="list">
+      <div v-if="favouritePlaces.length === 0">Список порожній</div>
       <FavouritePlace
         v-for="place in props.items"
         :key="place.id"
