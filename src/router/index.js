@@ -14,7 +14,14 @@ const RegistrationPage = () => import('../views/RegistrationView.vue')
 const routes = [
   { path: '/', component: GreetingPage },
   { path: '/map', component: HomePage },
-  { path: '/auth', component: AuthPage },
+  {
+    path: '/auth',
+    component: AuthPage,
+    children: [
+      { path: '/login', component: LoginPage },
+      { path: '/auth', component: RegistrationPage },
+    ],
+  },
 ]
 
 export const router = createRouter({ history: createWebHistory(import.meta.env.BASE_URL), routes })
