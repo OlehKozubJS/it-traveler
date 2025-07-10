@@ -28,7 +28,7 @@ class AuthService {
   async logout() {
     await clientFetch.get('/user/logout')
 
-    this.clearToken(accessToken)
+    this.clearToken()
   }
 
   async refresh() {
