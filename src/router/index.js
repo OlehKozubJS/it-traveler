@@ -1,9 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomepageView from '../views/HomepageView.vue'
-import GreetingView from '../views/GreetingView.vue'
-import AuthView from '../views/AuthView.vue'
-import LoginView from '../views/LoginView.vue'
-import RegistrationView from '../views/RegistrationView.vue'
 
 const GreetingPage = () => import('../views/GreetingView.vue')
 const HomePage = () => import('../views/HomepageView.vue')
