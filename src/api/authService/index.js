@@ -70,7 +70,9 @@ clientFetch.interceptors.response.use(
     const errorCode = error.response.status
 
     if (errorCode === 401) {
-      await authService.refresh()
+      return await authService.refresh()
     }
+
+    return Promise.reject(error)
   },
 )
