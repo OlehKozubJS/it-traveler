@@ -45,6 +45,7 @@ const changePlace = (newId) => {
 
 onMounted(async () => {
   const { data } = await getFavoritePlaces()
+  console.log(data)
 })
 </script>
 
