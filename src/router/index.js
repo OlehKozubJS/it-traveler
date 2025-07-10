@@ -3,17 +3,11 @@ import HomepageView from '../views/HomepageView.vue'
 import GreetingView from '../views/GreetingView.vue'
 import AuthView from '../views/AuthView.vue'
 
-const GreetingPage = () => {
-  import('../views/GreetingView.vue')
-}
+const GreetingPage = () => import('../views/GreetingView.vue')
 
-const HomePage = () => {
-  import('../views/HomepageView.vue')
-}
+const HomePage = () => import('../views/HomepageView.vue')
 
-const AuthPage = () => {
-  import('../views/AuthView.vue')
-}
+const AuthPage = () => import('../views/AuthView.vue')
 
 const routes = [
   { path: '/', component: GreetingPage },
