@@ -11,25 +11,6 @@ import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
 
-/*
-const favouritePlaces = [
-  {
-    id: 1,
-    title: 'New place 1',
-    description: 'Super description 1',
-    img: '',
-    lngLat: [30.523333, 50.490001],
-  },
-  {
-    id: 2,
-    title: 'New place 2',
-    description: 'Super description 2',
-    img: '',
-    lngLat: [30.523333, 50.450001],
-  },
-]
-*/
-
 const favouritePlaces = ref([])
 
 const activeId = ref(null)
@@ -50,7 +31,6 @@ const changePlace = (newId) => {
 onMounted(async () => {
   const { data } = await getFavoritePlaces()
   favouritePlaces.value = data
-  console.log(data)
 })
 </script>
 
