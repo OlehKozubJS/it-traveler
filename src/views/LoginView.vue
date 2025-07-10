@@ -6,9 +6,9 @@ import { useRouter } from 'vue-router'
 
 import LoginForm from '../components/Auth/LoginForm/LoginForm.vue'
 
+const isLoading = ref(false)
 const router = useRouter()
 const error = ref(null)
-const isLoading = ref(false)
 
 const handleLoginUser = async (userData) => {
   isLoading.value = true
