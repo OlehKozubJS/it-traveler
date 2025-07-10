@@ -15,7 +15,6 @@ class AuthService {
 
   setToken(token) {
     localStorage.setItem(TOKEN_KEY, token)
-    clientFetch.defaults.headers.common = { Authorization: `Bearer ${token}` }
     this.#token = token
   }
 
@@ -54,4 +53,13 @@ export const authService = new AuthService()
 
 clientFetch.interceptors.request.use((request) => {
   const token = authService.getToken()
+
+  if (token) {
+    request.headers = {
+      ...request.headers,
+      Authorization: `Bearer ${token}`,
+    }
+  }
+
+  return request
 })
