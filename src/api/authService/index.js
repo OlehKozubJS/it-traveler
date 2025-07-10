@@ -17,7 +17,10 @@ class AuthService {
   }
 
   async registerUser(body) {
-    return clientFetch.post('/user/register', body)
+    const { data } = await clientFetch.post('/user/register', body)
+    const { accessToken } = await data
+
+    this.setToken(accessToken)
   }
 
   async logout() {
