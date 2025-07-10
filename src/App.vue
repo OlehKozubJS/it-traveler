@@ -36,7 +36,6 @@ const changePlace = (newId) => {
   const newPlace = favouritePlaces.find((place) => {
     place.id === newId
   })
-  console.log(newId)
   changeActiveId(newId)
 }
 </script>
