@@ -3,6 +3,8 @@ import HomepageView from '../views/HomepageView.vue'
 import GreetingView from '../views/GreetingView.vue'
 import AuthView from '../views/AuthView.vue'
 
+const greetingPage = import()
+
 const routes = [
   { path: '/', component: GreetingView },
   { path: '/map', component: HomepageView },
