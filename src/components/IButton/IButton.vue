@@ -20,10 +20,12 @@ const bgStyles = computed(() => {
     : 'bg-[#FFA279]'
 })
 
-const isLink = computed(() => {})
+const isLink = computed(() => {
+  return !!props.to
+})
 
 const componentName = computed(() => {
-  return props.to ? 'link' : 'button'
+  return isLink.value ? 'RouterLink' : 'button'
 })
 </script>
 
