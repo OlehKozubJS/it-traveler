@@ -1,6 +1,4 @@
-<script setup>
-import { IButton } from '../components/IButton'
-</script>
+<script setup></script>
 
 <template>
   <main class="flex h-screen bg-primary">
