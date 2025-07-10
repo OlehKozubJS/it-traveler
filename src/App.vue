@@ -1,5 +1,5 @@
 <script setup>
-import { MapboxMap } from '@studiometa/vue-mapbox-gl'
+import { MapboxMap, MapboxMarker } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 import { mapSettings } from './map/settings'
@@ -36,7 +36,9 @@ const favouritePlaces = [
         :zoom="10"
         :access-token="mapSettings.apiToken"
         :map-style="mapSettings.style"
-      ></MapboxMap>
+      >
+        <MapboxMarker v-for="place in favouritePlaces" :key="place.id"></MapboxMarker>
+      </MapboxMap>
     </div>
   </main>
 </template>
