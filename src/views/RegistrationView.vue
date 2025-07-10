@@ -1,9 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 
-import RegistrationForm from '../components/Auth/RegistrationForm/RegistrationForm.vue'
 import { registerUser } from '../api/user'
 import { useRouter } from 'vue-router'
+
+import RegistrationForm from '../components/Auth/RegistrationForm/RegistrationForm.vue'
 
 const router = useRouter()
 const isLoading = ref(false)
