@@ -33,7 +33,7 @@ const changeActiveId = (newId) => {
 }
 
 const changePlace = (newId) => {
-  const newPlace = favouritePlaces.find((place) => {
+  const { lngLat } = favouritePlaces.find((place) => {
     place.id === newId
   })
   changeActiveId(newId)
