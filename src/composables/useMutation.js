@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-export const useMutation = (mutationFunction) => {
+export const useMutation = ({ mutationFunction, onSuccess, onError }) => {
   const data = ref()
   const isLoading = ref(false)
   //const router = useRouter()
@@ -12,8 +12,10 @@ export const useMutation = (mutationFunction) => {
     try {
       await mutationFunction(...args)
       error.value = null
+      onSuccess?.(data)
     } catch (newError) {
       error.value = newError
+      onError?.(error)
     } finally {
       isLoading.value = false
     }
