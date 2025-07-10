@@ -4,8 +4,10 @@ import { registerUser } from '../api/user'
 
 const handleRegisterUser = async (userData) => {
   try {
-    await registerUser()
-  } catch {}
+    await registerUser(userData)
+  } catch (error) {
+    console.error(error)
+  }
 }
 </script>
 
