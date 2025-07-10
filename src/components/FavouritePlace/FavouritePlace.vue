@@ -7,6 +7,7 @@ const props = defineProps({
   title: { required: true, type: String },
   description: { rquired: true, type: String },
   img: String,
+  isActive: { required: true, type: Boolean },
 })
 </script>
 
