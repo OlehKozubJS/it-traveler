@@ -16,7 +16,7 @@ const props = defineProps({
       <img class="w-[76px] h-[76px] shrink-0" :src="props.img" alt="" />
       <div>
         <div class="flex justify-between items-center mb-2">
-          <h2 class="font-bold text-sm text-[#2C2C2C]">Палац спорту</h2>
+          <h2 class="font-bold text-sm text-[#2C2C2C]">{{ props.title }}</h2>
           <div class="flex gap-2">
             <FavouritePlaceIconButton><EditIcon /></FavouritePlaceIconButton>
             <FavouritePlaceIconButton><DeleteIcon /></FavouritePlaceIconButton>
