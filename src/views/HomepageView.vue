@@ -5,10 +5,11 @@ import { MapboxMap, MapboxMarker } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { mapSettings } from '../map/settings'
 
+import { getFavoritePlaces } from '../api/favourite-places'
+
 import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
-import { getFavoritePlaces } from '../api/favourite-places'
 
 const favouritePlaces = [
   {
