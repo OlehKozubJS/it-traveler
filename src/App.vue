@@ -12,14 +12,14 @@ const favouritePlaces = [
     title: 'New place 1',
     description: 'Super description 1',
     img: '',
-    lngLat: '',
+    lngLat: [],
   },
   {
     id: 2,
     title: 'New place 2',
     description: 'Super description 2',
     img: '',
-    lngLat: '',
+    lngLat: [],
   },
 ]
 </script>
