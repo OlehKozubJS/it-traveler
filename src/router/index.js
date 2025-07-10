@@ -19,7 +19,7 @@ const routes = [
     component: AuthPage,
     children: [
       { path: '/login', component: LoginPage },
-      { path: '/auth', component: RegistrationPage },
+      { path: '/registration', component: RegistrationPage },
     ],
   },
 ]
