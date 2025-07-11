@@ -5,7 +5,7 @@ export const useMutation = ({ mutationFunction, onSuccess, onError }) => {
   const isLoading = ref(false)
   const error = ref(null)
 
-  const mutate = async (...args) => {
+  const mutation = async (...args) => {
     isLoading.value = true
 
     try {
