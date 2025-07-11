@@ -12,7 +12,6 @@ import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
 
 const favouritePlaces = ref([])
-
 const activeId = ref(null)
 const map = ref(null)
 
