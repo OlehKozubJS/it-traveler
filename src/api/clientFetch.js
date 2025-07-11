@@ -1,5 +1,5 @@
 import axios from 'axios'
 
-export const clientFetch = axios.create({ baseURL: 'https://back-for-vue.b.goit.study/' })
-
-//clientFetch.get('/user/login')
+export const clientFetch = axios.create({
+  baseURL: 'https://back-for-vue.b.goit.study/',
+})
