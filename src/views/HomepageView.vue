@@ -96,7 +96,7 @@ onMounted(async () => {
         <MapboxMarker
           v-for="place in favouritePlaces"
           :key="place.id"
-          :lngLat="place.lngLat"
+          :lngLat="place.coordinates"
           anchor="bottom"
         >
           <button @click="changeActiveId(place.id)">
