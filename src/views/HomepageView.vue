@@ -13,11 +13,13 @@ import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
 
+import CreateNewPlaceModal from '../components/CreateNewPlaceModal'
+
 const favouritePlaces = ref([])
 const activeId = ref(null)
 const map = ref(null)
 const mapMarkerLngLat = ref(null)
-const { openModal, closeModal } = useModal()
+const { isOpen, openModal, closeModal } = useModal()
 
 const changeActiveId = (newId) => {
   activeId.value = newId
