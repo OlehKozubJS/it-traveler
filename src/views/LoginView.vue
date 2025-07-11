@@ -5,6 +5,8 @@ import { authService } from '../api/authService'
 import { useMutation } from '../composables/useMutation'
 import LoginForm from '../components/Auth/LoginForm/LoginForm.vue'
 
+const router = useRouter()
+
 const {
   isLoading,
   error,
@@ -19,7 +21,6 @@ const {
     router.replace('/map')
   },
 })
-const router = useRouter()
 </script>
 
 <template>
