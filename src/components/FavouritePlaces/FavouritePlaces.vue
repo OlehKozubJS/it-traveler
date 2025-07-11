@@ -23,7 +23,7 @@ const handlePlaceClick = (place) => {
       <div v-if="items.length === 0">Список порожній</div>
       <FavouritePlace
         v-for="place in props.items"
-        :key="place.id"
+        :key="place._id"
         :title="place.title"
         :description="place.description"
         :img="place.img"
