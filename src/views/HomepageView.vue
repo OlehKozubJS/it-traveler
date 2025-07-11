@@ -47,9 +47,10 @@ const handleMapClick = ({ lngLat }) => {
   mapMarkerLngLat.value = [lngLat.lng, lngLat.lat]
 }
 
-const handleAddPlace = (formData) => {
+const handleAddPlace = async (formData, resetForm) => {
   const body = { ...formData, coordinates: mapMarkerLngLat.value }
-  addPlace(body)
+  await addPlace(body)
+  resetForm()
   console.log(body)
 }
 
