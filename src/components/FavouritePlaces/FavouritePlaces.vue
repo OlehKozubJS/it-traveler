@@ -10,7 +10,7 @@ const props = defineProps({
 const emit = defineEmits(['place-clicked', 'create'])
 
 const handlePlaceClick = (place) => {
-  console.log(place.)
+  console.log(place._id)
   emit('place-clicked', place.id)
 }
 </script>
