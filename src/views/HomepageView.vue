@@ -101,7 +101,7 @@ onMounted(() => {
         "
       >
         <MapboxMarker v-if="mapMarkerLngLat" :lngLat="mapMarkerLngLat" anchor="bottom">
-          <MarkerIcon class="h-8 w-8" />
+          <MarkerIcon class="h-8 w-8 stroke-yellow-700" />
         </MapboxMarker>
 
         <MapboxMarker
