@@ -28,8 +28,8 @@ const changePlace = (newId) => {
   map.value.flyTo({ center: lngLat })
 }
 
-const handleMapClick = ({ newLngLat }) => {
-  mapMarkerLngLat.value = [newLngLat.lng, newLngLat.lat]
+const handleMapClick = ({ lngLat }) => {
+  mapMarkerLngLat.value = [lngLat.lng, lngLat.lat]
 }
 
 onMounted(async () => {
@@ -54,7 +54,7 @@ onMounted(async () => {
         :zoom="10"
         :access-token="mapSettings.apiToken"
         :map-style="mapSettings.style"
-        @mb-click="console.log"
+        @mb-click="handleMapClick"
         @mb-created="
           (mapInstance) => {
             map = mapInstance
