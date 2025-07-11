@@ -1,10 +1,15 @@
 <script setup>
 import { reactive, toRaw } from 'vue'
 
-import IInput from '@/components/IInput/IInput.vue'
-import IButton from '@/components/IButton/IButton.vue'
+import IInput from '../../IInput/IInput.vue'
+import IButton from '../../IButton/IButton.vue'
 
-const props = defineProps({ isLoading: { default: false, type: Boolean } })
+const props = defineProps({
+  isLoading: {
+    default: false,
+    type: Boolean,
+  },
+})
 
 const emit = defineEmits(['submit'])
 
