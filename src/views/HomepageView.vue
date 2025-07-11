@@ -14,6 +14,7 @@ import MarkerIcon from '../components/icons/MarkerIcon.vue'
 const favouritePlaces = ref([])
 const activeId = ref(null)
 const map = ref(null)
+const mapMarker = ref()
 
 const changeActiveId = (newId) => {
   activeId.value = newId
