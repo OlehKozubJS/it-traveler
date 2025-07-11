@@ -1,7 +1,3 @@
-<script setup>
-// <stop stop-color="#FFA279" />
-// <stop offset="1" stop-color="#F3743D" />
-</script>
 <template>
   <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
