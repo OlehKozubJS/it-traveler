@@ -9,7 +9,7 @@ export const useMutation = ({ mutationFunction, onSuccess, onError }) => {
     isLoading.value = true
 
     try {
-      await mutationFunction(...args)
+      data.value = await mutationFunction(...args)
       error.value = null
       onSuccess?.(data)
     } catch (newError) {
