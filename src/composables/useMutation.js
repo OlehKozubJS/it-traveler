@@ -3,7 +3,6 @@ import { ref } from 'vue'
 export const useMutation = ({ mutationFunction, onSuccess, onError }) => {
   const data = ref()
   const isLoading = ref(false)
-  //const router = useRouter()
   const error = ref(null)
 
   const mutation = async (...args) => {
