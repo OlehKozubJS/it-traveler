@@ -28,6 +28,7 @@ const {
   },
   onSuccess: () => {
     closeModal()
+    mapMarkerLngLat.value = null
   },
 })
 
