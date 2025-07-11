@@ -24,7 +24,8 @@ const { data, mutate: getPlaces } = useMutation({
 })
 
 const favouritePlaces = computed(() => {
-  data.value?.data ?? []
+  console.log(data.value?.data ?? [])
+  return data.value?.data ?? []
 })
 
 const {
@@ -38,6 +39,7 @@ const {
   onSuccess: () => {
     closeModal()
     mapMarkerLngLat.value = null
+    getPlaces()
   },
 })
 
@@ -81,7 +83,7 @@ onMounted(() => {
       <CreateNewPlaceModal
         :is-open="isOpen"
         :is-loading="isAddingPlace"
-        :has-error="error"
+        :has-error="Boolean(error)"
         @close="closeModal"
         @submit="handleAddPlace"
       />
