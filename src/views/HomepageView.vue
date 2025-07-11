@@ -71,6 +71,7 @@ onMounted(async () => {
       <CreateNewPlaceModal
         :is-open="isOpen"
         :is-loading="isAddingPlace"
+        :has-error="error"
         @close="closeModal"
         @submit="handleAddPlace"
       />
