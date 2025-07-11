@@ -10,4 +10,14 @@ export const useModal = () => {
   const closeModal = () => {
     isOpen.value = false
   }
+
+  const toggleModal = () => {
+    isOpen.value = !isOpen.value
+  }
+
+  return {
+    openModal,
+    closeModal,
+    toggleModal,
+  }
 }
