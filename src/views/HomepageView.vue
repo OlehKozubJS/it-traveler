@@ -113,17 +113,7 @@ onMounted(() => {
           anchor="bottom"
         >
           <button @click="changeActiveId(place._id)">
-            <template v-if="place._id !== activeId">
-              <MarkerIcon :class="place._id === activeId ? 'h-10 w-10' : 'h-8 w-8'" />
-            </template>
-          </button>
-        </MapboxMarker>
-
-        <MapboxMarker :lngLat="place.coordinates" anchor="bottom">
-          <button @click="changeActiveId(place._id)">
-            <template v-if="place._id === activeId">
-              <ChosenMarkerIcon :class="place._id === activeId ? 'h-10 w-10' : 'h-8 w-8'" />
-            </template>
+            <MarkerIcon :class="place._id === activeId ? 'h-10 w-10' : 'h-8 w-8'" />
           </button>
         </MapboxMarker>
       </MapboxMap>
