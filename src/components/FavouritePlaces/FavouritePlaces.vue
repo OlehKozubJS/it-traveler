@@ -9,7 +9,9 @@ const props = defineProps({
 
 const emit = defineEmits(['place-clicked', 'create'])
 
-const handlePlaceClick = () => {}
+const handlePlaceClick = () => {
+  emit('place-clicked', place.id)
+}
 </script>
 
 <template>
@@ -25,7 +27,7 @@ const handlePlaceClick = () => {}
         :description="place.description"
         :img="place.img"
         :is-active="place.id === props.activeId"
-        @click="emit('place-clicked', place.id)"
+        @click="handlePlaceClick"
       />
     </slot>
     <slot></slot>
