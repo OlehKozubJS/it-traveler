@@ -24,7 +24,7 @@ const { data, mutation: getPlaces } = useMutation({
 })
 
 const favouritePlaces = computed(() => {
-  console.log(data.value?.data ?? [])
+  //console.log(data.value?.data ?? [])
   return data.value?.data ?? []
 })
 
