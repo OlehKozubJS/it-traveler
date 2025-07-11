@@ -1,11 +1,11 @@
 <script setup>
 import { useRouter } from 'vue-router'
-
 import { authService } from '../api/authService'
-
 import { useMutation } from '@/composables/useMutation'
 
 import RegistrationForm from '../components/Auth/RegistrationForm/RegistrationForm.vue'
+
+const router = useRouter()
 
 const {
   isLoading,
@@ -19,7 +19,6 @@ const {
     router.replace('/map')
   },
 })
-const router = useRouter()
 </script>
 
 <template>
