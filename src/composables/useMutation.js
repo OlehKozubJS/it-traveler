@@ -24,6 +24,6 @@ export const useMutation = ({ mutationFunction, onSuccess, onError }) => {
     data,
     isLoading,
     error,
-    mutate,
+    mutation,
   }
 }
