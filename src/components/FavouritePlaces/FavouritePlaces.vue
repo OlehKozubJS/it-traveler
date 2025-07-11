@@ -29,6 +29,6 @@ const addMarker = () => {}
       />
     </slot>
     <slot></slot>
-    <IButton class="w-full mt-10" @click="addMarker" variant="gradient">Додати маркер</IButton>
+    <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">Додати маркер</IButton>
   </div>
 </template>
