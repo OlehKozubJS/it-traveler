@@ -7,8 +7,18 @@ import MarkerIcon from '../icons/MarkerIcon.vue'
 import { computed, reactive } from 'vue'
 
 const props = defineProps({
-  isOpen: { default: false, type: Boolean },
-  isLoading: { default: false, type: Boolean },
+  isOpen: {
+    default: false,
+    type: Boolean,
+  },
+  isLoading: {
+    default: false,
+    type: Boolean,
+  },
+  hasError: {
+    default: false,
+    type: Boolean,
+  },
 })
 
 const emit = defineEmits(['close', 'submit'])
