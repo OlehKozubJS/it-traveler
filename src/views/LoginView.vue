@@ -13,9 +13,6 @@ const {
   mutation: handleLoginUser,
 } = useMutation({
   mutationFunction: authService.loginUser,
-
-  /////////////////////////////////////////
-  //mutationFunction: loginUser,
   onSuccess: () => {
     router.replace('/map')
   },
