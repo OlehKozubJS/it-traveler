@@ -14,7 +14,7 @@ import MarkerIcon from '../components/icons/MarkerIcon.vue'
 const favouritePlaces = ref([])
 const activeId = ref(null)
 const map = ref(null)
-const mapMarker = ref()
+const mapMarkerLngLat = ref(null)
 
 const changeActiveId = (newId) => {
   activeId.value = newId
@@ -26,6 +26,10 @@ const changePlace = (newId) => {
   changeActiveId(newId)
 
   map.value.flyTo({ center: lngLat })
+}
+
+const handleMapClick = ({ newLngLat }) => {
+  mapMarkerLngLat.value = [newLngLat.lng, newLngLat.lat]
 }
 
 onMounted(async () => {
@@ -50,12 +54,17 @@ onMounted(async () => {
         :zoom="10"
         :access-token="mapSettings.apiToken"
         :map-style="mapSettings.style"
+        @mb-click="console.log"
         @mb-created="
           (mapInstance) => {
             map = mapInstance
           }
         "
       >
+        <MapboxMarker v-if="mapMarkerLngLat" :lngLat="mapMarkerLngLat">
+          <MarkerIcon class="h-8 w-8" />
+        </MapboxMarker>
+
         <MapboxMarker v-for="place in favouritePlaces" :key="place.id" :lngLat="place.lngLat">
           <button @click="changeActiveId(place.id)">
             <MarkerIcon class="h-8 w-8" />
