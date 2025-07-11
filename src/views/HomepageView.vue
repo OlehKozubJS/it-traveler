@@ -26,6 +26,9 @@ const {
   mutationFunction: async (newPlaceData) => {
     await addFavoritePlace(newPlaceData)
   },
+  onSuccess: () => {
+    closeModal()
+  },
 })
 
 const changeActiveId = (newId) => {
