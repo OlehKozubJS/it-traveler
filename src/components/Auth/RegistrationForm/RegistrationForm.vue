@@ -31,7 +31,7 @@ const userData = reactive({
       v-model="userData.email"
     />
     <IInput label="Пароль" type="password" v-model="userData.password" />
-    <IButton class="mt-10 w-full" variant="gradient" type="submit" :isLoading="props.isLoading">
+    <IButton class="mt-10 w-full" variant="gradient" type="submit" :is-loading="props.isLoading">
       Створити акаунт
     </IButton>
   </form>
