@@ -28,7 +28,7 @@ const favouritePlaces = computed(() => {
 })
 
 const {
-  mutate: addPlace,
+  mutation: addPlace,
   isLoading: isAddingPlace,
   error,
 } = useMutation({
