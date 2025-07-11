@@ -12,8 +12,8 @@ const {
   error,
   mutation: handleRegisterUser,
 } = useMutation({
-  mutationFunction: (data) => {
-    authService.registerUser(data)
+  mutationFunction: async (data) => {
+    await authService.registerUser(data)
   },
   onSuccess: () => {
     router.replace('/map')
