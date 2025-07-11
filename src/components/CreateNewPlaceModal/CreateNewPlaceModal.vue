@@ -1,12 +1,15 @@
 <script setup>
-const props = defineProps({ isOpen: { default: false, type: Boolean } })
-
 import IModal from '../IModal/IModal.vue'
 import IInput from '../IInput/IInput.vue'
 import InputImage from '../InputImage/InputImage.vue'
 import IButton from '../IButton/IButton.vue'
 import MarkerIcon from '../icons/MarkerIcon.vue'
 import { computed, reactive } from 'vue'
+
+const props = defineProps({
+  isOpen: { default: false, type: Boolean },
+  isLoading: { default: false, type: Boolean },
+})
 
 const emit = defineEmits(['close', 'submit'])
 const formData = reactive({ title: '', description: '', img: '' })
