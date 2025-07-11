@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { MapboxMap, MapboxMarker } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { mapSettings } from '../map/settings'
@@ -19,9 +19,13 @@ const mapMarkerLngLat = ref(null)
 const { isOpen, openModal, closeModal } = useModal()
 
 const { data, mutate: getPlaces } = useMutation({
-  mutationFunction: async () => {
-    await getFavoritePlaces()
+  mutationFunction: () => {
+    getFavoritePlaces()
   },
+})
+
+const favouritePlaces = computed(() => {
+  data.value?.data ?? ''
 })
 
 const {
@@ -61,9 +65,8 @@ const handleAddPlace = async (formData, resetForm) => {
   console.log(body)
 }
 
-onMounted(async () => {
-  const { data } = await getFavoritePlaces()
-  favouritePlaces.value = data
+onMounted(() => {
+  getPlaces()
 })
 </script>
 
