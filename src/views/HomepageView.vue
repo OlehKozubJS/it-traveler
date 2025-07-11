@@ -13,7 +13,7 @@ import MarkerIcon from '../components/icons/MarkerIcon.vue'
 import ChosenMarkerIcon from '../components/icons/ChosenMarkerIcon.vue'
 import CreateNewPlaceModal from '../components/CreateNewPlaceModal/CreateNewPlaceModal.vue'
 
-const activeId = ref(null)
+const activeId = ref('')
 const map = ref(null)
 const mapMarkerLngLat = ref(null)
 const { isOpen, openModal, closeModal } = useModal()
