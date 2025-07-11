@@ -46,7 +46,7 @@ const handleMapClick = ({ lngLat }) => {
 
 const handleAddPlace = (formData) => {
   const body = { ...formData, coordinates: mapMarkerLngLat.value }
-
+  addPlace(body)
   console.log(body)
 }
 
@@ -65,7 +65,7 @@ onMounted(async () => {
         @place-clicked="changePlace"
         @create="openModal"
       />
-      <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" @submit="" />
+      <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" @submit="handleAddPlace" />
     </div>
     <div class="w-full h-full flex items-center justify-center text-6xl">
       <MapboxMap
