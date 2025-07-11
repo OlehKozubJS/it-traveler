@@ -41,7 +41,7 @@ const resetForm = () => {
 
 <template>
   <IModal v-if="props.isOpen" @close="emit('close')">
-    <form @submit.prevent="emit('submit', formData)" class="min-w-[420px]">
+    <form @submit.prevent="emit('submit', formData, resetForm)" class="min-w-[420px]">
       <div class="flex gap-1 font-bold justify-center mb-10"><MarkerIcon />Додати маркер</div>
       <IInput label="Локація" class="mb-4" v-model="formData.title" />
       <IInput label="Опис" type="textarea" class="mb-2" v-model="formData.description" />
