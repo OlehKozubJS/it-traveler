@@ -12,11 +12,10 @@ const {
   error,
   mutation: handleLoginUser,
 } = useMutation({
-  //mutationFunction: (data) => {
-  //  authService.loginUser(data)
-  //},
+  mutationFunction: authService.loginUser,
+
   /////////////////////////////////////////
-  mutationFunction: loginUser,
+  //mutationFunction: loginUser,
   onSuccess: () => {
     router.replace('/map')
   },
