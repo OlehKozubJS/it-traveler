@@ -1,8 +1,8 @@
 <script setup>
-import { loginUser } from '../api/user'
 import { useRouter } from 'vue-router'
 import { authService } from '../api/authService'
 import { useMutation } from '../composables/useMutation'
+
 import LoginForm from '../components/Auth/LoginForm/LoginForm.vue'
 
 const router = useRouter()
