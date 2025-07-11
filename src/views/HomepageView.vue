@@ -13,7 +13,7 @@ import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
 
-import CreateNewPlaceModal from '../components/CreateNewPlaceModal'
+import CreateNewPlaceModal from '../components/CreateNewPlaceModal/CreateNewPlaceModal.vue'
 
 const favouritePlaces = ref([])
 const activeId = ref(null)
@@ -51,6 +51,7 @@ onMounted(async () => {
         :active-id="activeId"
         @place-clicked="changePlace"
       />
+      <CreateNewPlaceModal :is-open="isOpen" :clo />
     </div>
     <div class="w-full h-full flex items-center justify-center text-6xl">
       <MapboxMap
