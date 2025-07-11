@@ -45,6 +45,7 @@ const {
 
 const changeActiveId = (newId) => {
   activeId.value = newId
+  console.log(activeId.value)
 }
 
 const changePlace = (newId) => {
@@ -113,11 +114,11 @@ onMounted(() => {
         >
           <button @click="changeActiveId(place._id)">
             <template v-if="place._id === activeId">
-              <MarkerIcon :class="place._id === activeId ? 'h-10 w-10' : 'h-8 w-8'"
-            /></template>
-            <template v-else="place._id !== activeId">
-              <ChosenMarkerIcon :class="place._id === activeId ? 'h-10 w-10' : 'h-8 w-8'"
-            /></template>
+              <MarkerIcon :class="place._id === activeId ? 'h-10 w-10' : 'h-8 w-8'" />
+            </template>
+            <template v-else>
+              <ChosenMarkerIcon :class="place._id === activeId ? 'h-10 w-10' : 'h-8 w-8'" />
+            </template>
           </button>
         </MapboxMarker>
       </MapboxMap>
