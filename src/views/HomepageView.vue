@@ -106,7 +106,7 @@ onMounted(() => {
 
         <MapboxMarker
           v-for="place in favouritePlaces"
-          :key="place.id"
+          :key="place._id"
           :lngLat="place.coordinates"
           anchor="bottom"
         >
