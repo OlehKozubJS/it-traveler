@@ -16,6 +16,7 @@ export const useModal = () => {
   }
 
   return {
+    isOpen,
     openModal,
     closeModal,
     toggleModal,
