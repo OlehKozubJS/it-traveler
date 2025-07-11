@@ -7,7 +7,7 @@ const props = defineProps({
   activeId: { required: true, type: [Number, null] },
 })
 
-const emit = defineEmits(['place-clicked'])
+const emit = defineEmits(['place-clicked', 'create'])
 
 const addMarker = () => {}
 </script>
