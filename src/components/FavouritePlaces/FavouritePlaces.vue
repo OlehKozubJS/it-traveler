@@ -8,6 +8,8 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['place-clicked', 'create'])
+
+const handlePlaceClick = () => {}
 </script>
 
 <template>
