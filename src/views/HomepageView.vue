@@ -18,7 +18,7 @@ const map = ref(null)
 const mapMarkerLngLat = ref(null)
 const { isOpen, openModal, closeModal } = useModal()
 
-const { mutate: addPlace } = useMutation({
+const {} = useMutation({
   mutationFunction: async (newPlaceData) => {
     await addFavoritePlace(newPlaceData)
   },
