@@ -33,7 +33,7 @@ const uploadText = computed(() => {
         <img v-if="formData.img" :src="formData.img" alt="" class="w-20 h-20 object-cover" />
         <InputImage class="mb-10" @uploaded="handleUpload">{{ uploadText }}</InputImage>
       </div>
-      <IButton variant="gradient" class="w-full">Додати</IButton>
+      <IButton class="w-full" variant="gradient" :is-loading="props.isLoading">Додати</IButton>
     </form>
   </IModal>
 </template>
