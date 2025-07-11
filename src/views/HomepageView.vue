@@ -68,7 +68,12 @@ onMounted(async () => {
         @place-clicked="changePlace"
         @create="openModal"
       />
-      <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" @submit="handleAddPlace" />
+      <CreateNewPlaceModal
+        :is-open="isOpen"
+        :is-loading="isAddingPlace"
+        @close="closeModal"
+        @submit="handleAddPlace"
+      />
     </div>
     <div class="w-full h-full flex items-center justify-center text-6xl">
       <MapboxMap
