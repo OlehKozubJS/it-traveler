@@ -30,8 +30,8 @@ const userData = reactive({
       placeholder="email@gmail.com"
       v-model="userData.email"
     />
-    <IInput class="mb-4" label="Пароль" type="password" v-model="userData.password" />
-    <IButton variant="gradient" type="submit" class="mt-8 w-full" :isLoading="props.isLoading">
+    <IInput label="Пароль" type="password" v-model="userData.password" />
+    <IButton class="mt-10 w-full" variant="gradient" type="submit" :isLoading="props.isLoading">
       Створити акаунт
     </IButton>
   </form>
