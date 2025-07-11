@@ -31,6 +31,12 @@ const handleUpload = (url) => {
 const uploadText = computed(() => {
   return `Натисність тут, щоб ${formData.img ? 'змінити' : 'додати'} фото`
 })
+
+const resetForm = () => {
+  formData.title = ''
+  formData.description = ''
+  formData.img = ''
+}
 </script>
 
 <template>
