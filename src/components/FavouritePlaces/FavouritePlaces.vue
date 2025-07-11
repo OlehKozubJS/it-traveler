@@ -4,7 +4,7 @@ import IButton from '../IButton/IButton.vue'
 
 const props = defineProps({
   items: { required: true, type: Array },
-  activeId: { required: true, type: [Number, null] },
+  activeId: { required: true, type: [String, null] },
 })
 
 const emit = defineEmits(['place-clicked', 'create'])
