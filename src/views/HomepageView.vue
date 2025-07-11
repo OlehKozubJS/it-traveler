@@ -4,7 +4,7 @@ import { MapboxMap, MapboxMarker } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { mapSettings } from '../map/settings'
 
-import { getFavoritePlaces } from '../api/favourite-places'
+import { addFavoritePlace, getFavoritePlaces } from '../api/favourite-places'
 import { useModal } from '../composables/useModal'
 import { useMutation } from '../composables/useMutation'
 
@@ -17,6 +17,12 @@ const activeId = ref(null)
 const map = ref(null)
 const mapMarkerLngLat = ref(null)
 const { isOpen, openModal, closeModal } = useModal()
+
+const { mutation } = useMutation({
+  mutationFunction: async (newPlaceData) => {
+    await addFavoritePlace(newPlaceData)
+  },
+})
 
 const changeActiveId = (newId) => {
   activeId.value = newId
