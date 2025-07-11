@@ -8,8 +8,6 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['place-clicked', 'create'])
-
-const addMarker = () => {}
 </script>
 
 <template>
