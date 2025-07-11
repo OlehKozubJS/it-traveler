@@ -44,6 +44,10 @@ const handleMapClick = ({ lngLat }) => {
   mapMarkerLngLat.value = [lngLat.lng, lngLat.lat]
 }
 
+const handleAddPlace = (formData) => {
+  const body = { ...formData, coordinates: mapMarkerLngLat.value }
+}
+
 onMounted(async () => {
   const { data } = await getFavoritePlaces()
   favouritePlaces.value = data
@@ -59,7 +63,7 @@ onMounted(async () => {
         @place-clicked="changePlace"
         @create="openModal"
       />
-      <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" />
+      <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" @submit="" />
     </div>
     <div class="w-full h-full flex items-center justify-center text-6xl">
       <MapboxMap
