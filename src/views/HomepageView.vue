@@ -12,7 +12,6 @@ import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
 import CreateNewPlaceModal from '../components/CreateNewPlaceModal/CreateNewPlaceModal.vue'
 
-const favouritePlaces = ref([])
 const activeId = ref(null)
 const map = ref(null)
 const mapMarkerLngLat = ref(null)
