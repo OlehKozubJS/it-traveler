@@ -49,11 +49,11 @@ const changeActiveId = (newId) => {
 }
 
 const changePlace = (newId) => {
-  const { lngLat } = favouritePlaces.value.find((place) => place._id === newId)
+  const newPlace = favouritePlaces.value.find((place) => place._id === newId)
 
-  changeActiveId(newId)
+  changeActiveId(newPlace)
 
-  map.value.flyTo({ center: lngLat })
+  //map.value.flyTo({ center: lngLat })
 }
 
 const handleMapClick = ({ lngLat }) => {
