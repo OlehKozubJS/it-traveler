@@ -27,7 +27,7 @@ const handlePlaceClick = (place) => {
         :title="place.title"
         :description="place.description"
         :img="place.img"
-        :is-active="place.id === props.activeId"
+        :is-active="place._id === props.activeId"
         @click="handlePlaceClick(place)"
       />
     </slot>
