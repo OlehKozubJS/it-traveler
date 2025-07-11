@@ -50,6 +50,7 @@ onMounted(async () => {
         :items="favouritePlaces"
         :active-id="activeId"
         @place-clicked="changePlace"
+        @create="openModal"
       />
       <CreateNewPlaceModal :is-open="isOpen" @close="closeModal" />
     </div>
