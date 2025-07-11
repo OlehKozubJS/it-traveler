@@ -23,7 +23,7 @@ const uploadText = computed(() => {
 <template>
   <IModal v-if="props.isOpen" @close="emit('close')">
     <form @submit.prevent="emit('submit', formData)" class="min-w-[420px]">
-      <div class="flex gap-1 font-bold justify-center mb-10"><MarkerIcon />Додати маркери</div>
+      <div class="flex gap-1 font-bold justify-center mb-10"><MarkerIcon />Додати маркер</div>
       <IInput label="Локація" class="mb-4" v-model="formData.title" />
       <IInput label="Опис" type="textarea" class="mb-2" v-model="formData.description" />
       <div class="flex gap-1 items-center mb-10">
