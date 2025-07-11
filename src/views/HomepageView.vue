@@ -50,10 +50,10 @@ const changeActiveId = (newId) => {
 
 const changePlace = (newId) => {
   const newPlace = favouritePlaces.value.find((place) => place._id === newId)
-
-  changeActiveId(newPlace)
-
-  //map.value.flyTo({ center: lngLat })
+  const { coordinates } = newPlace
+  changeActiveId(newId)
+  console.log(newPlace)
+  map.value.flyTo({ center: coordinates })
 }
 
 const handleMapClick = ({ lngLat }) => {
