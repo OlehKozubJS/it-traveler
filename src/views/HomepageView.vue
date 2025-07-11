@@ -61,11 +61,16 @@ onMounted(async () => {
           }
         "
       >
-        <MapboxMarker v-if="mapMarkerLngLat" :lngLat="mapMarkerLngLat">
+        <MapboxMarker v-if="mapMarkerLngLat" :lngLat="mapMarkerLngLat" anchor="bottom">
           <MarkerIcon class="h-8 w-8" />
         </MapboxMarker>
 
-        <MapboxMarker v-for="place in favouritePlaces" :key="place.id" :lngLat="place.lngLat">
+        <MapboxMarker
+          v-for="place in favouritePlaces"
+          :key="place.id"
+          :lngLat="place.lngLat"
+          anchor="bottom"
+        >
           <button @click="changeActiveId(place.id)">
             <MarkerIcon class="h-8 w-8" />
           </button>
