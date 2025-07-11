@@ -1,18 +1,15 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-
 import { MapboxMap, MapboxMarker } from '@studiometa/vue-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { mapSettings } from '../map/settings'
 
 import { getFavoritePlaces } from '../api/favourite-places'
-
 import { useModal } from '../composables/useModal'
+import { useMutation } from '../composables/useMutation'
 
 import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
-
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
-
 import CreateNewPlaceModal from '../components/CreateNewPlaceModal/CreateNewPlaceModal.vue'
 
 const favouritePlaces = ref([])
