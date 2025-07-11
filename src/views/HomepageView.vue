@@ -111,7 +111,7 @@ onMounted(() => {
           anchor="bottom"
         >
           <button @click="changeActiveId(place.id)">
-            <MarkerIcon class="h-8 w-8" />
+            <MarkerIcon :class="place._id === activeId.value" />
           </button>
         </MapboxMarker>
       </MapboxMap>
