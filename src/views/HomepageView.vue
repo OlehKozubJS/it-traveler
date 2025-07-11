@@ -18,7 +18,9 @@ const mapMarkerLngLat = ref(null)
 const { isOpen, openModal, closeModal } = useModal()
 
 const { data, mutate: getPlaces } = useMutation({
-  mutationFunction: () => getFavoritePlaces(),
+  mutationFunction: () => {
+    return getFavoritePlaces()
+  },
 })
 
 const favouritePlaces = computed(() => {
