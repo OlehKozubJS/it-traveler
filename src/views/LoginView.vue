@@ -10,7 +10,7 @@ const router = useRouter()
 const {
   isLoading,
   error,
-  mutate: handleLoginUser,
+  mutation: handleLoginUser,
 } = useMutation({
   mutationFunction: async (data) => {
     await authService.loginUser(data)
