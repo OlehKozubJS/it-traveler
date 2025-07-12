@@ -18,6 +18,10 @@ const props = defineProps({
     required: true,
     type: [String, null],
   },
+  isLoading: {
+    required: true,
+    type: Boolean,
+  },
 })
 
 const emit = defineEmits(['place-clicked', 'create', 'updated'])
