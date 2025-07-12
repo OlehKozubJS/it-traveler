@@ -36,7 +36,7 @@ const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal
         @click="emit('place-clicked', place._id)"
       />
 
-      <EditPlaceModal :is-open="true" />
+      <EditPlaceModal :is-open="isEditOpen" @close="closeEditModal" />
     </slot>
     <slot></slot>
     <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">Додати маркер</IButton>
