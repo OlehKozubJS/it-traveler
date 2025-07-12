@@ -3,7 +3,7 @@ import { ref, watch } from 'vue'
 
 import { ItTravelerButton } from '../ItTravelerButton'
 import { ItTravelerInput } from '../ItTravelerInput'
-import IModal from '../IModal/IModal.vue'
+import { ItTravelerModal } from '../ItTravelerModal'
 import InputImage from '../InputImage/InputImage.vue'
 import MarkerIcon from '../icons/MarkerIcon.vue'
 import fallbackImage from '../../assets/img/map-svgrepo-com.svg'
@@ -43,7 +43,7 @@ const handleChangeImg = (url) => {
 </script>
 
 <template>
-  <IModal v-if="props.isOpen" @close="emit('close')">
+  <ItTravelerModal v-if="props.isOpen" @close="emit('close')">
     <div class="w-[750px]">
       <div class="flex gap-2 items-center mb-10">
         <MarkerIcon height="18" width="18" />
@@ -75,5 +75,5 @@ const handleChangeImg = (url) => {
         </InputImage>
       </form>
     </div>
-  </IModal>
+  </ItTravelerModal>
 </template>
