@@ -4,8 +4,14 @@ import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 
 const props = defineProps({
-  items: { required: true, type: Array },
-  activeId: { required: true, type: [String, null] },
+  items: {
+    required: true,
+    type: Array,
+  },
+  activeId: {
+    required: true,
+    type: [String, null],
+  },
 })
 
 const emit = defineEmits(['place-clicked', 'create'])
