@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, toRaw } from 'vue'
 
-import IInput from '../../IInput/IInput.vue'
+import { ItTravelerInput } from '../../ItTravelerInput'
 import { ItTravelerButton } from '../../ItTravelerButton'
 
 const props = defineProps({
