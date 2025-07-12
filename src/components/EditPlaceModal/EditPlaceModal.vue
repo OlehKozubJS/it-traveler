@@ -2,7 +2,7 @@
 import { ref, watch } from 'vue'
 
 import { ItTravelerButton } from '../ItTravelerButton'
-import IInput from '../IInput/IInput.vue'
+import { ItTravelerInput } from '../ItTravelerInput'
 import IModal from '../IModal/IModal.vue'
 import InputImage from '../InputImage/InputImage.vue'
 import MarkerIcon from '../icons/MarkerIcon.vue'
