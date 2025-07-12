@@ -18,7 +18,8 @@ const emit = defineEmits(['close'])
 const formData = ref({
   id: '',
   title: '',
-  description:
+  description: '',
+  img: '',
 })
 </script>
 
