@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({ isActive: { type: Boolean, default: false } })
+defineProps({ isActive: { type: Boolean, default: false } })
 </script>
 
 <template>
