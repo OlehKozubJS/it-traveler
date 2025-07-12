@@ -14,6 +14,10 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['close'])
+
+const formData = ref({
+    id:
+})
 </script>
 
 <template>
