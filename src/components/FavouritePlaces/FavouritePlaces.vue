@@ -51,6 +51,7 @@ const {
   onSuccess: () => {
     closeConfirmationModal()
     idOfDeletedItem.value = null
+    emit('updated')
   },
 })
 
