@@ -48,7 +48,7 @@ const changeActiveId = (newId) => {
 }
 
 const changePlace = (newId) => {
-  const newPlace = favouritePlaces.value.find((place) => place._id === newId)
+  const newPlace = favouritePlaces.value.find((place) => place.id === newId)
   const { coordinates } = newPlace
   changeActiveId(newId)
   console.log(newPlace)
@@ -107,12 +107,12 @@ onMounted(() => {
 
         <MapboxMarker
           v-for="place in favouritePlaces"
-          :key="place._id"
+          :key="place.id"
           :lngLat="place.coordinates"
           anchor="bottom"
         >
-          <button @click="changeActiveId(place._id)">
-            <MarkerIcon :class="place._id === activeId ? 'h-10 w-10' : 'h-8 w-8'" />
+          <button @click="changeActiveId(place.id)">
+            <MarkerIcon :class="place.id === activeId ? 'h-10 w-10' : 'h-8 w-8'" />
           </button>
         </MapboxMarker>
       </MapboxMap>
