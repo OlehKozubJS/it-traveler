@@ -2,7 +2,7 @@
 import IButton from '../IButton/IButton.vue'
 import IModal from '../IModal/IModal.vue'
 
-const props = defineProps({
+defineProps({
   title: {
     default: false,
     type: String,
@@ -19,7 +19,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <IModal>
+  <IModal v-if="isOpen">
     <div class="mb-4 test-lg">{{ title }}</div>
     <div class="flex gap-3 justify-center">
       <IButton variant="primary">Відхилити</IButton>
