@@ -28,12 +28,12 @@ const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal
       <div v-if="items.length === 0">Список порожній</div>
       <FavouritePlace
         v-for="place in props.items"
-        :key="place._id"
+        :key="place.id"
         :title="place.title"
         :description="place.description"
         :img="place.img"
-        :is-active="place._id === props.activeId"
-        @click="emit('place-clicked', place._id)"
+        :is-active="place.id === props.activeId"
+        @click="emit('place-clicked', place.id)"
         @edit="openEditModal"
       />
 
