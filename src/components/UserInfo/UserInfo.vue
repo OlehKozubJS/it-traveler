@@ -26,6 +26,6 @@ onMounted(() => {
     <div class="w-10 h-10 flex items-center justify-center rounded-full color-primary bg-primary">
       <UserIcon class="text-white" />
     </div>
-    <span>{{ name }}</span>
+    <span>{{ userInfo.name }}</span>
   </div>
 </template>
