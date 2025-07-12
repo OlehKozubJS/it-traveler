@@ -24,6 +24,7 @@ const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal
 const selectedId = ref(null)
 
 const handleEditPlace = (id) => {
+  selectedId.value = id
   openEditModal()
 }
 </script>
