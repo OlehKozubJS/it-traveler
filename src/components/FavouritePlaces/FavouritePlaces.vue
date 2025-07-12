@@ -6,7 +6,7 @@ import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 import { useModal } from '../../composables/useModal'
 import { useMutation } from '../../composables/useMutation'
-import { updateFavoritePlace } from '../../api/favourite-places'
+import { deleteFavoritePlace, updateFavoritePlace } from '../../api/favourite-places'
 import ConfirmationModal from '../ConfirmationModal/ConfirmationModal.vue'
 
 const props = defineProps({
@@ -39,6 +39,12 @@ const { mutation: updatePlace, isLoading } = useMutation({
     emit('updated')
   },
 })
+
+const {
+  mutation: deletePlace,
+  isLoading: isDeleting,
+  error: deleteError,
+} = useMutation({ mutationFunction: (id) => deleteFavoritePlace(id) })
 
 const selectedId = ref(null)
 const selectedItem = computed(() => {
