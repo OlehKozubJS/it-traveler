@@ -65,8 +65,8 @@ const handleOpenConfirmationModal = (id) => {
   idOfDeletedItem.value = id
 }
 
-const handleDeletePlace = (id) => {
-  deletePlace(id)
+const handleDeletePlace = () => {
+  deletePlace(idOfDeletedItem.value)
 }
 </script>
 
@@ -85,7 +85,7 @@ const handleDeletePlace = (id) => {
         :is-active="place.id === props.activeId"
         @click="emit('place-clicked', place.id)"
         @edit="handleEditPlace(place.id)"
-        @delete="openConfirmationModal"
+        @delete="handleOpenConfirmationModal"
       />
 
       <EditPlaceModal
