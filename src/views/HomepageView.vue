@@ -76,6 +76,7 @@ onMounted(() => {
         :active-id="activeId"
         @place-clicked="changePlace"
         @create="openModal"
+        @updated="getPlaces"
       />
       <CreateNewPlaceModal
         :is-open="isOpen"
