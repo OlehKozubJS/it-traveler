@@ -8,15 +8,15 @@ const LoginPage = () => import('../views/LoginView.vue')
 const RegistrationPage = () => import('../views/RegistrationView.vue')
 
 const routes = [
-  { path: '/', component: GreetingPage },
-  { path: '/map', component: HomePage },
+  { path: '/', component: GreetingPage, name: 'Greeting' },
+  { path: '/map', component: HomePage, name: 'Homepage' },
   {
     path: '/auth',
     component: AuthPage,
     redirect: '/auth/login',
     children: [
-      { path: 'login', component: LoginPage },
-      { path: 'registration', component: RegistrationPage },
+      { path: 'login', component: LoginPage, name: 'greeting' },
+      { path: 'registration', component: RegistrationPage, name: 'greeting' },
     ],
   },
 ]
