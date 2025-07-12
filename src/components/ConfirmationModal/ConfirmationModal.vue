@@ -15,6 +15,10 @@ defineProps({
     default: false,
     type: Boolean,
   },
+  hasError: {
+    default: false,
+    type: Boolean,
+  },
 })
 
 const emit = defineEmits(['cancel', 'confirm'])
