@@ -34,7 +34,9 @@ const emit = defineEmits(['close'])
 
           <div class="w-7/12">
             <IInput />
-            <div></div>
+            <div class="mt-4">
+              <IInput label="Опис" type="textarea" />
+            </div>
             <IButton />
           </div>
         </div>
