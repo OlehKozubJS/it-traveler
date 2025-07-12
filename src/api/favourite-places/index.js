@@ -18,6 +18,6 @@ export const updateFavoritePlace = (body) => {
   return clientFetch.put(BASE_PLACES_URL, body)
 }
 
-export const deleteFavoritePlace = (body) => {
+export const deleteFavoritePlace = (id) => {
   return clientFetch.delete(BASE_PLACES_URL, body)
 }
