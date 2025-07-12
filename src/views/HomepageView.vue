@@ -79,6 +79,7 @@ onMounted(() => {
       <FavouritePlaces
         :items="favouritePlaces"
         :active-id="activeId"
+        :is-places-loading="isPlacesLoading"
         @place-clicked="changePlace"
         @create="openModal"
         @updated="getPlaces"
