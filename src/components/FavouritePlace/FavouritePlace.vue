@@ -9,6 +9,8 @@ const props = defineProps({
   img: String,
   isActive: { required: true, type: Boolean },
 })
+
+const emit = defineEmits([''])
 </script>
 
 <template>
