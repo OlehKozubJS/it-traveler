@@ -72,8 +72,13 @@ const handleSubmit = (formData) => {
       />
     </slot>
     <slot></slot>
-    <IButton class="w-full mt-10" @click="emit('create')" variant="gradient" :is-loading="isLoading"
-      >Додати маркер</IButton
+    <IButton
+      class="w-full mt-10"
+      @click="emit('create')"
+      variant="gradient"
+      :is-loading="isLoading"
     >
+      Додати маркер
+    </IButton>
   </div>
 </template>
