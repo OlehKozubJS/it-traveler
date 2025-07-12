@@ -23,6 +23,11 @@ const props = defineProps({
 const emit = defineEmits(['place-clicked', 'create', 'updated'])
 
 const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
+const {
+  isOpen: isConfirmationModalOpen,
+  openModal: openConfirmationModal,
+  closeModal: closeConfirmationModal,
+} = useModal()
 
 const { mutation: updatePlace, isLoading } = useMutation({
   mutationFunction: async (formData) => {
