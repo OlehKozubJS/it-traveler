@@ -5,6 +5,7 @@ import EditPlaceModal from '../EditPlaceModal/EditPlaceModal.vue'
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 import { useModal } from '../../composables/useModal'
+import { useMutation } from '../../composables/useMutation'
 
 const props = defineProps({
   items: {
