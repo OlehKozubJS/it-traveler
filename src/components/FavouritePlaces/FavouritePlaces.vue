@@ -18,7 +18,7 @@ const props = defineProps({
     required: true,
     type: [String, null],
   },
-  isLoading: {
+  isPlacesLoading: {
     type: Boolean,
     default: false,
   },
