@@ -70,7 +70,7 @@ const handleChangeImg = (url) => {
           </div>
         </div>
 
-        <InputImage class="mt-3" @uploded="handleChangeImg">
+        <InputImage class="mt-3" @uploaded="handleChangeImg">
           <span span="text-xs">Натисність тут, щоб додати інше фото</span>
         </InputImage>
       </form>
