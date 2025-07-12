@@ -23,7 +23,7 @@ defineProps({
     <div class="mb-4 test-lg">{{ title }}</div>
     <div class="flex gap-3 justify-center">
       <IButton variant="primary">Відхилити</IButton>
-      <IButton variant="gradient">Підтвердити</IButton>
+      <IButton variant="gradient" :is-loading="isLoading">Підтвердити</IButton>
     </div>
   </IModal>
 </template>
