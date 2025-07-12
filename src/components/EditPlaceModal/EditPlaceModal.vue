@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 import IButton from '../IButton/IButton.vue'
 import IInput from '../IInput/IInput.vue'
 import IModal from '../IModal/IModal.vue'
@@ -20,6 +22,7 @@ const formData = ref({
   title: '',
   description: '',
   img: '',
+  coordinates: null,
 })
 </script>
 
