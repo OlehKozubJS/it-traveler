@@ -1,5 +1,5 @@
 <script setup>
-import IButton from '../IButton/IButton.vue'
+import { ItTravelerButton } from '../ItTravelerButton'
 import IModal from '../IModal/IModal.vue'
 
 defineProps({
@@ -28,10 +28,10 @@ const emit = defineEmits(['cancel', 'confirm'])
   <IModal v-if="isOpen" @close="emit('cancel')">
     <div class="mb-4 test-lg">{{ title }}</div>
     <div class="flex gap-3 justify-center">
-      <IButton @click="emit('cancel')" variant="primary"> Відхилити</IButton>
-      <IButton @click="emit('confirm')" variant="gradient" :is-loading="isLoading">
+      <ItTravelerButton @click="emit('cancel')" variant="primary"> Відхилити</ItTravelerButton>
+      <ItTravelerButton @click="emit('confirm')" variant="gradient" :is-loading="isLoading">
         Підтвердити
-      </IButton>
+      </ItTravelerButton>
     </div>
     <div v-if="hasError" class="text-red-500">Щось пішло не так</div>
   </IModal>
