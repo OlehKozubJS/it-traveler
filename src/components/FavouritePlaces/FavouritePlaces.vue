@@ -119,8 +119,8 @@ const handleDeletePlace = () => {
       />
     </slot>
     <slot></slot>
-    <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">
+    <ItTravelerButton class="w-full mt-10" @click="emit('create')" variant="gradient">
       Додати маркер
-    </IButton>
+    </ItTravelerButton>
   </div>
 </template>
