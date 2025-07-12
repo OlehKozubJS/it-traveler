@@ -66,18 +66,14 @@ const handleSubmit = (formData) => {
 
       <EditPlaceModal
         :is-open="isEditOpen"
+        :is-loading="isLoading"
         :place="selectedItem"
         @close="closeEditModal"
         @submit="handleSubmit"
       />
     </slot>
     <slot></slot>
-    <IButton
-      class="w-full mt-10"
-      @click="emit('create')"
-      variant="gradient"
-      :is-loading="isLoading"
-    >
+    <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">
       Додати маркер
     </IButton>
   </div>
