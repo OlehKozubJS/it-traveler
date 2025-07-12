@@ -94,7 +94,7 @@ onMounted(() => {
         @close="closeModal"
         @submit="handleAddPlace"
       />
-      <LogoutButton />
+      <LogoutButton class="mt-10" />
     </div>
     <div class="w-full h-full flex items-center justify-center text-6xl">
       <MapboxMap
