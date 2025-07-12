@@ -26,4 +26,6 @@ export const router = createRouter({
   routes,
 })
 
-router.beforeEach
+router.beforeEach((to, from, next) => {
+  const authRoutes = ['login', 'registration']
+})
