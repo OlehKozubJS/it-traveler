@@ -24,7 +24,7 @@ const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal
 const selectedId = ref(null)
 
 const selectedItem = computed(() => {
-  props.items.find((place) => place.id === selectedId.value)
+  return props.items.find((place) => place.id === selectedId.value)
 })
 
 const handleEditPlace = (id) => {
@@ -47,7 +47,7 @@ const handleEditPlace = (id) => {
         :img="place.img"
         :is-active="place.id === props.activeId"
         @click="emit('place-clicked', place.id)"
-        @edit="openEditModal"
+        @edit="handleEditPlace(place.id)"
       />
 
       <EditPlaceModal :is-open="isEditOpen" :place="handleEditPlace" @close="closeEditModal" />
