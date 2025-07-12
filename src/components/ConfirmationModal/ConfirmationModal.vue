@@ -25,7 +25,7 @@ const emit = defineEmits(['cancel', 'confirm'])
 </script>
 
 <template>
-  <IModal v-if="isOpen" @close="emit('cancel')">
+  <ItTravelerModal v-if="isOpen" @close="emit('cancel')">
     <div class="mb-4 test-lg">{{ title }}</div>
     <div class="flex gap-3 justify-center">
       <ItTravelerButton @click="emit('cancel')" variant="primary"> Відхилити</ItTravelerButton>
@@ -34,5 +34,5 @@ const emit = defineEmits(['cancel', 'confirm'])
       </ItTravelerButton>
     </div>
     <div v-if="hasError" class="text-red-500">Щось пішло не так</div>
-  </IModal>
+  </ItTravelerModal>
 </template>
