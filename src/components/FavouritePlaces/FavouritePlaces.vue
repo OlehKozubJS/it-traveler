@@ -106,6 +106,7 @@ const handleDeletePlace = () => {
 
       <ConfirmationModal
         :is-open="isConfirmationModalOpen"
+        :is-loading="isDeleting"
         @cancel="closeConfirmationModal"
         @confirm="handleDeletePlace"
         title="Ви дійсно хочете видалити улюблене місце?"
