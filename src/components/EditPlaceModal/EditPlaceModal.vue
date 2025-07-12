@@ -13,6 +13,7 @@ const props = defineProps({
     default: false,
     type: Boolean,
   },
+  place: Object,
 })
 
 const emit = defineEmits(['close'])
