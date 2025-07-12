@@ -6,7 +6,11 @@ import { getUserInfo } from '../../api/user'
 
 import UserIcon from './UserIcon.vue'
 
-const { mutation: getUser, isLoading } = useMutation({
+const {
+  data: userInfo,
+  mutation: getUser,
+  isLoading,
+} = useMutation({
   mutationFunction: () => getUserInfo(),
 })
 
