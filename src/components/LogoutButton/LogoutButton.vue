@@ -13,14 +13,10 @@ const { mutation: logoutUser, isLoading } = useMutation({
     router.replace('auth/login')
   },
 })
-
-const handlelogout = () => {
-  logout()
-}
 </script>
 
 <template>
-  <button class="flex gap-2 items-center px-6 text-black" @click="handlelogout">
+  <button class="flex gap-2 items-center px-6 text-black" @click="logoutUser">
     Вихід<LogoutIcon />
   </button>
 </template>
