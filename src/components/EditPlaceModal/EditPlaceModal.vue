@@ -16,7 +16,9 @@ const props = defineProps({
 const emit = defineEmits(['close'])
 
 const formData = ref({
-    id:
+  id: '',
+  title: '',
+  description:
 })
 </script>
 
