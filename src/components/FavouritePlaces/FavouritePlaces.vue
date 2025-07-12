@@ -59,6 +59,10 @@ const handleEditPlace = (id) => {
 const handleSubmit = (formData) => {
   updatePlace(formData)
 }
+
+const handleDeletePlace = (id) => {
+  deletePlace(id)
+}
 </script>
 
 <template>
