@@ -10,7 +10,6 @@ import { useMutation } from '../composables/useMutation'
 
 import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
-import ChosenMarkerIcon from '../components/icons/ChosenMarkerIcon.vue'
 import CreateNewPlaceModal from '../components/CreateNewPlaceModal/CreateNewPlaceModal.vue'
 
 const activeId = ref('')
