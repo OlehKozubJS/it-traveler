@@ -33,7 +33,7 @@ const emit = defineEmits(['close'])
           </div>
 
           <div class="w-7/12">
-            <IInput />
+            <IInput label="Локація" />
             <div class="mt-4">
               <IInput label="Опис" type="textarea" />
             </div>
