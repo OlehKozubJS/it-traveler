@@ -32,8 +32,14 @@ const emit = defineEmits(['close'])
             />
           </div>
 
-          <div class="w-7/12"></div>
+          <div class="w-7/12">
+            <IInput />
+            <div></div>
+            <IButton />
+          </div>
         </div>
+
+        <InputImage class="mt-3"> <span></span></InputImage>
       </form>
     </div>
   </IModal>
