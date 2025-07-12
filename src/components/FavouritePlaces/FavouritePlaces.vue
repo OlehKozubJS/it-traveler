@@ -24,8 +24,8 @@ const emit = defineEmits(['place-clicked', 'create'])
 const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
 
 const { mutation: updatePlace, isLoading } = useMutation({
-  mutationFunction: (formData) => {
-    updateFavoritePlace(formData)
+  mutationFunction: async (formData) => {
+    await updateFavoritePlace(formData)
   },
   onSuccess: () => {
     closeEditModal()
@@ -72,6 +72,8 @@ const handleSubmit = (formData) => {
       />
     </slot>
     <slot></slot>
-    <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">Додати маркер</IButton>
+    <IButton class="w-full mt-10" @click="emit('create')" variant="gradient" :is-loading="isLoading"
+      >Додати маркер</IButton
+    >
   </div>
 </template>
