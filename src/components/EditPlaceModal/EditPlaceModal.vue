@@ -31,6 +31,8 @@ const emit = defineEmits(['close'])
               alt="place img"
             />
           </div>
+
+          <div class="w-7/12"></div>
         </div>
       </form>
     </div>
