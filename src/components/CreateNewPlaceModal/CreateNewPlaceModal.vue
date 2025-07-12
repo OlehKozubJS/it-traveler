@@ -2,7 +2,7 @@
 import { computed, reactive } from 'vue'
 
 import IModal from '../IModal/IModal.vue'
-import IInput from '../IInput/IInput.vue'
+import { ItTravelerInput } from '../ItTravelerInput'
 import InputImage from '../InputImage/InputImage.vue'
 import { ItTravelerButton } from '../ItTravelerButton'
 import MarkerIcon from '../icons/MarkerIcon.vue'
@@ -49,8 +49,8 @@ const resetForm = () => {
   <IModal v-if="props.isOpen" @close="emit('close')">
     <form @submit.prevent="emit('submit', formData, resetForm)" class="min-w-[420px]">
       <div class="flex gap-1 font-bold justify-center mb-10"><MarkerIcon />Додати маркер</div>
-      <IInput label="Локація" class="mb-4" v-model="formData.title" />
-      <IInput label="Опис" type="textarea" class="mb-2" v-model="formData.description" />
+      <ItTravelerInput label="Локація" class="mb-4" v-model="formData.title" />
+      <ItTravelerInput label="Опис" type="textarea" class="mb-2" v-model="formData.description" />
       <div class="flex gap-1 items-center mb-10">
         <img v-if="formData.img" :src="formData.img" alt="" class="w-20 h-20 object-cover" />
         <InputImage class="mb-10" @uploaded="handleUpload">{{ uploadText }}</InputImage>
