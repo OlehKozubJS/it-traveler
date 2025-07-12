@@ -34,6 +34,7 @@ const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal
         :img="place.img"
         :is-active="place._id === props.activeId"
         @click="emit('place-clicked', place._id)"
+        @edit="openEditModal"
       />
 
       <EditPlaceModal :is-open="isEditOpen" @close="closeEditModal" />
