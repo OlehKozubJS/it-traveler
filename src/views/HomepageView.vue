@@ -44,14 +44,12 @@ const {
 
 const changeActiveId = (newId) => {
   activeId.value = newId
-  //console.log(activeId.value)
 }
 
 const changePlace = (newId) => {
   const newPlace = favouritePlaces.value.find((place) => place.id === newId)
   const { coordinates } = newPlace
   changeActiveId(newId)
-  //console.log(newPlace)
   map.value.flyTo({ center: coordinates })
 }
 
