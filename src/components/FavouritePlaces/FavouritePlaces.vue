@@ -29,6 +29,7 @@ const { mutation: updatePlace, isLoading } = useMutation({
   },
   onSuccess: () => {
     closeEditModal()
+    emit('updated')
   },
 })
 
