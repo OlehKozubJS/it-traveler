@@ -18,4 +18,12 @@ const props = defineProps({
 })
 </script>
 
-<template></template>
+<template>
+  <IModal>
+    <div></div>
+    <div>
+      <IButton></IButton>
+      <IButton></IButton>
+    </div>
+  </IModal>
+</template>
