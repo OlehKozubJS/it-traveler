@@ -16,8 +16,8 @@ const { mutation: logoutUser, isLoading } = useMutation({
 </script>
 
 <template>
-  <button class="flex gap-2 items-center px-6 text-black" @click="logoutUser">
+  <button @click="logoutUser">
     <span v-if="isLoading">Loading...</span>
-    <span v-else>Вихід<LogoutIcon /></span>
+    <span v-else class="flex gap-2 items-center px-6 text-black">Вихід<LogoutIcon /></span>
   </button>
 </template>
