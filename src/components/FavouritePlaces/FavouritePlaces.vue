@@ -20,10 +20,9 @@ const props = defineProps({
 
 const emit = defineEmits(['place-clicked', 'create'])
 
+const {} = useMutation()
 const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
-
 const selectedId = ref(null)
-
 const selectedItem = computed(() => {
   return props.items.find((place) => place.id === selectedId.value)
 })
