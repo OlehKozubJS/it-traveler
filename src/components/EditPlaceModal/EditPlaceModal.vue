@@ -24,6 +24,8 @@ const formData = ref({
   img: '',
   coordinates: null,
 })
+
+const handleChangeImg = (url) => {}
 </script>
 
 <template>
@@ -52,7 +54,7 @@ const formData = ref({
           </div>
         </div>
 
-        <InputImage class="mt-3">
+        <InputImage class="mt-3" @uploded="">
           <span span="text-xs">Натисність тут, щоб додати інше фото</span>
         </InputImage>
       </form>
