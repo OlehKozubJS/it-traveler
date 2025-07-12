@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 
 import EditPlaceModal from '../EditPlaceModal/EditPlaceModal.vue'
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
-import IButton from '../IButton/IButton.vue'
+import { ItTravelerButton } from '../ItTravelerButton'
 import { useModal } from '../../composables/useModal'
 import { useMutation } from '../../composables/useMutation'
 import { deleteFavoritePlace, updateFavoritePlace } from '../../api/favourite-places'
