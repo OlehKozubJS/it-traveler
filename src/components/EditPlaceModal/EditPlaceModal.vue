@@ -17,13 +17,13 @@ const emit = defineEmits(['close'])
 
 <template>
   <IModal v-if="props.isOpen" @close="emit('close')">
-    <div class="w-[750x]">
+    <div class="w-[750px]">
       <div class="flex gap-2 items-center mb-10">
         <MarkerIcon height="18" width="18" />
         <span class="font-bold text-base">Редагувати маркер</span>
       </div>
       <form>
-        <div class="flex-gap-5">
+        <div class="flex gap-5">
           <div class="w-5/12">
             <img
               class="w-full h-[276px] object-cover rounded-md"
