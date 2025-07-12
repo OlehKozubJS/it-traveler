@@ -27,7 +27,9 @@ const { mutation: updatePlace, isLoading } = useMutation({
   mutationFunction: (formData) => {
     updateFavoritePlace(formData)
   },
-  onSuccess: () => {},
+  onSuccess: () => {
+    closeEditModal()
+  },
 })
 
 const selectedId = ref(null)
