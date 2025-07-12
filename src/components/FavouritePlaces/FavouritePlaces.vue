@@ -17,7 +17,7 @@ const props = defineProps({
 
 const emit = defineEmits(['place-clicked', 'create'])
 
-const { isOpen: isEditOpen, openModal: openEditModal } = useModal()
+const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
 </script>
 
 <template>
