@@ -4,6 +4,7 @@ import IInput from '../IInput/IInput.vue'
 import IModal from '../IModal/IModal.vue'
 import InputImage from '../InputImage/InputImage.vue'
 import MarkerIcon from '../icons/MarkerIcon.vue'
+import fallbackImage from '../../assets/img'
 
 const props = defineProps({
   isOpen: {
@@ -23,7 +24,9 @@ const emit = defineEmits(['close'])
       </div>
       <form>
         <div class="flex-gap-5">
-          <div class="w-5/12"></div>
+          <div class="w-5/12">
+            <img class="w-full h-[276px] object-cover rounded-md" :src="" alt="" />
+          </div>
         </div>
       </form>
     </div>
