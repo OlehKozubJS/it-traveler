@@ -4,8 +4,9 @@ import { computed, reactive } from 'vue'
 import IModal from '../IModal/IModal.vue'
 import IInput from '../IInput/IInput.vue'
 import InputImage from '../InputImage/InputImage.vue'
-import IButton from '../IButton/IButton.vue'
+import { ItTravelerButton } from '../ItTravelerButton'
 import MarkerIcon from '../icons/MarkerIcon.vue'
+import ItTravelerButton from '../ItTravelerButton/ItTravelerButton.vue'
 
 const props = defineProps({
   isOpen: {
@@ -55,7 +56,7 @@ const resetForm = () => {
         <img v-if="formData.img" :src="formData.img" alt="" class="w-20 h-20 object-cover" />
         <InputImage class="mb-10" @uploaded="handleUpload">{{ uploadText }}</InputImage>
       </div>
-      <IButton class="w-full" variant="gradient" :is-loading="props.isLoading">Додати</IButton>
+      <ItTravelerButton class="w-full" variant="gradient" :is-loading="props.isLoading">Додати</Itt>
       <div v-if="props.hasError" class="text-red-500">Щось пішло не так</div>
     </form>
   </IModal>
