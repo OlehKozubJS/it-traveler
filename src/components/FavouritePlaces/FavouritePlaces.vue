@@ -70,6 +70,7 @@ const handleSubmit = (formData) => {
         :is-active="place.id === props.activeId"
         @click="emit('place-clicked', place.id)"
         @edit="handleEditPlace(place.id)"
+        @delete="openConfirmationModal"
       />
 
       <EditPlaceModal
