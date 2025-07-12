@@ -2,7 +2,7 @@
 import { reactive, toRaw } from 'vue'
 
 import IInput from '../../IInput/IInput.vue'
-import IButton from '../../IButton/IButton.vue'
+import { ItTravelerButton } from '../../ItTravelerButton'
 
 const props = defineProps({
   isLoading: {
@@ -31,8 +31,13 @@ const userData = reactive({
       v-model="userData.email"
     />
     <IInput label="Пароль" type="password" v-model="userData.password" />
-    <IButton class="mt-10 w-full" variant="gradient" type="submit" :is-loading="props.isLoading">
+    <ItTravelerButton
+      class="mt-10 w-full"
+      variant="gradient"
+      type="submit"
+      :is-loading="props.isLoading"
+    >
       Створити акаунт
-    </IButton>
+    </ItTravelerButton>
   </form>
 </template>
