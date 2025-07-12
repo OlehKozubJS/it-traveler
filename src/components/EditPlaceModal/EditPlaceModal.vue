@@ -37,7 +37,7 @@ const emit = defineEmits(['close'])
             <div class="mt-4">
               <IInput label="Опис" type="textarea" />
             </div>
-            <IButton />
+            <IButton class="mt-10 w-full" variant="gradient">Зберегти</IButton>
           </div>
         </div>
 
