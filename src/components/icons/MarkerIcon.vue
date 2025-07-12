@@ -1,5 +1,7 @@
 <script setup>
 defineProps({ isActive: { type: Boolean, default: false } })
+
+const isActive = ''
 </script>
 
 <template>
