@@ -6,6 +6,7 @@ import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 import { useModal } from '../../composables/useModal'
 import { useMutation } from '../../composables/useMutation'
+import { updateFavoritePlace } from '@/api/favourite-places'
 
 const props = defineProps({
   items: {
@@ -20,9 +21,15 @@ const props = defineProps({
 
 const emit = defineEmits(['place-clicked', 'create'])
 
-const { mutation: updatePlace, isLoading } = useMutation()
-
 const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
+
+const { mutation: updatePlace, isLoading } = useMutation({
+  mutationFunction: (formData) => {
+    updateFavoritePlace(formData)
+  },
+  onSuccess: () => {},
+})
+
 const selectedId = ref(null)
 const selectedItem = computed(() => {
   return props.items.find((place) => place.id === selectedId.value)
