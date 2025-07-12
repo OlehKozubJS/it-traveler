@@ -31,5 +31,8 @@ router.beforeEach((to, from, next) => {
   const { name } = to
 
   if (!authRoutes.includes(name) && !authService.isLoggedIn) {
+    next({ name: 'login' })
+  } else {
+    next()
   }
 })
