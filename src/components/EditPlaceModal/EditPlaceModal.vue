@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 import IButton from '../IButton/IButton.vue'
 import IInput from '../IInput/IInput.vue'
@@ -25,6 +25,13 @@ const formData = ref({
   img: '',
   coordinates: null,
 })
+
+watch(
+  () => props.place,
+  () => {
+    formData.value = { ...props.place }
+  },
+)
 
 const handleChangeImg = (url) => {
   formData.value.img = url
