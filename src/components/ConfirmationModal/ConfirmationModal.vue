@@ -16,6 +16,8 @@ defineProps({
     type: Boolean,
   },
 })
+
+const emit = defineEmits(['cancel', 'confirm'])
 </script>
 
 <template>
