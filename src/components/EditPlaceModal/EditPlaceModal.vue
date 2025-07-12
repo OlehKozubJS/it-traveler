@@ -6,7 +6,7 @@ import InputImage from '../InputImage/InputImage.vue'
 import MarkerIcon from '../icons/MarkerIcon.vue'
 
 const props = defineProps({
-  iOpen: {
+  isOpen: {
     default: false,
     type: Boolean,
   },
@@ -15,5 +15,5 @@ const emit = defineEmits(['close'])
 </script>
 
 <template>
-  <IModal v-if="props.isOpen"> </IModal>
+  <IModal v-if="props.isOpen" @close="emit('close')"> </IModal>
 </template>
