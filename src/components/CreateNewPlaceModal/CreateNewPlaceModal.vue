@@ -32,7 +32,6 @@ const formData = reactive({
 
 const handleUpload = (url) => {
   formData.img = url
-  console.log(url)
 }
 
 const uploadText = computed(() => {
