@@ -60,9 +60,9 @@ const handleChangeImg = (url) => {
           </div>
 
           <div class="w-7/12">
-            <IInput label="Локація" v-model="formData.title" />
+            <ItTravelerInput label="Локація" v-model="formData.title" />
             <div class="mt-4">
-              <IInput label="Опис" type="textarea" v-model="formData.description" />
+              <ItTravelerInput label="Опис" type="textarea" v-model="formData.description" />
             </div>
             <ItTravelerButton class="mt-10 w-full" variant="gradient" :is-loading="isLoading">
               Зберегти
