@@ -2,6 +2,7 @@
 import EditPlaceModal from '../EditPlaceModal/EditPlaceModal.vue'
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
+import { useModal } from '../../composables/useModal'
 
 const props = defineProps({
   items: {
@@ -15,6 +16,8 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['place-clicked', 'create'])
+
+const { isOpen: isEditOpen, openModal: openEditModal } = useModal()
 </script>
 
 <template>
