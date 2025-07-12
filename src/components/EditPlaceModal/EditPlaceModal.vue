@@ -11,4 +11,5 @@ const props = defineProps({
     type: Boolean,
   },
 })
+const emit = defineEmits(['close'])
 </script>
