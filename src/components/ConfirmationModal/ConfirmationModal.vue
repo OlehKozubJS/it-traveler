@@ -1,6 +1,6 @@
 <script setup>
 import { ItTravelerButton } from '../ItTravelerButton'
-import IModal from '../IModal/IModal.vue'
+import { ItTravelerModal } from '../ItTravelerModal'
 
 defineProps({
   title: {
