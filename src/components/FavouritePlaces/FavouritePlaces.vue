@@ -23,6 +23,7 @@ const props = defineProps({
 const emit = defineEmits(['place-clicked', 'create', 'updated'])
 
 const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
+
 const {
   isOpen: isConfirmationModalOpen,
   openModal: openConfirmationModal,
@@ -79,7 +80,11 @@ const handleSubmit = (formData) => {
         @submit="handleSubmit"
       />
 
-      <ConfirmationModal :is-open="true" title="Ви дійсно хочете видалити улюблене місце?" />
+      <ConfirmationModal
+        :is-open="isConfirmationModalOpen"
+        @cancel="closeConfirmationModal"
+        title="Ви дійсно хочете видалити улюблене місце?"
+      />
     </slot>
     <slot></slot>
     <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">
