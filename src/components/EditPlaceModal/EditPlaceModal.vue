@@ -39,7 +39,6 @@ watch(
 
 const handleChangeImg = (url) => {
   formData.value.img = url
-  console.log(formData.value.img)
 }
 </script>
 
