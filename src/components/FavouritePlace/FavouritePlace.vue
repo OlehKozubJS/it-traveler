@@ -2,6 +2,7 @@
 import FavouritePlaceIconButton from './FavouritePlaceIconButton.vue'
 import EditIcon from './EditIcon.vue'
 import DeleteIcon from './DeleteIcon.vue'
+import { defineEmits } from 'vue'
 
 const props = defineProps({
   title: { required: true, type: String },
@@ -10,7 +11,7 @@ const props = defineProps({
   isActive: { required: true, type: Boolean },
 })
 
-const emit = defineEmits([''])
+const emit = defineEmits(['edit', 'delete'])
 </script>
 
 <template>
@@ -21,10 +22,10 @@ const emit = defineEmits([''])
         <div class="flex justify-between items-center mb-2">
           <h2 class="font-bold text-sm text-[#2C2C2C]">{{ props.title }}</h2>
           <div class="flex gap-2">
-            <FavouritePlaceIconButton>
+            <FavouritePlaceIconButton @click="emit('edit')">
               <EditIcon />
             </FavouritePlaceIconButton>
-            <FavouritePlaceIconButton>
+            <FavouritePlaceIconButton @click="emit('delete')">
               <DeleteIcon />
             </FavouritePlaceIconButton>
           </div>
