@@ -17,7 +17,7 @@ const emit = defineEmits(['edit', 'delete'])
 <template>
   <section section class="text-grey mb-6 last:mb-0">
     <div class="flex gap-4">
-      <img class="w-[76px] h-[76px] shrink-0" :src="props.img" alt="" />
+      <img class="w-[76px] h-[76px] shrink-0 rounded-md" :src="props.img" alt="" />
       <div class="w-full">
         <div class="flex justify-between items-center mb-2">
           <h2 class="font-bold text-sm text-[#2C2C2C]">{{ props.title }}</h2>
