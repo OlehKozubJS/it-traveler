@@ -8,9 +8,11 @@ import { addFavoritePlace, getFavoritePlaces } from '../api/favourite-places'
 import { useModal } from '../composables/useModal'
 import { useMutation } from '../composables/useMutation'
 
+import UserInfo from '@/components/UserInfo/UserInfo.vue'
 import FavouritePlaces from '../components/FavouritePlaces/FavouritePlaces.vue'
 import MarkerIcon from '../components/icons/MarkerIcon.vue'
 import CreateNewPlaceModal from '../components/CreateNewPlaceModal/CreateNewPlaceModal.vue'
+import LogoutButton from '../components/LogoutButton/LogoutButton.vue'
 
 const activeId = ref('')
 const map = ref(null)
