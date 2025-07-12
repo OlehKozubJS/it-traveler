@@ -22,8 +22,8 @@ const props = defineProps({
   <IModal>
     <div class="mb-4 test-lg">{{ title }}</div>
     <div class="flex gap-3 justify-center">
-      <IButton></IButton>
-      <IButton></IButton>
+      <IButton variant="primary">Відхилити</IButton>
+      <IButton variant="gradient">Підтвердити</IButton>
     </div>
   </IModal>
 </template>
