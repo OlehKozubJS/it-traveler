@@ -15,5 +15,7 @@ const emit = defineEmits(['close'])
 </script>
 
 <template>
-  <IModal v-if="props.isOpen" @close="emit('close')"> </IModal>
+  <IModal v-if="props.isOpen" @close="emit('close')">
+    <div class="w-[750x]"></div>
+  </IModal>
 </template>
