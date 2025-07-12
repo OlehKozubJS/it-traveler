@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import EditPlaceModal from '../EditPlaceModal/EditPlaceModal.vue'
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
@@ -22,6 +22,10 @@ const emit = defineEmits(['place-clicked', 'create'])
 const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
 
 const selectedId = ref(null)
+
+const selectedItem = computed(() => {
+  props.items.find((place) => place.id === selectedId)
+})
 
 const handleEditPlace = (id) => {
   selectedId.value = id
