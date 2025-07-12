@@ -26,7 +26,7 @@ const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal
 const { mutation: updatePlace, isLoading } = useMutation({
   mutationFunction: async (formData) => {
     await updateFavoritePlace(formData)
-    console.log(formData)
+    //console.log(formData)
   },
   onSuccess: () => {
     closeEditModal()
