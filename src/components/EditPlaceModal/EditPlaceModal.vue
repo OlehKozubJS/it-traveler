@@ -25,7 +25,11 @@ const emit = defineEmits(['close'])
       <form>
         <div class="flex-gap-5">
           <div class="w-5/12">
-            <img class="w-full h-[276px] object-cover rounded-md" :src="fallbackImage" alt="" />
+            <img
+              class="w-full h-[276px] object-cover rounded-md"
+              :src="fallbackImage"
+              alt="place img"
+            />
           </div>
         </div>
       </form>
