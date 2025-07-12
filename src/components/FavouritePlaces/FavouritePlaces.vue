@@ -22,6 +22,8 @@ const props = defineProps({
 
 const emit = defineEmits(['place-clicked', 'create', 'updated'])
 
+const idOfDeletedItem = ref(null)
+
 const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
 
 const {
@@ -44,13 +46,18 @@ const {
   mutation: deletePlace,
   isLoading: isDeleting,
   error: deleteError,
-} = useMutation({ mutationFunction: (id) => deleteFavoritePlace(id) })
+} = useMutation({
+  mutationFunction: (id) => deleteFavoritePlace(id),
+  onSuccess: () => {
+    closeConfirmationModal()
+    idOfDeletedItem.value = null
+  },
+})
 
 const selectedId = ref(null)
 const selectedItem = computed(() => {
   return props.items.find((place) => place.id === selectedId.value)
 })
-const idOfDeletedItem = ref(null)
 
 const handleEditPlace = (id) => {
   selectedId.value = id
