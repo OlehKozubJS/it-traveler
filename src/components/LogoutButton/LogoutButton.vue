@@ -4,7 +4,9 @@ import { useMutation } from '../../composables/useMutation'
 
 import LogoutIcon from './LogoutIcon.vue'
 
-const { mutation: logoutUser, isLoading } = useMutation({ mutationFunction: })
+const { mutation: logoutUser, isLoading } = useMutation({
+  mutationFunction: () => logout(),
+})
 
 const handlelogout = () => {
   logout()
