@@ -13,6 +13,10 @@ const props = defineProps({
     default: false,
     type: Boolean,
   },
+  isLoading: {
+    default: false,
+    type: Boolean,
+  },
   place: Object,
 })
 
@@ -60,7 +64,9 @@ const handleChangeImg = (url) => {
             <div class="mt-4">
               <IInput label="Опис" type="textarea" v-model="formData.description" />
             </div>
-            <IButton class="mt-10 w-full" variant="gradient">Зберегти</IButton>
+            <IButton class="mt-10 w-full" variant="gradient" :is-loading="isLoading">
+              Зберегти
+            </IButton>
           </div>
         </div>
 
