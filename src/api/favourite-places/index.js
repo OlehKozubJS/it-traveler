@@ -4,7 +4,9 @@ const BASE_PLACES_URL = '/points'
 
 export const getFavoritePlaces = () => {
   return clientFetch.get(BASE_PLACES_URL).then(({ data }) => {
+    console.log(data)
     return data.map((place) => {
+      console.log({ ...place, id: place._id })
       return { ...place, id: place._id }
     })
   })
