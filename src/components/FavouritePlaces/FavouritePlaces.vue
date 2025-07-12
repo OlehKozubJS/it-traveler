@@ -50,7 +50,7 @@ const handleEditPlace = (id) => {
         @edit="handleEditPlace(place.id)"
       />
 
-      <EditPlaceModal :is-open="isEditOpen" :place="handleEditPlace" @close="closeEditModal" />
+      <EditPlaceModal :is-open="isEditOpen" :place="selectedItem" @close="closeEditModal" />
     </slot>
     <slot></slot>
     <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">Додати маркер</IButton>
