@@ -61,6 +61,10 @@ const handleSubmit = (formData) => {
   updatePlace(formData)
 }
 
+const handleOpenConfirmationModal = (id) => {
+  idOfDeletedItem.value = id
+}
+
 const handleDeletePlace = (id) => {
   deletePlace(id)
 }
