@@ -42,7 +42,7 @@ const handleChangeImg = (url) => {
           <div class="w-5/12">
             <img
               class="w-full h-[276px] object-cover rounded-md"
-              :src="fallbackImage"
+              :src="formData.img || fallbackImage"
               alt="place img"
             />
           </div>
@@ -56,7 +56,7 @@ const handleChangeImg = (url) => {
           </div>
         </div>
 
-        <InputImage class="mt-3" @uploded="">
+        <InputImage class="mt-3" @uploded="handleChangeImg">
           <span span="text-xs">Натисність тут, щоб додати інше фото</span>
         </InputImage>
       </form>
