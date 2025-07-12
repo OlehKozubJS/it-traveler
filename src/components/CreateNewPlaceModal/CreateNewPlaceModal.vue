@@ -23,7 +23,12 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['close', 'submit'])
-const formData = reactive({ title: '', description: '', img: '' })
+
+const formData = reactive({
+  title: '',
+  description: '',
+  img: '',
+})
 
 const handleUpload = (url) => {
   formData.img = url
