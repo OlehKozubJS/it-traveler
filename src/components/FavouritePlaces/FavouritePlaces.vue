@@ -41,6 +41,10 @@ const handleEditPlace = (id) => {
   selectedId.value = id
   openEditModal()
 }
+
+const handleSubmit = (formData) => {
+  updatePlace(formData)
+}
 </script>
 
 <template>
@@ -64,7 +68,7 @@ const handleEditPlace = (id) => {
         :is-open="isEditOpen"
         :place="selectedItem"
         @close="closeEditModal"
-        @submit="console.log"
+        @submit="handleSubmit"
       />
     </slot>
     <slot></slot>
