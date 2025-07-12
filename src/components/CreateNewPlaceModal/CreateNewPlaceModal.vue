@@ -1,10 +1,12 @@
 <script setup>
 import { computed, reactive } from 'vue'
 
-import IModal from '../IModal/IModal.vue'
-import { ItTravelerInput } from '../ItTravelerInput'
-import InputImage from '../InputImage/InputImage.vue'
 import { ItTravelerButton } from '../ItTravelerButton'
+import { ItTravelerInput } from '../ItTravelerInput'
+import { ItTravelerModal } from '../ItTravelerModal'
+
+import InputImage from '../InputImage/InputImage.vue'
+
 import MarkerIcon from '../icons/MarkerIcon.vue'
 
 const props = defineProps({
