@@ -1,4 +1,5 @@
 <script setup>
+import EditPlaceModal from '../EditPlaceModal/EditPlaceModal.vue'
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 
@@ -25,6 +26,8 @@ const emit = defineEmits(['place-clicked', 'create'])
         :is-active="place._id === props.activeId"
         @click="emit('place-clicked', place._id)"
       />
+
+      <EditPlaceModal :is-open="true" />
     </slot>
     <slot></slot>
     <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">Додати маркер</IButton>
