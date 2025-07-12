@@ -24,7 +24,7 @@ const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal
 const selectedId = ref(null)
 
 const selectedItem = computed(() => {
-  props.items.find((place) => place.id === selectedId)
+  props.items.find((place) => place.id === selectedId.value)
 })
 
 const handleEditPlace = (id) => {
