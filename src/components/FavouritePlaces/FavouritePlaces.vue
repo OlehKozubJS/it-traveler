@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 import EditPlaceModal from '../EditPlaceModal/EditPlaceModal.vue'
 import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
@@ -18,6 +20,12 @@ const props = defineProps({
 const emit = defineEmits(['place-clicked', 'create'])
 
 const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal } = useModal()
+
+const selectedId = ref(null)
+
+const handleEditPlace = (id) => {
+  openEditModal()
+}
 </script>
 
 <template>
@@ -37,7 +45,7 @@ const { isOpen: isEditOpen, openModal: openEditModal, closeModal: closeEditModal
         @edit="openEditModal"
       />
 
-      <EditPlaceModal :is-open="isEditOpen" @close="closeEditModal" />
+      <EditPlaceModal :is-open="isEditOpen" :place="handleEditPlace" @close="closeEditModal" />
     </slot>
     <slot></slot>
     <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">Додати маркер</IButton>
