@@ -25,7 +25,9 @@ const formData = ref({
   coordinates: null,
 })
 
-const handleChangeImg = (url) => {}
+const handleChangeImg = (url) => {
+  formData.value.img = url
+}
 </script>
 
 <template>
