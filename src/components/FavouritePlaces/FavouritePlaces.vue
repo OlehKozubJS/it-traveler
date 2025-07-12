@@ -88,7 +88,7 @@ const handleDeletePlace = () => {
     <div class="text-grey mb-4">Додані маркери</div>
     <slot name="label"></slot>
     <slot name="list">
-      <div v-if="items.length === 0">Список порожній</div>
+      <div v-if="items.length === 0 && !isPlacesLoading">Список порожній</div>
       <FavouritePlace
         v-for="place in props.items"
         :key="place.id"
