@@ -6,7 +6,8 @@ import FavouritePlace from '../FavouritePlace/FavouritePlace.vue'
 import IButton from '../IButton/IButton.vue'
 import { useModal } from '../../composables/useModal'
 import { useMutation } from '../../composables/useMutation'
-import { updateFavoritePlace } from '@/api/favourite-places'
+import { updateFavoritePlace } from '../../api/favourite-places'
+import ConfirmationModal from '../ConfirmationModal/ConfirmationModal.vue'
 
 const props = defineProps({
   items: {
@@ -72,6 +73,8 @@ const handleSubmit = (formData) => {
         @close="closeEditModal"
         @submit="handleSubmit"
       />
+
+      <ConfirmationModal :is-open="true" title="Ви дійсно хочете видалити улюблене місце?" />
     </slot>
     <slot></slot>
     <IButton class="w-full mt-10" @click="emit('create')" variant="gradient">
