@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, toRaw } from 'vue'
 
-import IInput from '../../IInput/IInput.vue'
+import { ItTravelerInput } from '../../ItTravelerInput'
 import { ItTravelerButton } from '../../ItTravelerButton'
 
 const props = defineProps({ isLoading: { default: false, type: Boolean } })
@@ -16,14 +16,14 @@ const userData = reactive({
 
 <template>
   <form @submit.prevent="emit('submit', toRaw(userData))">
-    <IInput
+    <ItTravelerInput
       class="mb-4"
       label="Електронна пошта"
       type="email"
       placeholder="email@gmail.com"
       v-model="userData.email"
     />
-    <IInput label="Пароль" type="password" v-model="userData.password" />
+    <ItTravelerInput label="Пароль" type="password" v-model="userData.password" />
     <ItTravelerButton
       class="mt-30 w-full"
       variant="gradient"
