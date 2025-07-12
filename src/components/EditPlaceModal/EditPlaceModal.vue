@@ -41,7 +41,9 @@ const emit = defineEmits(['close'])
           </div>
         </div>
 
-        <InputImage class="mt-3"><span>Натисність тут, щоб додати інше фото</span></InputImage>
+        <InputImage class="mt-3"
+          ><span span="text-xs">Натисність тут, щоб додати інше фото</span></InputImage
+        >
       </form>
     </div>
   </IModal>
