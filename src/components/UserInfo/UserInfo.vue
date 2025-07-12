@@ -1,10 +1,17 @@
 <script setup>
+import { onMounted } from 'vue'
+
 import { useMutation } from '../../composables/useMutation'
+import { getUserInfo } from '../../api/user'
 
 import UserIcon from './UserIcon.vue'
 
-const { mutation: getUserInfo, isLoading } = useMutation({
-  mutationFunction: () => getUserInfo,
+const { mutation: getUser, isLoading } = useMutation({
+  mutationFunction: () => getUserInfo(),
+})
+
+onMounted(() => {
+  getUser()
 })
 </script>
 
