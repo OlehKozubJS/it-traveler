@@ -44,9 +44,9 @@ const formData = ref({
           </div>
 
           <div class="w-7/12">
-            <IInput label="Локація" />
+            <IInput label="Локація" v-model="formData.title" />
             <div class="mt-4">
-              <IInput label="Опис" type="textarea" />
+              <IInput label="Опис" type="textarea" v-model="formData.title" />
             </div>
             <IButton class="mt-10 w-full" variant="gradient">Зберегти</IButton>
           </div>
