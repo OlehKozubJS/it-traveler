@@ -19,8 +19,13 @@ const emit = defineEmits(['close'])
     <div class="w-[750x]">
       <div class="flex gap-2 items-center mb-10">
         <MarkerIcon height="18" width="18" />
-        <span class="font-bold text-base">Редагуват маркер</span>
+        <span class="font-bold text-base">Редагувати маркер</span>
       </div>
+      <form>
+        <div class="flex-gap-5">
+          <div class="w-5/12"></div>
+        </div>
+      </form>
     </div>
   </IModal>
 </template>
