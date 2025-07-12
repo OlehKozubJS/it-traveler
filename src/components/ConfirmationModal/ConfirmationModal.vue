@@ -20,8 +20,8 @@ const props = defineProps({
 
 <template>
   <IModal>
-    <div></div>
-    <div>
+    <div class="mb-4 test-lg">{{ title }}</div>
+    <div class="flex gap-3 justify-center">
       <IButton></IButton>
       <IButton></IButton>
     </div>
