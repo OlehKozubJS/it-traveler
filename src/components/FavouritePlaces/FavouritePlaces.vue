@@ -50,6 +50,7 @@ const selectedId = ref(null)
 const selectedItem = computed(() => {
   return props.items.find((place) => place.id === selectedId.value)
 })
+const idOfDeletedItem = ref(null)
 
 const handleEditPlace = (id) => {
   selectedId.value = id
