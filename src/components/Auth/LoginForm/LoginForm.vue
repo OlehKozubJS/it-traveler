@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, toRaw } from 'vue'
 
-import IInput from '@/components/IInput/IInput.vue'
+import IInput from '../../IInput/IInput.vue'
 import { ItTravelerButton } from '../../ItTravelerButton'
 
 const props = defineProps({ isLoading: { default: false, type: Boolean } })
