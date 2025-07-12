@@ -24,8 +24,10 @@ const emit = defineEmits(['cancel', 'confirm'])
   <IModal v-if="isOpen">
     <div class="mb-4 test-lg">{{ title }}</div>
     <div class="flex gap-3 justify-center">
-      <IButton variant="primary">Відхилити</IButton>
-      <IButton variant="gradient" :is-loading="isLoading">Підтвердити</IButton>
+      <IButton @click="emit('cancel')" variant="primary"> Відхилити</IButton>
+      <IButton @click="emit('confirm')" variant="gradient" :is-loading="isLoading">
+        Підтвердити
+      </IButton>
     </div>
   </IModal>
 </template>
