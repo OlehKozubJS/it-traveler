@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 
-import IButton from '../IButton/IButton.vue'
+import { ItTravelerButton } from '../ItTravelerButton'
 import IInput from '../IInput/IInput.vue'
 import IModal from '../IModal/IModal.vue'
 import InputImage from '../InputImage/InputImage.vue'
@@ -64,9 +64,9 @@ const handleChangeImg = (url) => {
             <div class="mt-4">
               <IInput label="Опис" type="textarea" v-model="formData.description" />
             </div>
-            <IButton class="mt-10 w-full" variant="gradient" :is-loading="isLoading">
+            <ItTravelerButton class="mt-10 w-full" variant="gradient" :is-loading="isLoading">
               Зберегти
-            </IButton>
+            </ItTravelerButton>
           </div>
         </div>
 
