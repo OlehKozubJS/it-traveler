@@ -3,7 +3,9 @@ import { useMutation } from '../../composables/useMutation'
 
 import UserIcon from './UserIcon.vue'
 
-const { mutation: getUserInfo, isLoading } = useMutation()
+const { mutation: getUserInfo, isLoading } = useMutation({
+  mutationFunction: () => getUserInfo,
+})
 </script>
 
 <template>
