@@ -48,7 +48,7 @@ const resetForm = () => {
 </script>
 
 <template>
-  <IModal v-if="props.isOpen" @close="emit('close')">
+  <ItTravelerModal v-if="props.isOpen" @close="emit('close')">
     <form @submit.prevent="emit('submit', formData, resetForm)" class="min-w-[420px]">
       <div class="flex gap-1 font-bold justify-center mb-10"><MarkerIcon />Додати маркер</div>
       <ItTravelerInput label="Локація" class="mb-4" v-model="formData.title" />
@@ -62,5 +62,5 @@ const resetForm = () => {
       >
       <div v-if="props.hasError" class="text-red-500">Щось пішло не так</div>
     </form>
-  </IModal>
+  </ItTravelerModal>
 </template>
