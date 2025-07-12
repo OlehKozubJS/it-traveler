@@ -13,3 +13,7 @@ const props = defineProps({
 })
 const emit = defineEmits(['close'])
 </script>
+
+<template>
+  <IModal v-if="props.isOpen"> </IModal>
+</template>
