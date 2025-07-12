@@ -16,7 +16,7 @@ const props = defineProps({
   place: Object,
 })
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(['close', 'submit'])
 
 const formData = ref({
   id: '',
@@ -45,7 +45,7 @@ const handleChangeImg = (url) => {
         <MarkerIcon height="18" width="18" />
         <span class="font-bold text-base">Редагувати маркер</span>
       </div>
-      <form>
+      <form @submit.prevent="emit('submit', formData)">
         <div class="flex gap-5">
           <div class="w-5/12">
             <img
