@@ -7,11 +7,11 @@ const AuthPage = () => import('../views/AuthView.vue')
 const LoginPage = () => import('../views/LoginView.vue')
 const RegistrationPage = () => import('../views/RegistrationView.vue')
 */
-import GreetingView from '@/views/GreetingView.vue'
-import HomepageView from '@/views/HomepageView.vue'
-import AuthView from '@/views/AuthView.vue'
-import LoginView from '@/views/LoginView.vue'
-import RegistrationView from '@/views/RegistrationView.vue'
+import GreetingView from '../views/GreetingView.vue'
+import HomepageView from '../views/HomepageView.vue'
+import AuthView from '../views/AuthView.vue'
+import LoginView from '../views/LoginView.vue'
+import RegistrationView from '../views/RegistrationView.vue'
 
 const routes = [
   { path: '/', component: GreetingView, name: 'greeting' },
