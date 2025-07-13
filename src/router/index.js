@@ -3,7 +3,7 @@ import { authService } from '../api/authService'
 
 import MainView from '../views/MainView.vue'
 
-const MainView = () => import('../views/MainView.vue')
+//const MainView = () => import('../views/MainView.vue')
 const GreetingView = () => import('../views/GreetingView.vue')
 const HomepageView = () => import('../views/HomepageView.vue')
 const AuthView = () => import('../views/AuthView.vue')
