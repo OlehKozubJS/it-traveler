@@ -15,7 +15,7 @@ import LoginView from '../views/LoginView.vue'
 import RegistrationView from '../views/RegistrationView.vue'
 */
 const routes = [
-  { path: '/', component: async () => await import('../views/GreetingView.vue'), name: 'greeting' },
+  { path: '/', component: GreetingView, name: 'greeting' },
   { path: '/map', component: HomepageView, name: 'homepage' },
   {
     path: '/auth',
