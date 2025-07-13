@@ -6,6 +6,7 @@ const HomepageView = () => import('../views/HomepageView.vue')
 const AuthView = () => import('../views/AuthView.vue')
 const LoginView = () => import('../views/LoginView.vue')
 const RegistrationView = () => import('../views/RegistrationView.vue')
+console.log(GreetingView)
 
 /*
 import GreetingView from '../views/GreetingView.vue'
@@ -15,7 +16,7 @@ import LoginView from '../views/LoginView.vue'
 import RegistrationView from '../views/RegistrationView.vue'
 */
 const routes = [
-  { path: '/', component: GreetingView, name: 'greeting' },
+  { path: '/', component: () => import('../views/GreetingView.vue'), name: 'greeting' },
   { path: '/map', component: HomepageView, name: 'homepage' },
   {
     path: '/auth',
