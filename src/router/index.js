@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { authService } from '../api/authService'
 
+//import MainView from '@/views/MainView.vue'
+
 const MainView = () => import('../views/MainView.vue')
 const GreetingView = () => import('../views/GreetingView.vue')
 const HomepageView = () => import('../views/HomepageView.vue')
@@ -11,7 +13,7 @@ const RegistrationView = () => import('../views/RegistrationView.vue')
 //import GreetingView from '../views/GreetingView.vue'
 
 const routes = [
-  { path: '/', component: GreetingView, redirect: '/home' },
+  { path: '/', component: MainView, redirect: '/home' },
   { path: '/home', component: GreetingView, name: 'greeting' },
   { path: '/map', component: HomepageView, name: 'homepage' },
   {
