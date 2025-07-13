@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { authService } from '../api/authService'
 
-//import MainView from '@/views/MainView.vue'
+import MainView from '@/views/MainView.vue'
 
 const MainView = () => import('../views/MainView.vue')
 const GreetingView = () => import('../views/GreetingView.vue')
