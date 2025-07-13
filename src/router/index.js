@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { authService } from '../api/authService'
+import { defineAsyncComponent } from 'vue'
 
 const GreetingView = () => import('../views/GreetingView.vue')
 const HomepageView = () => import('../views/HomepageView.vue')
 const AuthView = () => import('../views/AuthView.vue')
 const LoginView = () => import('../views/LoginView.vue')
 const RegistrationView = () => import('../views/RegistrationView.vue')
-console.log(GreetingView())
+console.log(GreetingView)
 /*
 import GreetingView from '../views/GreetingView.vue'
 import HomepageView from '../views/HomepageView.vue'
