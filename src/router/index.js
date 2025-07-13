@@ -11,7 +11,7 @@ const LoginView = () => import('../views/LoginView.vue')
 const RegistrationView = () => import('../views/RegistrationView.vue')
 
 //import GreetingView from '../views/GreetingView.vue'
-
+console.log('Hello! This is new deploy')
 const routes = [
   { path: '/', component: MainView, redirect: '/home' },
   { path: '/home', component: GreetingView, name: 'greeting' },
