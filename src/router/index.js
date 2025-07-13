@@ -33,16 +33,7 @@ export const router = createRouter({
   history: createWebHashHistory(),
   routes,
 })
-/*
-router.onError((error, to) => {
-  if (
-    error.message.includes('Failed to fetch dynamically imported module') ||
-    error.message.includes('Importing a module script failed')
-  ) {
-    window.location = to.name('greeting')
-  }
-})
-*/
+
 router.beforeEach((to, from, next) => {
   const authRoutes = ['login', 'registration']
   const { name } = to
