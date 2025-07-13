@@ -1,22 +1,28 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { authService } from '../api/authService'
-
+/*
 const GreetingPage = () => import('../views/GreetingView.vue')
 const HomePage = () => import('../views/HomepageView.vue')
 const AuthPage = () => import('../views/AuthView.vue')
 const LoginPage = () => import('../views/LoginView.vue')
 const RegistrationPage = () => import('../views/RegistrationView.vue')
+*/
+import GreetingView from '@/views/GreetingView.vue'
+import HomepageView from '@/views/HomepageView.vue'
+import AuthView from '@/views/AuthView.vue'
+import LoginView from '@/views/LoginView.vue'
+import RegistrationView from '@/views/RegistrationView.vue'
 
 const routes = [
-  { path: '/', component: GreetingPage, name: 'greeting' },
-  { path: '/map', component: HomePage, name: 'homepage' },
+  { path: '/', component: GreetingView, name: 'greeting' },
+  { path: '/map', component: HomepageView, name: 'homepage' },
   {
     path: '/auth',
-    component: AuthPage,
+    component: AuthView,
     redirect: '/auth/login',
     children: [
-      { path: 'login', component: LoginPage, name: 'login' },
-      { path: 'registration', component: RegistrationPage, name: 'registration' },
+      { path: 'login', component: LoginView, name: 'login' },
+      { path: 'registration', component: RegistrationView, name: 'registration' },
     ],
   },
 ]
