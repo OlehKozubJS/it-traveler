@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { authService } from '../api/authService'
-
+/*
 const GreetingPage = () => import('../views/GreetingView.vue')
 const HomePage = () => import('../views/HomepageView.vue')
 const AuthPage = () => import('../views/AuthView.vue')
 const LoginPage = () => import('../views/LoginView.vue')
 const RegistrationPage = () => import('../views/RegistrationView.vue')
+*/
 
 const routes = [
   { path: '/', component: GreetingPage, name: 'greeting' },
@@ -24,6 +25,15 @@ const routes = [
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+})
+
+router.onError((error, to) => {
+  if (
+    error.message.includes('Failed to fetch dynamically imported module') ||
+    error.message.includes('Importing a module script failed')
+  ) {
+    window.location = to.fullPath
+  }
 })
 
 router.beforeEach((to, from, next) => {
