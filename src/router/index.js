@@ -1,10 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { authService } from '../api/authService'
 
-window.addEventListener('vite:preloadError', (event) => {
-  window.location.reload() // for example, refresh the page
-})
-
 const GreetingView = () => import('../views/GreetingView.vue')
 const HomepageView = () => import('../views/HomepageView.vue')
 const AuthView = () => import('../views/AuthView.vue')
