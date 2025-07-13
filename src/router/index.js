@@ -1,13 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { authService } from '../api/authService'
 
-const GreetingView = () => import('../views/GreetingView.vue')
+//const GreetingView = () => import('../views/GreetingView.vue')
 const HomepageView = () => import('../views/HomepageView.vue')
 const AuthView = () => import('../views/AuthView.vue')
 const LoginView = () => import('../views/LoginView.vue')
 const RegistrationView = () => import('../views/RegistrationView.vue')
 
-//import GreetingView from '../views/GreetingView.vue'
+import GreetingView from '../views/GreetingView.vue'
 
 const routes = [
   { path: '/', redirect: '/home' },
