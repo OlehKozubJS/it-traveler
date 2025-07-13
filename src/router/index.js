@@ -9,7 +9,7 @@ const AuthView = () => import('../views/AuthView.vue')
 const LoginView = () => import('../views/LoginView.vue')
 const RegistrationView = () => import('../views/RegistrationView.vue')
 
-console.log('Hello! This is new deploy')
+console.log('Hello! This is 17:48 deploy')
 const routes = [
   { path: '/', component: MainView, redirect: '/greeting' },
   { path: '/greeting', component: GreetingView, name: 'greeting' },
